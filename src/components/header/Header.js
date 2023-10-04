@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom"
 import logo from '../../assets/svg/unconstrained-logo.svg'
 import login from '../../assets/svg/Login.svg'
 import signup from '../../assets/svg/Signup.svg'
-import { Badge } from "react-bootstrap"
 
 const Header = props => {
     // const navigate = useNavigate();
@@ -33,11 +32,8 @@ const Header = props => {
                 <Link to="/coaching">Coaching</Link>
                 <Link to="/community">Community</Link>
                 <Link to="/resources">Resources</Link>
-                {/* {user && user.role === "user"
-                    ? <Badge variant="secondary" className="badge">{user.role}</Badge>
-                    : <Badge variant="warning"> {user.role}</Badge>
-                } */}
-                {/* <h5>{user && user.user}</h5> */}
+            </div>
+            <div className="login-btn">
                 <img className="login-btn" src={login} alt="login button" />
                 <img className="signup-btn" src={signup} alt="signup button" />
             </div>

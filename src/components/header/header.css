@@ -6,44 +6,49 @@
     justify-content: space-between;    
     align-items: center;
     padding: 0 120px;
-}
-
-.hlogo{
-    display: flex;
-    justify-content: center;    
-}
-
-.hmenu{
-    display: flex;
-    align-items: center;
-    column-gap: 26px;
-    .login-btn{
-        width: 92px;
-        height: 41px;
-        cursor: pointer;
+    .hlogo{
+        display: flex;
+        justify-content: center;    
     }
-    .signup-btn{
-        width: 92px;
-        height: 41px;
-        cursor: pointer;
-    }   
+    .hmenu{
+        display: flex;
+        align-items: center;
+        column-gap: 26px;
+        .login-btn{
+            width: 92px;
+            height: 41px;
+            cursor: pointer;
+        }
+        .signup-btn{
+            width: 92px;
+            height: 41px;
+            cursor: pointer;
+        }   
+    }
+    .hmenu > *{
+        text-decoration: none;
+        color: black;
+    }
+    .login-btn {
+        display: flex;
+        column-gap: 16px;
+    }
 }
 
-.hmenu > *{
-    text-decoration: none;
-    color: black;
-}
-
-.badge{
-    height: 25px;    
-}
-
-.hmenu h5{
-    position: relative;
-    top: 2px;
-}
-
-.logout{
-    position: relative;
-    bottom: 3px;
+@media only screen and (max-width: 767px) {
+    .hcontainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        row-gap: 10px;
+        align-items: baseline;
+        padding: 0 20px;
+        height: auto;
+        .hmenu {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            column-gap: 20px;
+        }
+    }
 }
