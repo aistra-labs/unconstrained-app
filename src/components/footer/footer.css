@@ -1,0 +1,80 @@
+.footer-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .top-footer {
+        display: flex;
+        column-gap: 125px;
+        justify-content: center;
+        .left-footer {
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            .footer-logo {
+                width: 123.8px;
+                height: 18.78px;
+                margin-bottom: 16px;
+            }
+            .footer-desc{
+                color: var(--foundation-black-black-800, #2C3032);
+                font-family: Inter;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+            }
+            .footer-icon-container {
+                display: flex;
+                column-gap: 20px;
+                .footer-icon {
+                    width: 41px;
+                    height: 41px;
+                }
+            }
+        }
+        .mid-footer{
+            display: flex;
+            flex-direction: column;
+            row-gap: 32px;
+            .footer-title{
+                color: var(--foundation-black-black-800, #2C3032);
+                font-family: Inter;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+            }
+            .sub-links{
+                display: flex;
+                flex-direction: column;
+                color: var(--foundation-black-black-500, #50585B);
+                font-family: Inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%;
+                row-gap: 10px;
+            }
+            .subscribe-btn{
+                background: var(--foundation-red-light-red-light-400, #F54737);
+            }
+        }
+    }
+    .bottom-footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 85px;
+        opacity: 0.4;
+        background: var(--foundation-black-black-50, #EEEEEF);
+        color: var(--foundation-black-black-300, #8A8F91);
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+    }
+}

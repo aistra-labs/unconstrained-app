@@ -1,24 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import Header from './components/header/Header';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
+import { Suspense, lazy } from 'react';
+
+const Header = lazy(() => import('./components/header/Header'));
+const Footer = lazy(() => import('./components/footer/Footer'));
+const Home = lazy(() => import('./components/home/Home'));
+const About = lazy(() => import('./components/about/About'));
+const Courses = lazy(() => import('./components/courses/Courses'));
+const Coaching = lazy(() => import('./components/coaching/Coaching'));
+const Community = lazy(() => import('./components/community/Community'));
+const Resources = lazy(() => import('./components/resources/Resources'));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/coaching" element={<Coaching />} />
+          <Route path="/community" element={<Community />} />
+          <Route path="/resources" element={<Resources />} />
+        </Routes>
+        <Footer />
+      </Suspense>
+    </Router>
   );
 }
 

@@ -1,0 +1,49 @@
+.hcontainer{
+    width: 100%;
+    height: 80px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;    
+    align-items: center;
+    padding: 0 120px;
+}
+
+.hlogo{
+    display: flex;
+    justify-content: center;    
+}
+
+.hmenu{
+    display: flex;
+    align-items: center;
+    column-gap: 26px;
+    .login-btn{
+        width: 92px;
+        height: 41px;
+        cursor: pointer;
+    }
+    .signup-btn{
+        width: 92px;
+        height: 41px;
+        cursor: pointer;
+    }   
+}
+
+.hmenu > *{
+    text-decoration: none;
+    color: black;
+}
+
+.badge{
+    height: 25px;    
+}
+
+.hmenu h5{
+    position: relative;
+    top: 2px;
+}
+
+.logout{
+    position: relative;
+    bottom: 3px;
+}
