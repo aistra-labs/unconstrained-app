@@ -24,31 +24,33 @@ const Footer = () => {
                         <img className="footer-icon" src={ldIcon} alt="ld-icon" />
                     </div>
                 </div>
-                <div className="mid-footer">
-                    <h3 className="footer-title">Company</h3>
-                    <div className="sub-links">
-                        <span>Home</span>
-                        <span>About</span>
-                        <span>Courses</span>
-                        <span>Coaching</span>
-                        <span>Community</span>
-                        <span>Resources</span>
+                <div className="mid-footer-container">
+                    <div className="mid-footer">
+                        <h3 className="footer-title">Company</h3>
+                        <div className="sub-links">
+                            <span>Home</span>
+                            <span>About</span>
+                            <span>Courses</span>
+                            <span>Coaching</span>
+                            <span>Community</span>
+                            <span>Resources</span>
+                        </div>
+                    </div>
+                    <div className="mid-footer">
+                        <h3 className="footer-title">Useful Links</h3>
+                        <div className="sub-links">
+                            <span>Terms of Services</span>
+                            <span>Privacy Policy</span>
+                            <span>Cookie Policy</span>
+                            <span>Contact Us</span>
+                        </div>
                     </div>
                 </div>
-                <div className="mid-footer">
-                    <h3 className="footer-title">Useful Links</h3>
-                    <div className="sub-links">
-                        <span>Terms of Services</span>
-                        <span>Privacy Policy</span>
-                        <span>Cookie Policy</span>
-                        <span>Contact Us</span>
-                    </div>
-                </div>
-                <div className="mid-footer">
+                <div className="news-container">
                     <h3 className="footer-title">Newsletter</h3>
                     <div className="sub-links">
                         <span>Sign up and receive the lastest news via email.</span>
-                        <InputGroup className="mb-3">
+                        <InputGroup className="mb-3 subscribe-style">
                             <Form.Control
                             placeholder="Email address"
                             aria-label="Email address"

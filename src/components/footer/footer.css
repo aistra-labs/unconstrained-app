@@ -30,10 +30,39 @@
                 .footer-icon {
                     width: 41px;
                     height: 41px;
+                    cursor: pointer;
                 }
             }
         }
-        .mid-footer{
+        .mid-footer-container{
+            display: flex;
+            column-gap: 125px;
+            .mid-footer{
+                display: flex;
+                flex-direction: column;
+                row-gap: 32px;
+                .footer-title{
+                    color: var(--foundation-black-black-800, #2C3032);
+                    font-family: Inter;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                }
+                .sub-links{
+                    display: flex;
+                    flex-direction: column;
+                    color: var(--foundation-black-black-500, #50585B);
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 160%;
+                    row-gap: 10px;
+                }
+            }
+        }
+        .news-container{
             display: flex;
             flex-direction: column;
             row-gap: 32px;
@@ -74,5 +103,35 @@
         font-style: normal;
         font-weight: 400;
         line-height: 160%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .footer-container{
+        .top-footer{
+            flex-direction: column;
+            row-gap: 25px;
+            padding-left: 15px;
+            .left-footer{
+                .footer-logo{
+                    margin-bottom: 0px;
+                }
+            }
+            .mid-footer-container{
+                display: flex;
+                column-gap: 30px;
+                .mid-footer{
+                    row-gap: 5px;
+                }
+            }
+            .news-container{
+                row-gap: 5px;
+                .sub-links{
+                    .subscribe-style{
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
     }
 }
