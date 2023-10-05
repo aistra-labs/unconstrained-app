@@ -33,9 +33,9 @@ const Header = props => {
                 <Link to="/community">Community</Link>
                 <Link to="/resources">Resources</Link>
             </div>
-            <div className="login-btn">
+            <div className="login-btn-container">
                 <img className="login-btn" src={login} alt="login button" />
-                <img className="signup-btn" src={signup} alt="signup button" />
+                <img className="login-btn" src={signup} alt="signup button" />
             </div>
         </div>
     )

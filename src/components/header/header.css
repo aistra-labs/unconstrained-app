@@ -29,9 +29,12 @@
         text-decoration: none;
         color: black;
     }
-    .login-btn {
+    .login-btn-container {
         display: flex;
         column-gap: 16px;
+        .login-btn{
+            cursor: pointer;
+        }
     }
 }
 
