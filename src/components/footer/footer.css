@@ -1,10 +1,8 @@
 .footer-container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-top: 80px;
     .top-footer {
         display: flex;
         column-gap: 125px;
