@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { memo, useEffect } from "react";
 import "./footer.css";
-import images from '../images';
+import { images } from '../images';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
@@ -48,9 +48,9 @@ const Footer = () => {
                         <span>Sign up and receive the lastest news via email.</span>
                         <InputGroup className="mb-3 subscribe-style">
                             <Form.Control
-                            placeholder="Email address"
-                            aria-label="Email address"
-                            aria-describedby="basic-addon2"
+                                placeholder="Email address"
+                                aria-label="Email address"
+                                aria-describedby="basic-addon2"
                             />
                             <InputGroup.Text className="subscribe-btn" id="basic-addon2">Subscribe</InputGroup.Text>
                         </InputGroup>
