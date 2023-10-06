@@ -2,8 +2,8 @@
 import React, { memo, useEffect } from "react";
 // import axios from "axios";
 import "./home.css";
-import demoBtn from '../../assets/svg/demo-video-btn.svg';
-import banner from '../../assets/svg/banner-image.svg'
+import Cards from "../card";
+import { images } from "../images";
 
 const Home = () => {
 
@@ -20,12 +20,13 @@ const Home = () => {
             emerging technology to enable human-centred 
             approach to learning
           </div>
-          <img className="demo-btn" src={demoBtn} loading="lazy" alt="demo button" />
+          <img className="demo-btn" src={images.demoBtn} loading="lazy" alt="demo button" />
         </div>
         <div className="banner-image-container">
-          <img className="banner-image" src={banner} loading="lazy" alt="banner" />
+          <img className="banner-image" src={images.homeBanner} loading="lazy" alt="banner" />
         </div>
       </div>
+      <Cards />
     </div>
   );
 };
