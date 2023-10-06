@@ -1,10 +1,11 @@
 import React from "react";
 import "./card.css";
+import Card1Img from '../../assets/jpg/p25.jpg';
 
 const Card = ({ imageUrl, header, description }) => {
   return (
     <div className="card">
-      <img src={imageUrl} alt={header} className="card-image" />
+      <img src={Card1Img} alt={header} className="card-image" />
       <div className="card-content">
         <h2 className="card-header">{header}</h2>
         <p className="card-description">{description}</p>
@@ -16,19 +17,24 @@ const Card = ({ imageUrl, header, description }) => {
 const Cards = () => {
   const cardData = [
     {
-      header: "Card 1",
-      description: "Content for Card 1",
-      imageUrl: "https://picsum.photos/200/300"
+      header: "Courses",
+      description: "Our courses are designed to help you to understand and harness emerging technologies so that you can spend more time doing what you do best - supporting your students.",
+      imageUrl: "../../assets/jpg/p25.jpg"
     },
     {
-      header: "Card 2",
-      description: "Content for Card 2",
-      imageUrl: "https://picsum.photos/200/300"
+      header: "Courses",
+      description: "Our courses are designed to help you to understand and harness emerging technologies so that you can spend more time doing what you do best - supporting your students.",
+      imageUrl: "../../assets/jpg/p25.jpg"
     },
     {
-      header: "Card 3",
-      description: "Content for Card 3",
-      imageUrl: "https://picsum.photos/200/300"
+      header: "Courses",
+      description: "Our courses are designed to help you to understand and harness emerging technologies so that you can spend more time doing what you do best - supporting your students.",
+      imageUrl: "../../assets/jpg/p25.jpg"
+    },
+    {
+      header: "Courses",
+      description: "Our courses are designed to help you to understand and harness emerging technologies so that you can spend more time doing what you do best - supporting your students.",
+      imageUrl: "../../assets/jpg/p25.jpg"
     }
     // Add more card data as needed
   ];
