@@ -1,0 +1,49 @@
+/* Card.css */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Add this property to enable flex-wrap */
+    justify-content: space-between;
+    /* You can adjust the container's styling as needed */
+}
+
+.card {
+    width: calc(33.33% - 20px);
+    /* Adjust the width and margin as needed for responsiveness */
+    margin: 10px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    text-align: center;
+}
+
+.card-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px 4px 0 0;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-header {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.card-description {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+
+    /* Media query for mobile devices */
+    .card {
+        width: 100%;
+        /* Full width on mobile */
+        margin: 10px 0;
+    }
+}

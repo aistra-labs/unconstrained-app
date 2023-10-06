@@ -8,6 +8,7 @@ import {
   Route,
 } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
+import Cards from './components/card';
 
 const Header = lazy(() => import('./components/header/Header'));
 const Footer = lazy(() => import('./components/footer/Footer'));
@@ -30,6 +31,7 @@ function App() {
           <Route path="/coaching" element={<Coaching />} />
           <Route path="/community" element={<Community />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/cards" element={<Cards />} />
         </Routes>
         <Footer />
       </Suspense>
