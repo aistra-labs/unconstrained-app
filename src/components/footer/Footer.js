@@ -1,11 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { memo, useEffect } from "react";
 import "./footer.css";
-import logo from '../../assets/svg/unconstrained-logo.svg'
-import twitterIcon from '../../assets/svg/twitter-icon.svg'
-import fbIcon from '../../assets/svg/fb-icon.svg'
-import instaIcon from '../../assets/svg/insta-icon.svg'
-import ldIcon from '../../assets/svg/ld-icon.svg'
+import images from '../images';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
@@ -15,13 +11,13 @@ const Footer = () => {
         <div className="footer-container">
             <div className="top-footer">
                 <div className="left-footer">
-                    <img className="footer-logo" src={logo} alt="Unconstrained Logo" />
+                    <img className="footer-logo" src={images.logo} alt="Unconstrained Logo" />
                     <span className="footer-desc">Find us here</span>
                     <div className="footer-icon-container">
-                        <img className="footer-icon" src={twitterIcon} alt="twitter-icon" />
-                        <img className="footer-icon" src={fbIcon} alt="fb-icon" />
-                        <img className="footer-icon" src={instaIcon} alt="insta-icon" />
-                        <img className="footer-icon" src={ldIcon} alt="ld-icon" />
+                        <img className="footer-icon" src={images.twitterIcon} alt="twitter-icon" />
+                        <img className="footer-icon" src={images.fbIcon} alt="fb-icon" />
+                        <img className="footer-icon" src={images.instaIcon} alt="insta-icon" />
+                        <img className="footer-icon" src={images.ldIcon} alt="ld-icon" />
                     </div>
                 </div>
                 <div className="mid-footer-container">
