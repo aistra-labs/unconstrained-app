@@ -7,6 +7,7 @@ import demoBtn from '../../assets/svg/demo-video-btn.svg';
 import homeBanner from '../../assets/svg/banner-image.svg';
 import aboutBanner from '../../assets/svg/about-banner.svg';
 import missionImg from '../../assets/svg/mission-image.svg'
+import visionImg from '../../assets/svg/vision-image.svg';
 
 const images = {
     logo,
@@ -18,5 +19,6 @@ const images = {
     homeBanner,
     aboutBanner,
     missionImg,
+    visionImg,
 }
 export default images;

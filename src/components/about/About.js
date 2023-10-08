@@ -61,6 +61,23 @@ const About = () => {
           <img className="banner-image" src={images.missionImg} loading="lazy" alt="banner" />
         </div>
       </div>
+      <div className="mission-container vision-container">
+        <div className="mission-image-container">
+          <img className="banner-image" src={images.visionImg} loading="lazy" alt="banner" />
+        </div>
+        <div className="mission-content">
+          <div className="mission-title">
+            Our Vision
+          </div>
+          <div className="mission-desc">
+            Our vision is to revolutionize education by creating a world where learning knows no boundaries. 
+            We envision a future where access to high-quality education is universal, personalized, and deeply engaging. 
+            Through cutting-edge technology, innovative teaching methodologies, and a relentless commitment to student success, 
+            we aim to empower learners to explore their passions, unlock their full potential, and become lifelong contributors to a global community. 
+            Our vision is a world where education not only prepares individuals for the challenges of tomorrow but also inspires them to shape a brighter future for all.
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
