@@ -1,8 +1,7 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import React, { memo, useEffect } from "react";
-// import axios from "axios";
+import React, { memo } from "react";
 import "./home.css";
 import Cards from "../card";
+import CardBlog from "../cardBlog";
 import { images } from "../images";
 
 const Home = () => {
@@ -16,8 +15,8 @@ const Home = () => {
             <span className="orange-title">UnconstrainED</span>
           </div>
           <div className="banner-desc">
-            Partnering with teachers to harness the power of 
-            emerging technology to enable human-centred 
+            Partnering with teachers to harness the power of
+            emerging technology to enable human-centred
             approach to learning
           </div>
           <img className="demo-btn" src={images.demoBtn} loading="lazy" alt="demo button" />
@@ -26,7 +25,10 @@ const Home = () => {
           <img className="banner-image" src={images.homeBanner} loading="lazy" alt="banner" />
         </div>
       </div>
-      <Cards />
+      <div className="body-rest">
+        <Cards />
+        <CardBlog />
+      </div>
     </div>
   );
 };
