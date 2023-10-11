@@ -4,16 +4,18 @@ import { images } from '../images';
 
 const Card = ({ imageUrl, header, description }) => {
   return (
-    <div className="card-blog">
-      <img src={imageUrl} alt={header} className="card-blog-image" />
-      <div className="meta-by">
-        <div className="date">Aug 31, 2023</div>
-        <div className="writer">by Ganda Suthivarakom</div>
-      </div>
-      <div className="card-blog-content">
-        <h2 className="card-blog-header">{header}</h2>
-        <p className="card-blog-description">{description}</p>
-        <div className="read-more"><div className="read-more-text" >Read More</div></div>
+    <div className="card-blog-css">
+      <div className="card-blog">
+        <img src={imageUrl} alt={header} className="card-blog-image" />
+        <div className="meta-by">
+          <div className="date">Aug 31, 2023</div>
+          <div className="writer">by Ganda Suthivarakom</div>
+        </div>
+        <div className="card-blog-content">
+          <h2 className="card-blog-header">{header}</h2>
+          <p className="card-blog-description">{description}</p>
+          <div className="read-more"><div className="read-more-text" >Read More</div></div>
+        </div>
       </div>
     </div>
   );

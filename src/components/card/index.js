@@ -39,17 +39,19 @@ const Cards = () => {
   ];
 
   return (
-    <div className="card-section">
-      <div className="card-section-header">What We Offer</div>
-      <div className="card-container">
-        {cardData.map((card, index) => (
-          <Card
-            key={index}
-            imageUrl={card.imageUrl}
-            header={card.header}
-            description={card.description}
-          />
-        ))}
+    <div className="card-css">
+      <div className="card-section">
+        <div className="card-section-header">What We Offer</div>
+        <div className="card-container">
+          {cardData.map((card, index) => (
+            <Card
+              key={index}
+              imageUrl={card.imageUrl}
+              header={card.header}
+              description={card.description}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
