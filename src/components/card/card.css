@@ -1,5 +1,4 @@
 /* Card.css */
-.card-css {
     .card-container {
         display: flex;
         flex-wrap: wrap;
@@ -84,4 +83,3 @@
             border: none;
         }
     }
-}

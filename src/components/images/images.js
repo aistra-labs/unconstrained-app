@@ -14,6 +14,9 @@ import p27 from "../../assets/jpg/p27.jpg";
 import p28 from "../../assets/jpg/p28.jpg";
 import blog1 from "../../assets/jpg/blog1.jpg";
 import blog2 from "../../assets/jpg/blog2.jpg";
+import coursesSignupBtn from '../../assets/svg/courses-signup-btn.svg';
+import coursesBanner from '../../assets/svg/courses-banner.svg';
+import coachingInputBtn from '../../assets/svg/coaching-input-btn.svg';
 
 const images = {
     logo,
@@ -31,6 +34,9 @@ const images = {
     p27,
     p28,
     blog1,
-    blog2
+    blog2,
+    coursesSignupBtn,
+    coursesBanner,
+    coachingInputBtn,
 }
 export default images;
