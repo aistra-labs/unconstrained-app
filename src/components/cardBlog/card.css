@@ -79,15 +79,20 @@
         .card-blog-section {
             padding: 0 10px;
         }
+        .card-blog-section-header{
+            text-align: center;
+        }
         .card-blog {
-            width: 100%;
-            /* Full width on mobile */
-            margin: 10px 0;
+            height: auto;
+            padding: 20px 0;
             border: none;
-            width: 400px;
+            width: 370px;
+            border-radius: 20px;
         }
         .card-blog-image {
-            width: 400px;
+            width: 340px;
+            height: 340px;
+            border-radius: 40px;
         }
     }
 
