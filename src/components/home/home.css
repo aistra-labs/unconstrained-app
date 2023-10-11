@@ -1,6 +1,13 @@
 .home-container{
     display: flex;
     flex-direction: column;
+    .body-rest{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
     .home-banner-container{
         display: flex;
         width: 100%;
