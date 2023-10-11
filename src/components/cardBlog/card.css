@@ -1,4 +1,4 @@
-.card-blog-css {
+
     .card-blog-container {
         display: flex;
         flex-wrap: wrap;
@@ -76,11 +76,18 @@
     @media (max-width: 768px) {
 
         /* Media query for mobile devices */
+        .card-blog-section {
+            padding: 0 10px;
+        }
         .card-blog {
             width: 100%;
             /* Full width on mobile */
             margin: 10px 0;
             border: none;
+            width: 400px;
+        }
+        .card-blog-image {
+            width: 400px;
         }
     }
 
@@ -131,4 +138,3 @@
         /* 22.4px */
         letter-spacing: 0.7px;
     }
-}
