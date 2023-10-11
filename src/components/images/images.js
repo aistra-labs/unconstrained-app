@@ -8,6 +8,9 @@ import homeBanner from '../../assets/svg/banner-image.svg';
 import aboutBanner from '../../assets/svg/about-banner.svg';
 import missionImg from '../../assets/svg/mission-image.svg'
 import visionImg from '../../assets/svg/vision-image.svg';
+import coursesSignupBtn from '../../assets/svg/courses-signup-btn.svg';
+import coursesBanner from '../../assets/svg/courses-banner.svg';
+import coachingInputBtn from '../../assets/svg/coaching-input-btn.svg';
 
 const images = {
     logo,
@@ -20,5 +23,8 @@ const images = {
     aboutBanner,
     missionImg,
     visionImg,
+    coursesSignupBtn,
+    coursesBanner,
+    coachingInputBtn,
 }
 export default images;

@@ -1,14 +1,26 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { memo, useEffect } from "react";
+import React, { memo, useEffect, useRef } from "react";
 import "./footer.css";
 import { images } from '../images';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
+    const location = useLocation();
+    const isCoachingRoute = location.pathname.startsWith('/coaching');
+    const footerRef = useRef();
+
+    useEffect(() => {
+        if (isCoachingRoute) {
+            footerRef.current.classList.add('display-none');
+          } else {
+            footerRef.current.classList.remove('display-none');
+          }
+    }, [isCoachingRoute])
 
     return (
-        <div className="footer-container">
+        <div ref={footerRef} className="footer-container">
             <div className="top-footer">
                 <div className="left-footer">
                     <img className="footer-logo" src={images.logo} alt="Unconstrained Logo" />

@@ -7,6 +7,7 @@
         display: flex;
         column-gap: 125px;
         justify-content: center;
+        margin-bottom: 50px;
         .left-footer {
             display: flex;
             flex-direction: column;
@@ -86,6 +87,7 @@
                 row-gap: 10px;
             }
             .subscribe-btn{
+                cursor: pointer;
                 background: var(--foundation-red-light-red-light-400, #F54737);
             }
         }
@@ -105,13 +107,18 @@
         line-height: 160%;
     }
 }
+.display-none{
+    display: none;
+}
 
 @media only screen and (max-width: 767px) {
     .footer-container{
+        margin-top: 50px;
         .top-footer{
             flex-direction: column;
             row-gap: 25px;
             padding-left: 15px;
+            margin-bottom: 10px;
             .left-footer{
                 .footer-logo{
                     margin-bottom: 0px;
