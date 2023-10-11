@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { memo, useEffect } from "react";
+import React, { memo } from "react";
 import "./about.css";
 import { images } from "../images";
 
