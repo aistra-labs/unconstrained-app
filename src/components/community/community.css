@@ -1,0 +1,128 @@
+.community-container{
+    display: flex;
+    flex-direction: column;
+    .community-top{
+        display: flex;
+        justify-content: center;
+        background: #FFF0EF;
+        padding: 197px 250px 10px 250px;
+        .community-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 20px;
+            .community-title{
+                color: var(--foundation-black-black-900, #222526);
+                text-align: center;
+                text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.14);
+                font-family: Inter;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+            .community-desc{
+                color: var(--foundation-black-black-800, #2C3032);
+                text-align: center;
+                font-family: Inter;
+                font-size: 18px;
+                width: 930px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 30px;
+            }
+            .community-input-container{
+                width: 860px;
+                height: 64px;
+                margin-top: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-shrink: 0;
+                border-radius: 12px;
+                background: #FFF;
+                box-shadow: 0px 0px 32px 0px rgba(158, 0, 0, 0.08);
+                .input-val{
+                    .search-icon{
+                        margin-left: 16px;
+                    }
+                    .form-control{
+                        font-family: Inter;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        border: none;
+                        line-height: normal;
+                        &:hover {
+                            outline: none;
+                            border: none;
+                        }
+                        &:focus {
+                            outline: none;
+                            border: none;
+                            box-shadow: none;
+                        }
+                        &::placeholder {
+                            color: var(--foundation-black-black-200, #AFB2B4);
+                            font-family: Inter;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+                        }
+                    }
+                }
+            }
+            .community-tabs{
+                display: flex;
+                justify-content: center;
+                column-gap: 36px;
+                margin-top: 95px;
+                .tab{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 140px;
+                    height: 48px;
+                    &:hover{
+                        border-radius: 8px;
+                        cursor: pointer;
+                        color: black;
+                        font-weight: 700;
+                        opacity: 0.1;
+                        background: var(--foundation-red-light-red-light-400, #F54737);
+                        text-align: center;
+                        font-family: Inter;
+                        font-size: 15px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+@media only screen and (max-width: 767px) {
+    .community-container{
+        .community-top{
+            padding: 100px 30px 10px 30px;
+            .community-content{
+                width: 100%;
+                .community-title{
+                    font-size: 36px;
+                }
+                .community-desc{
+                    width: auto;
+                }
+                .community-input-container{
+                    width: auto;
+                }
+                .community-tabs{
+                    column-gap: 18px;
+                }
+            }
+        }
+    }
+}

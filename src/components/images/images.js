@@ -17,6 +17,7 @@ import blog2 from "../../assets/jpg/blog2.jpg";
 import coursesSignupBtn from '../../assets/svg/courses-signup-btn.svg';
 import coursesBanner from '../../assets/svg/courses-banner.svg';
 import coachingInputBtn from '../../assets/svg/coaching-input-btn.svg';
+import searchIcon from '../../assets/svg/search-icon.svg';
 
 const images = {
     logo,
@@ -38,5 +39,6 @@ const images = {
     coursesSignupBtn,
     coursesBanner,
     coachingInputBtn,
+    searchIcon,
 }
 export default images;
