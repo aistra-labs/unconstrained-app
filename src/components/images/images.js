@@ -18,6 +18,9 @@ import coursesSignupBtn from '../../assets/svg/courses-signup-btn.svg';
 import coursesBanner from '../../assets/svg/courses-banner.svg';
 import coachingInputBtn from '../../assets/svg/coaching-input-btn.svg';
 import searchIcon from '../../assets/svg/search-icon.svg';
+import resourceImg1 from '../../assets/svg/resource-img1.svg';
+import resourceImg2 from '../../assets/svg/resource-img2.svg';
+import resourceImg3 from '../../assets/svg/resource-img3.svg';
 
 const images = {
     logo,
@@ -40,5 +43,8 @@ const images = {
     coursesBanner,
     coachingInputBtn,
     searchIcon,
+    resourceImg1,
+    resourceImg2,
+    resourceImg3,
 }
 export default images;
