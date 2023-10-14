@@ -12,12 +12,12 @@ import Cards from './components/card';
 
 const Header = lazy(() => import('./components/header/Header'));
 const Footer = lazy(() => import('./components/footer/Footer'));
-const Home = lazy(() => import('./components/home/Home'));
-const About = lazy(() => import('./components/about/About'));
-const Courses = lazy(() => import('./components/courses/Courses'));
-const Coaching = lazy(() => import('./components/coaching/Coaching'));
-const Community = lazy(() => import('./components/community/Community'));
-const Resources = lazy(() => import('./components/resources/Resources'));
+const Home = lazy(() => import('./pages/home/Home'));
+const About = lazy(() => import('./pages/about/About'));
+const Courses = lazy(() => import('./pages/courses/Courses'));
+const Coaching = lazy(() => import('./pages/coaching/Coaching'));
+const Community = lazy(() => import('./pages/community/Community'));
+const Resources = lazy(() => import('./pages/resources/Resources'));
 
 function App() {
   return (

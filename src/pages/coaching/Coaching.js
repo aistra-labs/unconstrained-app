@@ -3,7 +3,7 @@ import React, { memo } from "react";
 import "./coaching.css";
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-import { images } from "../images";
+import { images } from "../../components/images";
 
 const Coaching = () => {
 

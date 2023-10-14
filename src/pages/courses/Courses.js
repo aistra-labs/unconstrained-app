@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { memo } from "react";
 import "./courses.css";
-import { images } from "../images";
+import { images } from "../../components/images";
 
 const Courses = () => {
 

@@ -1,8 +1,8 @@
 import React, { memo } from "react";
 import "./home.css";
-import Cards from "../card";
-import CardBlog from "../cardBlog";
-import { images } from "../images";
+import Cards from "../../components/card";
+import CardBlog from "../../components/cardBlog";
+import { images } from "../../components/images";
 
 const Home = () => {
 
