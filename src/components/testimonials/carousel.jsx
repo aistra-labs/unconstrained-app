@@ -32,7 +32,8 @@ function CardsCarousel() {
     const handleSelect = (selectedIndex) => {
         setIndex(selectedIndex);
     };
-    const testimonyData = groupTestimony(data);
+    const { innerWidth: width } = window;
+    const testimonyData = groupTestimony(data, width <= 767 ? 1 : 3);
 
     return (
         <Carousel activeIndex={index} onSelect={handleSelect} data-bs-theme="dark" controls={false}>
