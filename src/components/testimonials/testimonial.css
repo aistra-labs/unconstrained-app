@@ -1,4 +1,6 @@
 .testimonial-card-css {
+    width: 100%;
+
     .carousel-slide-container {
         display: flex;
         height: 400px;
@@ -22,21 +24,21 @@
         padding-bottom: 30px;
         padding-right: 30px;
         padding-left: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .card-image {
         width: 24px;
         height: 18px;
-        /* flex-shrink: 0; */
-        /* max-width: 281px;
-        height: 375px; */
-        /* border-radius: 4px 4px 0 0; */
     }
 
     .testimonial-container {
         display: flex;
     }
-        .testimonial {
+
+    .testimonial {
         color: #50585B;
         font-family: Inter;
         font-size: 14px;
