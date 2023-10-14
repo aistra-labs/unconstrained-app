@@ -3,7 +3,7 @@ import React, { memo } from "react";
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import "./community.css";
-import { image }from "../../components/images";
+import { images }from "../../components/images";
 
 const Community = () => {
 
@@ -20,7 +20,7 @@ const Community = () => {
           </div>
           <div className="community-input-container">
             <InputGroup className="input-val">
-              <img className="search-icon" src={image['search-icon.svg']} loading="lazy" alt="search icon" />
+              <img className="search-icon" src={images['search-icon.svg']} loading="lazy" alt="search icon" />
               <Form.Control
                 placeholder="Search for questions"
                 aria-label="Search for questions"

@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { memo, useEffect, useRef } from "react";
 import "./footer.css";
-import { image }from '../images';
+import { images }from '../images';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { useLocation } from "react-router-dom";
@@ -23,13 +23,13 @@ const Footer = () => {
         <div ref={footerRef} className="footer-container">
             <div className="top-footer">
                 <div className="left-footer">
-                    <img className="footer-logo" src={image['logo.svg']} alt="Unconstrained Logo" />
+                    <img className="footer-logo" src={images['logo.svg']} alt="Unconstrained Logo" />
                     <span className="footer-desc">Find us here</span>
                     <div className="footer-icon-container">
-                        <img className="footer-icon" src={image['twitter-icon.svg']} alt="twitter-icon" />
-                        <img className="footer-icon" src={image['fb-icon.svg']} alt="fb-icon" />
-                        <img className="footer-icon" src={image['insta-icon.svg']} alt="insta-icon" />
-                        <img className="footer-icon" src={image['ld-icon.svg']} alt="ld-icon" />
+                        <img className="footer-icon" src={images['twitter-icon.svg']} alt="twitter-icon" />
+                        <img className="footer-icon" src={images['fb-icon.svg']} alt="fb-icon" />
+                        <img className="footer-icon" src={images['insta-icon.svg']} alt="insta-icon" />
+                        <img className="footer-icon" src={images['ld-icon.svg']} alt="ld-icon" />
                     </div>
                 </div>
                 <div className="mid-footer-container">

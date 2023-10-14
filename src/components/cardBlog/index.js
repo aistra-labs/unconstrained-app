@@ -1,6 +1,6 @@
 import React from "react";
 import "./card.css";
-import { image } from '../images';
+import { images } from '../images';
 
 const Card = ({ imageUrl, header, description }) => {
   return (
@@ -26,12 +26,12 @@ const Cards = () => {
     {
       header: "Running remote offsites and onbordings",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat fermentum, enim vel adipiscing non. Lacus, nunc, at et vel tellus dignissim quis.",
-      imageUrl: image['blog1.jpg']
+      imageUrl: images['blog1.jpg']
     },
     {
       header: "Executive coach Joe Kwon reaches clients",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat fermentum, enim vel adipiscing non. Lacus, nunc, at et vel tellus dignissim quis.",
-      imageUrl: image['blog2.jpg']
+      imageUrl: images['blog2.jpg']
     }
   ];
 

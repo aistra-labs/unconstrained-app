@@ -1,6 +1,6 @@
 import React from "react";
 import "./testimonial.css";
-import { image }from '../images';
+import { images }from '../images';
 import Carousel from './carousel';
 
 
@@ -21,22 +21,22 @@ const Cards = () => {
     {
       header: "Courses",
       description: "Our courses are designed to help you to understand and harness emerging technologies so that you can spend more time doing what you do best - supporting your students.",
-      imageUrl: image['p25.jpg']
+      imageUrl: images['p25.jpg']
     },
     {
       header: "Curated Tools and Resources",
       description: "We vet the newest tools and resources in emerging technology and let you know how they can best support you and your students and give you back time.",
-      imageUrl: image['p26.jpg']
+      imageUrl: images['p26.jpg']
     },
     {
       header: "Coaching with AI",
       description: "Meet our coaches that can support you in planning, and productivity",
-      imageUrl: image['p27.jpg']
+      imageUrl: images['p27.jpg']
     },
     {
       header: "Community",
       description: "Connect with educators like you who are ready to explore and exchange ideas.",
-      imageUrl: image['p28.jpg']
+      imageUrl: images['p28.jpg']
     }
   ];
 

@@ -3,7 +3,7 @@ import "./home.css";
 import Cards from "../../components/card";
 import CardBlog from "../../components/cardBlog";
 import Testimonials from "../../components/testimonials";
-import { image }from "../../components/images";
+import { images }from "../../components/images";
 
 const Home = () => {
 
@@ -20,10 +20,10 @@ const Home = () => {
             emerging technology to enable human-centred
             approach to learning
           </div>
-          <img className="demo-btn" src={image['demo-video-btn.svg']} loading="lazy" alt="demo button" />
+          <img className="demo-btn" src={images['demo-video-btn.svg']} loading="lazy" alt="demo button" />
         </div>
         <div className="banner-image-container">
-          <img className="banner-image" src={image['banner-image.svg']} loading="lazy" alt="banner" />
+          <img className="banner-image" src={images['banner-image.svg']} loading="lazy" alt="banner" />
         </div>
       </div>
       <div className="body-rest">

@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import { image } from '../images';
+import { images } from '../images';
 import NameStrip from '../name-strip';
 
 function CarouselItem({ ix }) {
     return (<div className="carousel-slide-container">
         <div className="card">
             <div className='testimonial-container'>
-                <img src={image['doublequotes.jpg']} className="card-image" />
+                <img src={images['doublequotes.jpg']} className="card-image" />
                 <h2 className="testimonial">
                     This product brings so much value. I LOVE IT!This product brings so much value. I LOVE IT!This product brings so much value. I LOVE IT!This product brings so much value. I LOVE IT!This product brings so much value. I LOVE IT!This product brings so much value. I LOVE IT!This product brings so much value. I LOVE IT!This product brings so much value. I LOVE IT!This product brings so much value. I LOVE IT!This product brings so much value. I LOVE IT!"
                 </h2>

@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { memo } from "react";
 import "./about.css";
-import { image }from "../../components/images";
+import { images }from "../../components/images";
 
 const About = () => {
 
@@ -9,7 +9,7 @@ const About = () => {
     <div className="about-container">
       <div className="about-banner">
         <div className="banner-image-container">
-          <img className="banner-image" src={image['about-banner.svg']} loading="lazy" alt="banner" />
+          <img className="banner-image" src={images['about-banner.svg']} loading="lazy" alt="banner" />
         </div>
         <div className="banner-content">
           <div className="banner-title">
@@ -58,12 +58,12 @@ const About = () => {
           </div>
         </div>
         <div className="mission-image-container">
-          <img className="banner-image" src={image['mission-img.svg']} loading="lazy" alt="banner" />
+          <img className="banner-image" src={images['mission-img.svg']} loading="lazy" alt="banner" />
         </div>
       </div>
       <div className="mission-container vision-container">
         <div className="mission-image-container">
-          <img className="banner-image" src={image['vision-image']} loading="lazy" alt="banner" />
+          <img className="banner-image" src={images['vision-image']} loading="lazy" alt="banner" />
         </div>
         <div className="mission-content">
           <div className="mission-title">
