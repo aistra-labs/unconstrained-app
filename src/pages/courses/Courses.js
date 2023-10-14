@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { memo } from "react";
 import "./courses.css";
-import { images } from "../../components/images";
+import { image }from "../../components/images";
 
 const Courses = () => {
 
@@ -18,12 +18,12 @@ const Courses = () => {
             In a ipsum ut aliquam ac felis consequat. In sit diam porta laoreet. 
             Amet id magna diam diam in egestas.
           </div>
-          <img className="signup-btn" src={images.coursesSignupBtn} loading="lazy" alt="signup button" />
+          <img className="signup-btn" src={image['courses-signup-btn.svg']} loading="lazy" alt="signup button" />
         </div>
         <div className="courses-banner">
           <div className="banner-image-container">
             <div className="image-background">
-              <img className="courses-banner" src={images.coursesBanner} loading="lazy" alt="courses banner" />
+              <img className="courses-banner" src={image['courses-banner.svg']} loading="lazy" alt="courses banner" />
             </div>
           </div>
         </div>

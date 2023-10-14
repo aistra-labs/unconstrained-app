@@ -18,7 +18,19 @@ import coursesSignupBtn from '../../assets/svg/courses-signup-btn.svg';
 import coursesBanner from '../../assets/svg/courses-banner.svg';
 import coachingInputBtn from '../../assets/svg/coaching-input-btn.svg';
 import searchIcon from '../../assets/svg/search-icon.svg';
+import doubleQuote from '../../assets/jpg/doublequotes.jpg';
+import dolly from '../../assets/jpg/dolly.jpg';
+import alex from '../../assets/jpg/alex.jpg';
 
+require.context('../../assets', false, /\.(png|jpe?g|svg)$/)
+
+function importAll(r) {
+    let images = {};
+    r.keys().forEach((item, index) => { images[item.replace('./', '')] = r(item); });
+    return images
+}
+
+// DO NOT ADD ANY MORE IMAGE THIS IS DEPRECATED
 const images = {
     logo,
     twitterIcon,
@@ -40,5 +52,15 @@ const images = {
     coursesBanner,
     coachingInputBtn,
     searchIcon,
+    doubleQuote,
+    // james,
+    dolly,
+    alex
 }
+
+export const image = {
+    ...importAll(require.context('../../assets/jpg/', false, /\.(png|jpe?g|svg)$/)),
+    ...importAll(require.context('../../assets/svg/', false, /\.(png|jpe?g|svg)$/))
+}
+
 export default images;
