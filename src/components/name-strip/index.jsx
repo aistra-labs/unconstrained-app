@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import "./style.css";
 import { Rating } from 'react-simple-star-rating'
 
