@@ -58,12 +58,12 @@ const About = () => {
           </div>
         </div>
         <div className="mission-image-container">
-          <img className="banner-image" src={images['mission-img.svg']} loading="lazy" alt="banner" />
+          <img className="banner-image" src={images['mission-image.svg']} loading="lazy" alt="banner" />
         </div>
       </div>
       <div className="mission-container vision-container">
         <div className="mission-image-container">
-          <img className="banner-image" src={images['vision-image']} loading="lazy" alt="banner" />
+          <img className="banner-image" src={images['vision-image.svg']} loading="lazy" alt="banner" />
         </div>
         <div className="mission-content">
           <div className="mission-title">

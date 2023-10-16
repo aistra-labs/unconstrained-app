@@ -23,7 +23,7 @@ const Footer = () => {
         <div ref={footerRef} className="footer-container">
             <div className="top-footer">
                 <div className="left-footer">
-                    <img className="footer-logo" src={images['logo.svg']} alt="Unconstrained Logo" />
+                    <img className="footer-logo" src={images['unconstrained-logo.svg']} alt="Unconstrained Logo" />
                     <span className="footer-desc">Find us here</span>
                     <div className="footer-icon-container">
                         <img className="footer-icon" src={images['twitter-icon.svg']} alt="twitter-icon" />
