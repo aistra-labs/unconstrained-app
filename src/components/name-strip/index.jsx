@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import "./style.css";
 import { Rating } from 'react-simple-star-rating'
 
