@@ -3,7 +3,7 @@ import React, { memo } from "react";
 import "./coaching.css";
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-import { images } from "../../components/images";
+import { images }from "../../components/images";
 
 const Coaching = () => {
 
@@ -21,7 +21,7 @@ const Coaching = () => {
               aria-label="Type your question and hit enter"
               aria-describedby="basic-addon2"
             />
-            <img className="coaching-btn" src={images.coachingInputBtn} loading="lazy" alt="submit button" />
+            <img className="coaching-btn" src={images['coaching-input-btn.svg']} loading="lazy" alt="submit button" />
           </InputGroup>
         </div>
       </div>

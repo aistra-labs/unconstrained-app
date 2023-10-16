@@ -26,12 +26,12 @@ const Cards = () => {
     {
       header: "Running remote offsites and onbordings",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat fermentum, enim vel adipiscing non. Lacus, nunc, at et vel tellus dignissim quis.",
-      imageUrl: images.blog1
+      imageUrl: images['blog1.jpg']
     },
     {
       header: "Executive coach Joe Kwon reaches clients",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat fermentum, enim vel adipiscing non. Lacus, nunc, at et vel tellus dignissim quis.",
-      imageUrl: images.blog2
+      imageUrl: images['blog2.jpg']
     }
   ];
 

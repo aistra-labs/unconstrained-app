@@ -1,6 +1,6 @@
 import React from "react";
 import "./card.css";
-import { images } from '../images';
+import { images }from '../images';
 
 const Card = ({ imageUrl, header, description }) => {
   return (
@@ -19,22 +19,22 @@ const Cards = () => {
     {
       header: "Courses",
       description: "Our courses are designed to help you to understand and harness emerging technologies so that you can spend more time doing what you do best - supporting your students.",
-      imageUrl: images.p25
+      imageUrl: images['p25.jpg']
     },
     {
       header: "Curated Tools and Resources",
       description: "We vet the newest tools and resources in emerging technology and let you know how they can best support you and your students and give you back time.",
-      imageUrl: images.p26
+      imageUrl: images['p26.jpg']
     },
     {
       header: "Coaching with AI",
       description: "Meet our coaches that can support you in planning, and productivity",
-      imageUrl: images.p27
+      imageUrl: images['p27.jpg']
     },
     {
       header: "Community",
       description: "Connect with educators like you who are ready to explore and exchange ideas.",
-      imageUrl: images.p28
+      imageUrl: images['p28.jpg']
     }
   ];
 
