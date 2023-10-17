@@ -1,9 +1,7 @@
 import React, { memo } from "react"
 import "./header.css"
 import { Link } from "react-router-dom"
-import logo from '../../assets/svg/unconstrained-logo.svg'
-import login from '../../assets/svg/Login.svg'
-import signup from '../../assets/svg/Signup.svg'
+import { images } from "../images"
 
 const Header = props => {
     // const navigate = useNavigate();
@@ -22,7 +20,7 @@ const Header = props => {
         <div className="hcontainer">
             <div className="hlogo">
                 <Link to="/">
-                    <img src={logo} alt="Unconstrained Logo" width="280px" />
+                    <img src={images['unconstrained-logo.svg']} alt="Unconstrained Logo" width="280px" />
                 </Link>
             </div>
             <div className="hmenu">
@@ -34,8 +32,8 @@ const Header = props => {
                 <Link to="/resources">Resources</Link>
             </div>
             <div className="login-btn-container">
-                <img className="login-btn" src={login} alt="login button" />
-                <img className="login-btn" src={signup} alt="signup button" />
+                <img className="login-btn" src={images['Login.svg']} alt="login button" />
+                <img className="login-btn" src={images['Signup.svg']} alt="signup button" />
             </div>
         </div>
     )
