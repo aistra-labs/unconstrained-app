@@ -235,6 +235,7 @@
         }
         .team-banner-container{
             padding: 40px 20px;
+            margin-top: 40px;
             .banner-content{
                 width: 100%;
                 .team-title{
