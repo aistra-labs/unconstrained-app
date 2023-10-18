@@ -125,6 +125,48 @@
             }
         }
     }
+    .team-banner-container{
+        display: flex;
+        justify-content: center;
+        padding: 80px 122px;
+        .banner-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .team-title{
+                color: var(--foundation-black-black-900, #222526);
+                text-align: center;
+                font-family: Inter;
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+            .team-desc{
+                width: 620px;
+                display: flex;
+                flex-wrap: wrap;
+                color: var(--foundation-black-black-500, #50585B);
+                margin-top: 22px;
+                text-align: center;
+                font-family: Inter;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%;
+            }
+            .team-banner{
+                width: 1196px;
+                height: 672px;
+                margin-top: 62px;
+                .team-img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -190,6 +232,25 @@
         }
         .vision-container{
             flex-direction: column-reverse;
+        }
+        .team-banner-container{
+            padding: 40px 20px;
+            margin-top: 40px;
+            .banner-content{
+                width: 100%;
+                .team-title{
+                    width: 370px;
+                    font-size: 26px;
+                }
+                .team-desc{
+                    width: auto;
+                    font-size: 16px;
+                }
+                .team-banner{
+                    width: auto;
+                    height: auto;
+                }
+            }
         }
     }
 }
