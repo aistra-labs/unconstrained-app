@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="home-banner-container">
-        <div className="banner-content">
+        <div className="banner-content" style={{ display: 'flex' }}>
           <div className="banner-title">
             <span>Future of Learning is</span>
             <span className="orange-title">UnconstrainED</span>
