@@ -1,13 +1,13 @@
-import './App.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-// import Header from './components/header/Header';
+import { Suspense, lazy } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from 'react-router-dom';
-import { Suspense, lazy } from 'react';
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+// import Header from './components/header/Header';
 import Cards from './components/card';
 
 const Header = lazy(() => import('./components/header/Header'));

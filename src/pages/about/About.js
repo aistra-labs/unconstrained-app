@@ -78,6 +78,17 @@ const About = () => {
           </div>
         </div>
       </div>
+      <div className="team-banner-container">
+        <div className="banner-content">
+          <div className="team-title">Our Dedicated Team</div>
+          <div className="team-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit ut elit tellus luctus nec ullamcorper mattis pulvinar.
+          </div>
+          <div className="team-banner">
+            <img className="team-img" src={images['TeamPic.svg']} alt="Team Banner" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
