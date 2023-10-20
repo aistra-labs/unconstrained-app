@@ -20,7 +20,7 @@ const Header = props => {
         <div className="hcontainer">
             <div className="hlogo">
                 <Link to="/">
-                    <img src={images['unconstrained-logo.svg']} alt="Unconstrained Logo" width="280px" />
+                    <img src={images['new-logo.svg']} alt="Unconstrained Logo" width="280px" />
                 </Link>
             </div>
             <div className="hmenu">
@@ -29,7 +29,7 @@ const Header = props => {
                 <Link to="/courses">Courses</Link>
                 <Link to="/coaching">Coaching</Link>
                 <Link to="/community">Community</Link>
-                <Link to="/resources">Resources</Link>
+                <Link to="/resources">Curated Tools</Link>
             </div>
             <div className="login-btn-container">
                 <img className="login-btn" src={images['Login.svg']} alt="login button" />

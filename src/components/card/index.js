@@ -24,17 +24,17 @@ const Cards = () => {
     {
       header: "Curated Tools and Resources",
       description: "We vet the newest tools and resources in emerging technology and let you know how they can best support you and your students and give you back time.",
-      imageUrl: images['p26.jpg']
+      imageUrl: images['p28.jpg']
     },
     {
       header: "Coaching with AI",
       description: "Meet our coaches that can support you in planning, and productivity",
-      imageUrl: images['p27.jpg']
+      imageUrl: images['p26.jpg']
     },
     {
       header: "Community",
       description: "Connect with educators like you who are ready to explore and exchange ideas.",
-      imageUrl: images['p28.jpg']
+      imageUrl: images['p27.jpg']
     }
   ];
 

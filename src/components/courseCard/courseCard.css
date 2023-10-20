@@ -1,0 +1,82 @@
+.card-container{
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    height: 460px;
+    border-radius: 12px;
+    border: 1px solid #EEEEEF;
+    background: #FFF;
+    .image-container{
+        width: 374px;
+        height: 210px;
+        .card-image{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .card-content{
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        .card-header{
+            color: var(--foundation-black-black-900, #222526);
+            font-family: Inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+        }
+        .rating-review{
+            display: flex;
+            column-gap: 8px;
+            margin-top: 13px;
+            .rating-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 38px;
+                height: 26px;
+                border-radius: 4px;
+                background: var(--foundation-yellow-yellow-500, #F2CB05);
+                .rating{
+                    color: var(--foundation-black-black-800, #2C3032);
+                    font-family: Inter;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 22px;
+                }
+                .rating-star{
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+            .review{
+                color: var(--foundation-black-black-400, #73797C);
+                font-family: Inter;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 22px;
+            }
+        }
+        .card-desc{
+            margin-top: 19px;
+            color: var(--foundation-black-black-500, #50585B);
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .card-container{
+        .image-container{
+            
+        }
+    }
+}
