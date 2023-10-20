@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import "./home.css";
 import Cards from "../../components/card";
 import CardBlog from "../../components/cardBlog";
-import Testimonials from "../../components/testimonials";
+// import Testimonials from "../../components/testimonials";
 import { images }from "../../components/images";
 
 const Home = () => {
