@@ -53,13 +53,6 @@ const Cards = () => {
   return (
     <div className="card-teams">
       <div className="card-section">
-        <div className="card-section-header">Our Dedicated Teams</div>
-        <div className="card-section-header-container">
-          <div className="card-section-header-subtitle">
-            We are educators and developers who care deeply about supporting educators and schools in their quest  to support all students and all teachers.
-          </div>
-        </div>
-        <img className="team-pic" alt="team-pic" src={images['team-pic.svg']} />
         <div className="card-container">
           {cardData.map((card, index) => (
             <Card

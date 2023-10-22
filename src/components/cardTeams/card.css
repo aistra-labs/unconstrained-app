@@ -4,14 +4,9 @@
         flex-wrap: wrap;
         justify-content: center;
         flex: 1;
-        margin-left: 172px;
-        margin-right: 172px;
+        margin-left: 100px;
+        /* margin-right: 172px; */
         margin-top: 86px;
-    }
-
-    .team-pic {
-        width: 1196px;
-        height: 672px;
     }
 
     .card-image-container {
@@ -61,29 +56,6 @@
         align-items: center;
     }
 
-    .card-section-header {
-        font-family: Inter;
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 44px;
-        letter-spacing: 0em;
-        text-align: left;
-        display: flex;
-        justify-content: center;
-    }
-
-    .card-section-header-container {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 60px;
-        margin-top: 24px;
-    }
-
-    .card-section-header-subtitle {
-        max-width: 700px;
-        text-align: center;
-    }
-
     .card-header {
         margin: 0;
         background-color: transparent;
@@ -112,10 +84,35 @@
 
         /* Media query for mobile devices */
         .card {
-            width: 100%;
+            width: 50%;
             /* Full width on mobile */
             margin: 10px 0;
             border: none;
+        }
+
+        .card-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            /* padding: 20px; */
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex: 1 1;
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 0;
         }
     }
 }
