@@ -79,8 +79,19 @@ const About = () => {
           </div>
         </div>
       </div>
-      <CardValues />
-      <CardTeams />
+      <div className="team-banner-container">
+        <div className="banner-content">
+          <CardValues />
+          <div className="team-title">Our Dedicated Team</div>
+          <div className="team-desc">
+            We are educators and developers who care deeply about supporting educators and schools in their quest  to support all students and all teachers.
+          </div>
+          <div className="team-banner">
+            <img className="team-img" src={images['team-pic.svg']} alt="Team Banner" />
+          </div>
+          <CardTeams />
+        </div>
+      </div>
     </div>
   );
 };

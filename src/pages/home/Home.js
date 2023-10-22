@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="home-banner-container">
-        <div className="banner-content">
+        <div className="banner-content" style={{ display: 'flex' }}>
           <div className="banner-title">
             <span>Future of Learning is</span>
             <span className="orange-title">UnconstrainED</span>
@@ -30,6 +30,19 @@ const Home = () => {
         <Cards />
         <CardBlog />
         <Testimonials />
+      </div>
+      <div className="bottom-banner">
+        <div className="banner-content">
+          <div className="banner-title">
+            Come and join UnconstrainED today
+          </div>
+          <div className="banner-desc">
+            Join our ambitious team and help us reach the sky! Because sky is the limit, otherwise we would go further.
+          </div>
+          <div className="banner-btn">
+            <img className="login-btn" src={images['JoinTeam-btn.svg']} alt="Join button" />
+          </div>
+        </div>
       </div>
     </div>
   );
