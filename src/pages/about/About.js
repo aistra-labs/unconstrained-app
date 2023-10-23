@@ -9,7 +9,7 @@ const About = () => {
     <div className="about-container">
       <div className="about-banner">
         <div className="banner-image-container">
-          <img className="banner-image" src={images['about-banner.svg']} loading="lazy" alt="banner" />
+          <img className="banner-image" src={images['about-top-banner.svg']} loading="lazy" alt="banner" />
         </div>
         <div className="banner-content">
           <div className="banner-title">
@@ -23,7 +23,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="achievement-container">
+      {/* <div className="achievement-container">
         <div className="achievement-title">
           Counting Our Achievements
         </div>
@@ -45,7 +45,7 @@ const About = () => {
             <div className="sub-heading">Team members</div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="mission-container">
         <div className="mission-content">
           <div className="mission-title">
@@ -58,23 +58,23 @@ const About = () => {
           </div>
         </div>
         <div className="mission-image-container">
-          <img className="banner-image" src={images['mission-image.svg']} loading="lazy" alt="banner" />
+          <img className="banner-image" src={images['about-mission-img.svg']} loading="lazy" alt="banner" />
         </div>
       </div>
       <div className="mission-container vision-container">
         <div className="mission-image-container">
-          <img className="banner-image" src={images['vision-image.svg']} loading="lazy" alt="banner" />
+          <img className="banner-image" src={images['about-values-img.svg']} loading="lazy" alt="banner" />
         </div>
         <div className="mission-content">
           <div className="mission-title">
-            Our Vision
+            Values
           </div>
           <div className="mission-desc">
-            Our vision is to revolutionize education by creating a world where learning knows no boundaries. 
+            Our values is to revolutionize education by creating a world where learning knows no boundaries. 
             We envision a future where access to high-quality education is universal, personalized, and deeply engaging. 
             Through cutting-edge technology, innovative teaching methodologies, and a relentless commitment to student success, 
             we aim to empower learners to explore their passions, unlock their full potential, and become lifelong contributors to a global community. 
-            Our vision is a world where education not only prepares individuals for the challenges of tomorrow but also inspires them to shape a brighter future for all.
+            Our values is a world where education not only prepares individuals for the challenges of tomorrow but also inspires them to shape a brighter future for all.
           </div>
         </div>
       </div>
@@ -82,7 +82,7 @@ const About = () => {
         <div className="banner-content">
           <div className="team-title">Our Dedicated Team</div>
           <div className="team-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit ut elit tellus luctus nec ullamcorper mattis pulvinar.
+            We are educators and developers who care deeply about supporting educators and schools in their quest to support all students and all teachers.
           </div>
           <div className="team-banner">
             <img className="team-img" src={images['TeamPic.svg']} alt="Team Banner" />
