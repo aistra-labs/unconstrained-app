@@ -135,7 +135,7 @@
     .team-banner-container{
         display: flex;
         justify-content: center;
-        padding: 80px 122px;
+        padding: 80px;
         .banner-content{
             display: flex;
             flex-direction: column;

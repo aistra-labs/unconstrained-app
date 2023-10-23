@@ -1,7 +1,11 @@
 .card-values {
+    background: #F5FAFF;
+    width: 100vw;
+    padding: 0 122px;
+    padding-bottom: 80px;
     .card-container {
         display: flex;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         justify-content: space-between;
         /* padding: 20px; */
     }
@@ -42,8 +46,6 @@
     }
 
     .card-section {
-        padding-left: 50px;
-        padding-right: 50px;
         padding-top: 100px;
         /* padding-bottom: 100px; */
     }
