@@ -1,8 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { memo } from "react";
 import "./about.css";
-import { images }from "../../components/images";
-
+import { images } from "../../components/images";
+import CardValues from "../../components/cardValues";
+import CardTeams from "../../components/cardTeams";
 const About = () => {
 
   return (
@@ -17,8 +18,8 @@ const About = () => {
             <span className="orange-title">UnconstrainED</span>
           </div>
           <div className="banner-desc">
-            Sed aliquam dictumst quisque eget non nisl in rhoncus. 
-            In a ipsum ut aliquam ac felis consequat. 
+            Sed aliquam dictumst quisque eget non nisl in rhoncus.
+            In a ipsum ut aliquam ac felis consequat.
             In sit diam porta laoreet. Amet id magna diam diam in egestas.
           </div>
         </div>
@@ -52,8 +53,8 @@ const About = () => {
             Our Mission
           </div>
           <div className="mission-desc">
-            To cultivate a global network of educators, 
-            empowered to integrate emerging technologies into the learning experience, 
+            To cultivate a global network of educators,
+            empowered to integrate emerging technologies into the learning experience,
             freeing time to build nurturing, transformative relationships with students.
           </div>
         </div>
@@ -70,23 +71,25 @@ const About = () => {
             Values
           </div>
           <div className="mission-desc">
-            Our values is to revolutionize education by creating a world where learning knows no boundaries. 
-            We envision a future where access to high-quality education is universal, personalized, and deeply engaging. 
-            Through cutting-edge technology, innovative teaching methodologies, and a relentless commitment to student success, 
-            we aim to empower learners to explore their passions, unlock their full potential, and become lifelong contributors to a global community. 
-            Our values is a world where education not only prepares individuals for the challenges of tomorrow but also inspires them to shape a brighter future for all.
+            Our vision is to revolutionize education by creating a world where learning knows no boundaries.
+            We envision a future where access to high-quality education is universal, personalized, and deeply engaging.
+            Through cutting-edge technology, innovative teaching methodologies, and a relentless commitment to student success,
+            we aim to empower learners to explore their passions, unlock their full potential, and become lifelong contributors to a global community.
+            Our vision is a world where education not only prepares individuals for the challenges of tomorrow but also inspires them to shape a brighter future for all.
           </div>
         </div>
       </div>
       <div className="team-banner-container">
         <div className="banner-content">
+          <CardValues />
           <div className="team-title">Our Dedicated Team</div>
           <div className="team-desc">
-            We are educators and developers who care deeply about supporting educators and schools in their quest to support all students and all teachers.
+            We are educators and developers who care deeply about supporting educators and schools in their quest  to support all students and all teachers.
           </div>
           <div className="team-banner">
-            <img className="team-img" src={images['TeamPic.svg']} alt="Team Banner" />
+            <img className="team-img" src={images['team-pic.svg']} alt="Team Banner" />
           </div>
+          <CardTeams />
         </div>
       </div>
     </div>

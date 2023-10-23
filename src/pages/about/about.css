@@ -135,7 +135,7 @@
     .team-banner-container{
         display: flex;
         justify-content: center;
-        padding: 80px 122px;
+        padding: 80px;
         .banner-content{
             display: flex;
             flex-direction: column;
@@ -148,6 +148,7 @@
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
+                margin-top: 76px;
             }
             .team-desc{
                 width: 620px;

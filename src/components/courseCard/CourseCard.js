@@ -4,7 +4,7 @@ import { images } from "../images";
 
 const CourseCard = ({ imageUrl, header, description, rating, review }) => {
   return (
-    <div className="card-container">
+    <div className="course-card-container">
       <div className="image-container">
         <img src={imageUrl} alt={header} className="card-image" />
       </div>
