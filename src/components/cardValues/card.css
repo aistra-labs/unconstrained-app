@@ -3,6 +3,7 @@
     width: 100vw;
     padding: 0 122px;
     padding-bottom: 80px;
+
     .card-container {
         display: flex;
         /* flex-wrap: wrap; */
@@ -99,8 +100,16 @@
     }
 
     @media (max-width: 767px) {
+        padding: 0;
+        padding-bottom: 0px;
 
-        /* Media query for mobile devices */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
         .card {
             width: 100%;
             /* Full width on mobile */
