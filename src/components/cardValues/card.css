@@ -6,7 +6,7 @@
         /* padding: 20px; */
     }
 
-    .card-image-container{
+    .card-image-container {
         height: 220px;
         display: flex;
         justify-content: center;
@@ -59,10 +59,17 @@
         justify-content: center;
     }
 
-    .card-section-header-container{
+    .card-section-header-container {
         display: flex;
         justify-content: center;
         margin-bottom: 60px;
+    }
+
+    .card-section-header-inner {
+        max-width: 620px;
+        display: flex;
+        text-align: center;
+        margin-top: 24px;
     }
 
     .card-header {

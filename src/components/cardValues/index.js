@@ -1,12 +1,12 @@
 import React from "react";
 import "./card.css";
-import { images }from '../images';
+import { images } from '../images';
 
 const Card = ({ imageUrl, header, description }) => {
   return (
     <div className="card">
       <div className="card-image-container">
-      <img src={imageUrl} alt={header} className="card-image" />
+        <img src={imageUrl} alt={header} className="card-image" />
       </div>
       <div className="card-content">
         <h2 className="card-header">{header}</h2>
@@ -44,7 +44,11 @@ const Cards = () => {
     <div className="card-values">
       <div className="card-section">
         <div className="card-section-header">Values</div>
-        <div className="card-section-header-container">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut elit tellus luctus nec ullamcorper mattis pulvinar.</div>
+        <div className="card-section-header-container">
+          <div className="card-section-header-inner">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit ut elit tellus luctus nec ullamcorper mattis pulvinar.
+          </div>
+        </div>
         <div className="card-container">
           {cardData.map((card, index) => (
             <Card
