@@ -131,6 +131,8 @@
         border-radius: 8px;
         border: 1px solid #F54737;
         background: #FFF;
+        cursor: pointer;
+        text-decoration: none;
     }
 
     .read-more-text {

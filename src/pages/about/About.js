@@ -10,7 +10,7 @@ const About = () => {
     <div className="about-container">
       <div className="about-banner">
         <div className="banner-image-container">
-          <img className="banner-image" src={images['about-banner.svg']} loading="lazy" alt="banner" />
+          <img className="banner-image" src={images['about-top-banner.svg']} loading="lazy" alt="banner" />
         </div>
         <div className="banner-content">
           <div className="banner-title">
@@ -24,7 +24,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="achievement-container">
+      {/* <div className="achievement-container">
         <div className="achievement-title">
           Counting Our Achievements
         </div>
@@ -46,7 +46,7 @@ const About = () => {
             <div className="sub-heading">Team members</div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="mission-container">
         <div className="mission-content">
           <div className="mission-title">
@@ -59,16 +59,16 @@ const About = () => {
           </div>
         </div>
         <div className="mission-image-container">
-          <img className="banner-image" src={images['mission-image.svg']} loading="lazy" alt="banner" />
+          <img className="banner-image" src={images['about-mission-img.svg']} loading="lazy" alt="banner" />
         </div>
       </div>
       <div className="mission-container vision-container">
         <div className="mission-image-container">
-          <img className="banner-image" src={images['vision-image.svg']} loading="lazy" alt="banner" />
+          <img className="banner-image" src={images['about-values-img.svg']} loading="lazy" alt="banner" />
         </div>
         <div className="mission-content">
           <div className="mission-title">
-            Our Vision
+            Values
           </div>
           <div className="mission-desc">
             Our vision is to revolutionize education by creating a world where learning knows no boundaries.
