@@ -102,11 +102,11 @@ const Courses = () => {
         </div>
         <div className="courses-cards">
         <Slider {...settings}>
-          {cardData.map((card, i) => {
+          {cardData.map((card, index) => {
             return(
               <CourseCard 
                 imageUrl={card.imageUrl}
-                key={i}
+                key={index}
                 header={card.header}
                 description={card.description}
                 rating={card.rating}
