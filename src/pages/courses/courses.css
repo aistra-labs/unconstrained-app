@@ -94,13 +94,13 @@
                         position: absolute;
                         z-index: 1;
                         top: 30%;
-                        left: -12px;
+                        left: -10px;
                     }
                     .right-arrow{
                         position: absolute;
                         z-index: 1;
                         top: 30%;
-                        right: 25px;
+                        right: 0px;
                     }
                 }
             }
