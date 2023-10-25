@@ -25,6 +25,7 @@
             .user-header{
                 display: flex;
                 column-gap: 20px;
+                align-items: center;
                 .user-name{
                     color: var(--foundation-black-black-800, #2C3032);
                     font-family: Inter;
