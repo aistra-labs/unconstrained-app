@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import "./courseCard.css";
-import { images } from "../images";
+// import { images } from "../images";
 
 const CourseCard = ({ imageUrl, header, description, rating, review }) => {
   return (
