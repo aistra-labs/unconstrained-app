@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { memo, useEffect, useRef } from "react";
 import "./footer.css";
-import { images }from '../images';
+import { images } from '../images';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { useLocation } from "react-router-dom";
@@ -14,9 +14,9 @@ const Footer = () => {
     useEffect(() => {
         if (isCoachingRoute) {
             footerRef.current.classList.add('display-none');
-          } else {
+        } else {
             footerRef.current.classList.remove('display-none');
-          }
+        }
     }, [isCoachingRoute])
 
     return (
@@ -26,10 +26,18 @@ const Footer = () => {
                     <img className="footer-logo" src={images['unconstrained-logo.svg']} alt="Unconstrained Logo" />
                     <span className="footer-desc">Find us here</span>
                     <div className="footer-icon-container">
-                        <img className="footer-icon" src={images['twitter-icon.svg']} alt="twitter-icon" />
-                        <img className="footer-icon" src={images['fb-icon.svg']} alt="fb-icon" />
-                        <img className="footer-icon" src={images['insta-icon.svg']} alt="insta-icon" />
-                        <img className="footer-icon" src={images['ld-icon.svg']} alt="ld-icon" />
+                        <a href="https://twitter.com/UnconstrainED23" target="_blank" rel="noreferrer">
+                            <img className="footer-icon" src={images['twitter-icon.svg']} alt="twitter-icon" />
+                        </a>
+                        <a href="https://www.facebook.com/unconstrained.work/" target="_blank" rel="noreferrer">
+                            <img className="footer-icon" src={images['fb-icon.svg']} alt="fb-icon" />
+                        </a>
+                        <a href="https://www.instagram.com/unconstrained.ai/" target="_blank" rel="noreferrer">
+                            <img className="footer-icon" src={images['insta-icon.svg']} alt="insta-icon" />
+                        </a>
+                        <a href="https://www.linkedin.com/company/unconstrained-work/" target="_blank" rel="noreferrer">
+                            <img className="footer-icon" src={images['ld-icon.svg']} alt="ld-icon" />
+                        </a>
                     </div>
                 </div>
                 <div className="mid-footer-container">
