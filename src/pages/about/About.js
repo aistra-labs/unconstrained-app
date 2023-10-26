@@ -66,7 +66,7 @@ const About = () => {
         </div>
         <div className="mission-content">
           <div className="mission-title">
-            Values
+            Our Vision
           </div>
           <div className="mission-desc">
             Our vision is to revolutionize education by creating a world where learning knows no boundaries.

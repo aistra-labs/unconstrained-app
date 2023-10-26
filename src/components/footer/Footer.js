@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { memo, useEffect, useRef } from "react";
 import "./footer.css";
-import { images }from '../images';
+import { images } from '../images';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { useLocation } from "react-router-dom";
@@ -14,9 +14,9 @@ const Footer = () => {
     useEffect(() => {
         if (isCoachingRoute) {
             footerRef.current.classList.add('display-none');
-          } else {
+        } else {
             footerRef.current.classList.remove('display-none');
-          }
+        }
     }, [isCoachingRoute])
 
     return (
