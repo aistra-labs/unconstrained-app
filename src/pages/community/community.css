@@ -101,6 +101,26 @@
                 }
             }
         }
+    }
+    .community-bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+        row-gap: 27px;
+        .community-bottom-header{
+            color: var(--foundation-black-black-900, #222526);
+            font-family: Inter;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        .community-cards{
+            display: flex;
+            flex-direction: column;
+            row-gap: 24px;
+        }
     }    
 }
 
@@ -122,6 +142,11 @@
                 .community-tabs{
                     column-gap: 18px;
                 }
+            }
+        }
+        .community-bottom{
+            .community-cards{
+                padding: 0 12px;
             }
         }
     }
