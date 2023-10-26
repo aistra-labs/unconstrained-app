@@ -6,7 +6,7 @@
         width: 100%;
         height: auto;
         justify-content: center;
-        padding: 70px 0;
+        padding: 60px 0;
         column-gap: 64px;
         align-items: center;
         background: url('../../assets/svg/courses-banner-bg.svg'), lightgray 50% / cover no-repeat;
@@ -100,7 +100,7 @@
                         position: absolute;
                         z-index: 1;
                         top: 30%;
-                        right: 25px;
+                        right: 0px;
                     }
                 }
             }

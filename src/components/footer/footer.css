@@ -12,10 +12,15 @@
             display: flex;
             flex-direction: column;
             row-gap: 15px;
-            .footer-logo {
-                width: 123.8px;
-                height: 18.78px;
+            .footer-logo-container{
+                width: 148.8px;
+                height: 32.78px;
                 margin-bottom: 16px;
+                .footer-logo {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
             }
             .footer-desc{
                 color: var(--foundation-black-black-800, #2C3032);
