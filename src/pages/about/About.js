@@ -50,7 +50,7 @@ const About = () => {
       <div className="mission-container">
         <div className="mission-content">
           <div className="mission-title">
-            Our Mission
+            Mission
           </div>
           <div className="mission-desc">
             To cultivate a global network of educators,
@@ -68,7 +68,7 @@ const About = () => {
         </div>
         <div className="mission-content">
           <div className="mission-title">
-            Values
+            Our Vision
           </div>
           <div className="mission-desc">
             Our vision is to revolutionize education by creating a world where learning knows no boundaries.
@@ -82,9 +82,9 @@ const About = () => {
       <div className="team-banner-container">
         <div className="banner-content">
           <CardValues />
-          <div className="team-title">Our Dedicated Team</div>
+          <div className="team-title">Team</div>
           <div className="team-desc">
-            We are educators and developers who care deeply about supporting educators and schools in their quest  to support all students and all teachers.
+          We are educators and developers passionate about helping schools support every student and teacher.
           </div>
           <div className="team-banner">
             <img className="team-img" src={images['team-pic.svg']} alt="Team Banner" />
