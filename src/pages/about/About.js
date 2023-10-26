@@ -18,9 +18,7 @@ const About = () => {
             <span className="orange-title">UnconstrainED</span>
           </div>
           <div className="banner-desc">
-            UnConstrainED is dedicated to reclaiming time for teachers by offering professional learning in emerging
-            technology. Through courses, community, coaching, and curated tools and resources, we aim to alleviate
-            the time pressures educators face.
+            UnConstrainED is dedicated to reclaiming time for teachers by offering professional learning in emerging technology. Through courses, community, coaching, and curated tools and resources, we aim to alleviate the time pressures educators face.
           </div>
         </div>
       </div>
@@ -84,7 +82,7 @@ const About = () => {
           <CardValues />
           <div className="team-title">Team</div>
           <div className="team-desc">
-          We are educators and developers passionate about helping schools support every student and teacher.
+            We are educators and developers passionate about helping schools support every student and teacher.
           </div>
           <div className="team-banner">
             <img className="team-img" src={images['team-pic.svg']} alt="Team Banner" />

@@ -23,19 +23,24 @@ const Footer = () => {
         <div ref={footerRef} className="footer-container">
             <div className="top-footer">
                 <div className="left-footer">
-                    <img className="footer-logo" src={images['unconstrained-logo.svg']} alt="Unconstrained Logo" />
+                    <div className="footer-logo-container">
+                        <img className="footer-logo" src={images['new-logo.svg']} alt="Unconstrained Logo" />
+                    </div>
                     <span className="footer-desc">Find us here</span>
                     <div className="footer-icon-container">
-                        <a href="https://twitter.com/UnconstrainED23" target="_blank" rel="noreferrer">
+                        <a href="https://twitter.com/UnconstrainED23" target="_blank" rel="noopener noreferrer">
                             <img className="footer-icon" src={images['twitter-icon.svg']} alt="twitter-icon" />
                         </a>
-                        <a href="https://www.facebook.com/unconstrained.work/" target="_blank" rel="noreferrer">
+
+                        <a href="https://www.facebook.com/unconstrained.work/" target="_blank" rel="noopener noreferrer">
                             <img className="footer-icon" src={images['fb-icon.svg']} alt="fb-icon" />
                         </a>
-                        <a href="https://www.instagram.com/unconstrained.ai/" target="_blank" rel="noreferrer">
+
+                        <a href="https://www.instagram.com/unconstrained.ai/" target="_blank" rel="noopener noreferrer">
                             <img className="footer-icon" src={images['insta-icon.svg']} alt="insta-icon" />
                         </a>
-                        <a href="https://www.linkedin.com/company/unconstrained-work/" target="_blank" rel="noreferrer">
+
+                        <a href="https://www.linkedin.com/company/unconstrained-work/" target="_blank" rel="noopener noreferrer">
                             <img className="footer-icon" src={images['ld-icon.svg']} alt="ld-icon" />
                         </a>
                     </div>
@@ -49,7 +54,7 @@ const Footer = () => {
                             <span>Courses</span>
                             <span>Coaching</span>
                             <span>Community</span>
-                            <span>Resources</span>
+                            <span>Curated Tools</span>
                         </div>
                     </div>
                     <div className="mid-footer">

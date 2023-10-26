@@ -9,22 +9,22 @@ const Courses = () => {
 
   const cardData = [
     {
-      header: "AI for Routine Tasks",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+      header: "AI for Routine Tasks: Coming Soon",
+      description: "Learn how to automate your workflows related to email, report writing, and other non-student related tasks.",
       imageUrl: images['course1.png'],
       rating: '4.7',
       review: '207'
     },
     {
-      header: "AI for Assessment",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
+      header: "AI for Assessment: Coming Soon",
+      description: "Learn how to use AI to give feedback to your students, create assessments, and support grading, as well as how to create AI Proof assignments (and it's not using an AI detector).",
       imageUrl: images['course2.png'],
       rating: '4.7',
       review: '720'
     },
     {
-      header: "AI for Differentiation",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+      header: "AI for Differentiation: Coming Soon",
+      description: "Learn how to use AI to create lessons, units, and assignments that meet the diverse needs of your students and inspire them based on their interests.",
       imageUrl: images['course3.png'],
       rating: '4.7',
       review: '480'
@@ -81,9 +81,11 @@ const Courses = () => {
             <span className="orange-title">AI</span> for Learning Design
           </div>
           <div className="banner-desc">
-            Sed aliquam dictumst quisque eget non nisl in rhoncus. 
-            In a ipsum ut aliquam ac felis consequat. In sit diam porta laoreet. 
-            Amet id magna diam diam in egestas.
+            <div>Enduring Understandings</div>
+            <div>AI offers transformative opportunities and challenges in the educational landscape.</div>
+            <div>Selecting appropriate AI tools and using them responsibly is crucial for maximizing their benefit in teaching and TIME</div>
+            <div>Ethical considerations play a pivotal role in AI's adoption in the classroom.</div>
+            <div>Effective integration of AI requires hands-on practice, collaboration, and reflective planning.</div>
           </div>
           <img className="signup-btn" src={images['courses-signup-btn.svg']} loading="lazy" alt="signup button" />
         </div>
