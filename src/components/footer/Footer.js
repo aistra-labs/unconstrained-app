@@ -6,18 +6,21 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { useLocation } from "react-router-dom";
 
+const footerLessRoutes = ['/coaching', '/signin']
+
 const Footer = () => {
     const location = useLocation();
-    const isCoachingRoute = location.pathname.startsWith('/coaching');
+    const isFooterLessRoutes = footerLessRoutes.filter(el=>location.pathname.startsWith(el)).length>0;
+    
     const footerRef = useRef();
 
     useEffect(() => {
-        if (isCoachingRoute) {
+        if (isFooterLessRoutes) {
             footerRef.current.classList.add('display-none');
         } else {
             footerRef.current.classList.remove('display-none');
         }
-    }, [isCoachingRoute])
+    }, [isFooterLessRoutes])
 
     return (
         <div ref={footerRef} className="footer-container">
