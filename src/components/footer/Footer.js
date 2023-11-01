@@ -28,7 +28,7 @@ const Footer = () => {
                 <div className="left-footer">
                     <div className="footer-logo-container">
                         {/* <img className="footer-logo" src={images['new-logo.svg']} alt="Unconstrained Logo" /> */}
-                        Powered by <a href="https://aistra.com/" target="_blank"><img
+                        Powered by <a href="https://aistra.com/" target="_blank" rel="noreferrer"><img
                             className="footer-logo-powered"
                             src={'https://storage.googleapis.com/aistra-website-assets/assets/logo/aistra-labs.svg'}
                             alt="Unconstrained Logo" /></a>
