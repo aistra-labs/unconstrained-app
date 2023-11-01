@@ -1,0 +1,61 @@
+.input-field {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-height: 70px;
+    /* width: 100%; */
+    /* background-color: red; */
+
+    .header-input-field {
+        color: var(--foundation-black-black-800, #2C3032);
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 160%;
+    }
+
+    .input-container {
+        .input {
+            width: 100%;
+            height: 48px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            background: #F8F6F2;
+            outline: none;
+            border: none;
+            padding-right: 50px;
+            padding-left: 10px;
+        }
+
+        .show-password-button {
+            outline: none;
+            border: none;
+            background: none;
+            margin-left: -45px;
+        }
+    }
+
+    .details {
+        color: var(--foundation-black-black-300, #8A8F91);
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        text-align: center;
+        margin-top: 12px;
+    }
+
+    @media (max-width: 767px) {
+
+        /* Media query for mobile devices */
+        .card {
+            width: 100%;
+            /* Full width on mobile */
+            margin: 10px 0;
+            border: none;
+        }
+    }
+}

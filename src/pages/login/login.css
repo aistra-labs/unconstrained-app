@@ -48,6 +48,7 @@
             font-style: normal;
             font-weight: 600;
             line-height: 160%;
+            margin-top: 36px;
 
             .register-with-email {
                 text-align: center;
@@ -66,6 +67,12 @@
             border-color: #EEEEEF;
         }
 
+        .name {
+            display: flex;
+            flex-direction: row;
+            width: 460px;
+        }
+
         .header {
             color: var(--foundation-black-black-900, #222526);
             text-align: center;
@@ -74,6 +81,54 @@
             font-style: normal;
             font-weight: 700;
             line-height: normal;
+        }
+
+        .signup-btn {
+            margin-top: 56px;
+            display: flex;
+            width: 440px;
+            height: 48px;
+            padding: 15px 24px 16px 24px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            background: var(--foundation-red-light-red-light-400, #F54737);
+
+            color: #FFF;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            outline: none;
+            border: none;
+        }
+
+        .signup-container {
+            width: 440px;
+            height: 48px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: #fee6e699;
+            outline: none;
+            border: none;
+            margin-top: 40px;
+
+            .signup-google {
+                color: var(--foundation-black-black-800, #2C3032);
+                font-family: Inter;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 160%;
+                margin-left: 16px;
+            }
         }
 
         .already-account {
@@ -95,7 +150,19 @@
                 font-style: normal;
                 font-weight: 600;
                 line-height: 160%;
+                margin-left: 5px;
             }
+        }
+
+        .details {
+            color: var(--foundation-black-black-300, #8A8F91);
+            font-family: Inter;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%;
+            text-align: center;
+            margin-top: 12px;
         }
     }
 }
