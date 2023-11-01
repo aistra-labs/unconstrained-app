@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { memo } from "react";
 import "./resources.css";
-import data from './data';
+// import data from './data';
 
 const Resources = () => {
 
@@ -11,7 +11,8 @@ const Resources = () => {
         <div className="resources-title">
           Curated Tools and Resources
         </div>
-        <div className="resources-content">
+        Coming Soon...
+        {/* <div className="resources-content">
           {data.map((card, i) => {
             return (
               <div key={i} className="resource-card">
@@ -36,7 +37,7 @@ const Resources = () => {
               </div>
             )
           })}
-        </div>
+        </div> */}
       </div>
     </div>
   );

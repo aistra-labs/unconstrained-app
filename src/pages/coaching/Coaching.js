@@ -10,9 +10,10 @@ const Coaching = () => {
   return (
     <div className="coaching-container">
       <div className="coaching-top">
-        <div className="title-text">Hi there!</div>
-        <div className="title-text bottom">How can I help?</div>
-        <div className="title-text bottom">Still Developing...</div>
+        {/* <div className="title-text">Hi there!</div> */}
+        {/* <div className="title-text bottom">How can I help?</div> */}
+        <div className="title-text bottom">Coming Soon...</div>
+        {/* <div className="title-text bottom">Still Developing...</div> */}
       </div>
       <div className="coaching-bottom">
         <div className="coaching-input-container">
