@@ -19,22 +19,26 @@ const Cards = () => {
     {
       header: "Courses",
       description: "Our courses are designed to help you to understand and harness emerging technologies so that you can spend more time doing what you do best - supporting your students.",
-      imageUrl: images['p25.jpg']
+      imageUrl: images['p25.jpg'],
+      link: '/courses'
     },
     {
       header: "Curated Tools and Resources",
       description: "We vet the newest tools and resources in emerging technology and let you know how they can best support you and your students and give you back time.",
-      imageUrl: images['p28.jpg']
+      imageUrl: images['p28.jpg'],
+      link: '/resources'
     },
     {
       header: "Coaching with AI",
       description: "Meet our coaches that can support you in planning, and productivity",
-      imageUrl: images['p26.jpg']
+      imageUrl: images['p26.jpg'],
+      link: '/coaching'
     },
     {
       header: "Community",
       description: "Connect with educators like you who are ready to explore and exchange ideas.",
-      imageUrl: images['p27.jpg']
+      imageUrl: images['p27.jpg'],
+      link: '/community'
     }
   ];
 
@@ -44,12 +48,14 @@ const Cards = () => {
         <div className="card-section-header">What We Offer</div>
         <div className="card-container">
           {cardData.map((card, index) => (
+            <a href={card.link}>
             <Card
               key={index}
               imageUrl={card.imageUrl}
               header={card.header}
               description={card.description}
             />
+            </a>
           ))}
         </div>
       </div>
