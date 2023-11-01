@@ -44,10 +44,10 @@ const Header = props => {
                 <Link to="/community">Community</Link>
                 <Link to="/resources">Curated Tools</Link>
             </div>
-            <div className="login-btn-container">
+            {/* <div className="login-btn-container">
                 <img className="login-btn" src={images['Login.svg']} alt="login button" />
                 <img className="login-btn" src={images['Signup.svg']} alt="signup button" />
-            </div>
+            </div> */}
         </div>
     )
 }
