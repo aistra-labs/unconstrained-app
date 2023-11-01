@@ -40,9 +40,9 @@ const Home = () => {
           <div className="banner-desc">
             Join our ambitious team and help us reach the sky! Because sky is the limit, otherwise we would go further.
           </div>
-          <div className="banner-btn">
+          {/* <div className="banner-btn">
             <img className="login-btn" src={images['JoinTeam-btn.svg']} alt="Join button" />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

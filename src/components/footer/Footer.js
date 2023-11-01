@@ -10,8 +10,8 @@ const footerLessRoutes = ['/coaching', '/signin']
 
 const Footer = () => {
     const location = useLocation();
-    const isFooterLessRoutes = footerLessRoutes.filter(el=>location.pathname.startsWith(el)).length>0;
-    
+    const isFooterLessRoutes = footerLessRoutes.filter(el => location.pathname.startsWith(el)).length > 0;
+
     const footerRef = useRef();
 
     useEffect(() => {
@@ -27,7 +27,12 @@ const Footer = () => {
             <div className="top-footer">
                 <div className="left-footer">
                     <div className="footer-logo-container">
-                        <img className="footer-logo" src={images['new-logo.svg']} alt="Unconstrained Logo" />
+                        {/* <img className="footer-logo" src={images['new-logo.svg']} alt="Unconstrained Logo" /> */}
+                        Powered by <a href="https://aistra.com/" target="_blank"><img
+                            className="footer-logo-powered"
+                            src={'https://storage.googleapis.com/aistra-website-assets/assets/logo/aistra-labs.svg'}
+                            alt="Unconstrained Logo" /></a>
+
                     </div>
                     <span className="footer-desc">Find us here</span>
                     <div className="footer-icon-container">
