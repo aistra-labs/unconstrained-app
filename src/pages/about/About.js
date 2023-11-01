@@ -60,11 +60,11 @@ const About = () => {
           <img className="banner-image" src={images['about-mission-img.svg']} loading="lazy" alt="banner" />
         </div>
       </div>
-      <div className="mission-container vision-container">
+      {/* <div className="mission-container vision-container">
         <div className="mission-image-container">
           <img className="banner-image" src={images['about-values-img.svg']} loading="lazy" alt="banner" />
         </div>
-        {/* <div className="mission-content">
+        <div className="mission-content">
           <div className="mission-title">
             Our Vision
           </div>
@@ -75,8 +75,8 @@ const About = () => {
             we aim to empower learners to explore their passions, unlock their full potential, and become lifelong contributors to a global community.
             Our vision is a world where education not only prepares individuals for the challenges of tomorrow but also inspires them to shape a brighter future for all.
           </div>
-        </div> */}
-      </div>
+        </div>
+      </div> */}
       <div className="team-banner-container">
         <div className="banner-content">
           <CardValues />
