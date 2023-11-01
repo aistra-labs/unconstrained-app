@@ -31,14 +31,14 @@ const Courses = () => {
     },
     {
       header: "AI for Routine Tasks",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+      description: "",
       imageUrl: images['course1.png'],
       rating: '4.7',
       review: '207'
     },
     {
       header: "AI for Assessment",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
+      description: "",
       imageUrl: images['course2.png'],
       rating: '4.7',
       review: '720'

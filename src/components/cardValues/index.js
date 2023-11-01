@@ -46,7 +46,7 @@ const Cards = () => {
         <div className="card-section-header">Values</div>
         <div className="card-section-header-container">
           <div className="card-section-header-inner">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit ut elit tellus luctus nec ullamcorper mattis pulvinar.
+            {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit ut elit tellus luctus nec ullamcorper mattis pulvinar. */}
           </div>
         </div>
         <div className="card-container">

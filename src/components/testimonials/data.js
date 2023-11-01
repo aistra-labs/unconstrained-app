@@ -21,7 +21,7 @@ const data = [
         name: "Dolly Parton",
         image: images['dolly.jpg'],
         position: "Marketing manager",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        desc: "It was a transcending experience",
         rating: 4.5,
         id: 3
     },
