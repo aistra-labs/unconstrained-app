@@ -87,7 +87,7 @@ const Courses = () => {
             <div>Ethical considerations play a pivotal role in AI's adoption in the classroom.</div>
             <div>Effective integration of AI requires hands-on practice, collaboration, and reflective planning.</div>
           </div>
-          <img className="signup-btn" src={images['courses-signup-btn.svg']} loading="lazy" alt="signup button" />
+          {/* <img className="signup-btn" src={images['courses-signup-btn.svg']} loading="lazy" alt="signup button" /> */}
         </div>
         <div className="courses-banner">
           <div className="banner-image-container">
