@@ -84,6 +84,11 @@
                     font-weight: 400;
                     line-height: 160%;
                     row-gap: 10px;
+
+                    .link-no-deco {
+                        text-decoration: none;
+                        color: #000;
+                    }
                 }
             }
         }
@@ -112,6 +117,11 @@
                 font-weight: 400;
                 line-height: 160%;
                 row-gap: 10px;
+
+                .link-no-deco {
+                    text-decoration: none;
+                    color: #000;
+                }
             }
 
             .subscribe-btn {
@@ -170,6 +180,10 @@
                 row-gap: 5px;
 
                 .sub-links {
+                    .link-no-deco {
+                        text-decoration: none;
+                        color: #000;
+                    }
                     .subscribe-style {
                         padding-right: 20px;
                     }

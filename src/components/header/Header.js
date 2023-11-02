@@ -41,7 +41,8 @@ const Header = props => {
                 <Link to="/about">About</Link>
                 <Link to="/courses">Courses</Link>
                 <Link to="/coaching">Coaching</Link>
-                <Link to="/community">Community</Link>
+                {/* <Link to="/community">Community</Link> */}
+                <Link target="_blank" to="https://discord.com/channels/1146791094890283018/1146795215429062708">Community</Link>
                 <Link to="/resources">Curated Tools</Link>
             </div>
             {/* <div className="login-btn-container">

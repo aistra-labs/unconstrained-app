@@ -57,7 +57,7 @@ const About = () => {
           </div>
         </div>
         <div className="mission-image-container">
-          <img className="banner-image" src={images['about-mission-img.svg']} loading="lazy" alt="banner" />
+          <img className="banner-image-medium" src={images['about-mission-img.svg']} loading="lazy" alt="banner" height="500px" />
         </div>
       </div>
       {/* <div className="mission-container vision-container">

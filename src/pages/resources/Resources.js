@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { memo } from "react";
 import "./resources.css";
+import { images } from "../../components/images";
 // import data from './data';
 
 const Resources = () => {
@@ -12,6 +13,7 @@ const Resources = () => {
           Curated Tools and Resources
         </div>
         Coming Soon...
+        <img className="banner-image" src={images['curated_tools.png']} loading="lazy" alt="curated_tools" />
         {/* <div className="resources-content">
           {data.map((card, i) => {
             return (

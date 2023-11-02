@@ -2,8 +2,8 @@
 import React, { memo, useEffect, useRef } from "react";
 import "./footer.css";
 import { images } from '../images';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
+// import Form from 'react-bootstrap/Form';
+// import InputGroup from 'react-bootstrap/InputGroup';
 import { useLocation } from "react-router-dom";
 
 const footerLessRoutes = ['/coaching', '/signin']
@@ -57,25 +57,65 @@ const Footer = () => {
                     <div className="mid-footer">
                         <h3 className="footer-title">Company</h3>
                         <div className="sub-links">
-                            <span>Home</span>
-                            <span>About</span>
-                            <span>Courses</span>
-                            <span>Coaching</span>
-                            <span>Community</span>
-                            <span>Curated Tools</span>
+                            <a href="/" rel="noopener noreferrer" className="link-no-deco">
+                                <span>
+                                Home
+                                </span>
+                            </a>
+                            <a href="/about" rel="noopener noreferrer" className="link-no-deco">
+                                <span>
+                                About
+                                </span>
+                            </a>
+                            <a href="/courses" rel="noopener noreferrer" className="link-no-deco">
+                                <span>
+                                Courses
+                                </span>
+                            </a>
+                            <a href="/coaching" rel="noopener noreferrer" className="link-no-deco">
+                                <span>
+                                Coaching
+                                </span>
+                            </a>
+                            <a href="https://discord.com/channels/1146791094890283018/1146795215429062708" rel="noopener noreferrer" className="link-no-deco">
+                                <span>
+                                Community
+                                </span>
+                            </a>
+                            <a href="/resources" rel="noopener noreferrer" className="link-no-deco">
+                                <span>
+                                Curated Tools
+                                </span>
+                            </a>
                         </div>
                     </div>
                     <div className="mid-footer">
                         <h3 className="footer-title">Useful Links</h3>
                         <div className="sub-links">
-                            <span>Terms of Services</span>
-                            <span>Privacy Policy</span>
-                            <span>Cookie Policy</span>
-                            <span>Contact Us</span>
+                            <a href="https://aistra.com/termsandcondition/" rel="noopener noreferrer" className="link-no-deco">
+                                <span>
+                                Terms of Services
+                                </span>
+                            </a>
+                            <a href="https://aistra.com/privacypolicy/" target="_blank" rel="noopener noreferrer" className="link-no-deco">
+                                <span>
+                                Privacy Policy
+                                </span>
+                            </a>
+                            {/* <a href="/" rel="noopener noreferrer" className="link-no-deco">
+                                <span>
+                                Cookie Policy
+                                </span>
+                            </a> */}
+                            <a href="/" rel="noopener noreferrer" className="link-no-deco">
+                                <span>
+                                Contact Us
+                                </span>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div className="news-container">
+                {/* <div className="news-container">
                     <h3 className="footer-title">Newsletter</h3>
                     <div className="sub-links">
                         <span>Sign up and receive the lastest news via email.</span>
@@ -88,7 +128,7 @@ const Footer = () => {
                             <InputGroup.Text className="subscribe-btn" id="basic-addon2">Subscribe</InputGroup.Text>
                         </InputGroup>
                     </div>
-                </div>
+                </div> */}
             </div>
             <div className="bottom-footer">
                 Copyright 2023 The UnconstrainED  All Rights Reserved.

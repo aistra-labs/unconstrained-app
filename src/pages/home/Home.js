@@ -3,7 +3,7 @@ import "./home.css";
 import Cards from "../../components/card";
 import CardBlog from "../../components/cardBlog";
 // import Testimonials from "../../components/testimonials";
-import { images }from "../../components/images";
+import { images } from "../../components/images";
 
 const Home = () => {
 
@@ -35,10 +35,10 @@ const Home = () => {
         <img className="banner-image" src={images['home-bottom-banner.svg']} loading="lazy" alt="banner" />
         <div className="banner-content">
           <div className="banner-title">
-            Come and join UnconstrainED today
+            Join UnconstrainED
           </div>
           <div className="banner-desc">
-            Join our ambitious team and help us reach the sky! Because sky is the limit, otherwise we would go further.
+          Become a member of our dedicated team and contribute to our mission of uplifting educators and their students.
           </div>
           {/* <div className="banner-btn">
             <img className="login-btn" src={images['JoinTeam-btn.svg']} alt="Join button" />

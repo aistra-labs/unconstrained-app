@@ -30,7 +30,7 @@ const Cards = () => {
     },
     {
       header: "Coaching with AI",
-      description: "Meet our coaches that can support you in planning, and productivity",
+      description: "Meet our coaches who can support you in planning and productivity. (changing that to who, taking out comma after planning and adding full stop after productivity)",
       imageUrl: images['p26.jpg'],
       link: '/coaching'
     },
