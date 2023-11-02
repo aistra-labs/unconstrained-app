@@ -48,7 +48,7 @@ const Cards = () => {
         <div className="card-section-header">What We Offer</div>
         <div className="card-container">
           {cardData.map((card, index) => (
-            <a href={card.link}>
+            <a href={card.link} class="offer-card">
             <Card
               key={index}
               imageUrl={card.imageUrl}
