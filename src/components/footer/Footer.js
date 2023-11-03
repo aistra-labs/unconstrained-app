@@ -6,7 +6,8 @@ import { images } from '../images';
 // import InputGroup from 'react-bootstrap/InputGroup';
 import { useLocation } from "react-router-dom";
 
-const footerLessRoutes = ['/coaching', '/signin']
+// const footerLessRoutes = ['/coaching', '/signin'];
+const footerLessRoutes = ['/signin'];
 
 const Footer = () => {
     const location = useLocation();
@@ -107,7 +108,7 @@ const Footer = () => {
                                 Cookie Policy
                                 </span>
                             </a> */}
-                            <a href="/" rel="noopener noreferrer" className="link-no-deco">
+                            <a href="mailto:fiona@unconstrained.work" rel="noopener noreferrer" className="link-no-deco">
                                 <span>
                                 Contact Us
                                 </span>

@@ -57,6 +57,7 @@ const Cards = () => {
             description={card.description}
             linkUrl={card.linkUrl}
             author={card.author}
+            date={card.date}
           />
         ))}
       </div>

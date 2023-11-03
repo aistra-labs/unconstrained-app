@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { memo } from "react";
 import "./coaching.css";
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
-import { images }from "../../components/images";
+// import Form from 'react-bootstrap/Form';
+// import InputGroup from 'react-bootstrap/InputGroup';
+// import { images }from "../../components/images";
 
 const Coaching = () => {
 
@@ -15,7 +15,7 @@ const Coaching = () => {
         <div className="title-text bottom">Coming Soon...</div>
         {/* <div className="title-text bottom">Still Developing...</div> */}
       </div>
-      <div className="coaching-bottom">
+      {/* <div className="coaching-bottom">
         <div className="coaching-input-container">
           <InputGroup className="input-val">
             <Form.Control
@@ -26,7 +26,7 @@ const Coaching = () => {
             <img className="coaching-btn" src={images['coaching-input-btn.svg']} loading="lazy" alt="submit button" />
           </InputGroup>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

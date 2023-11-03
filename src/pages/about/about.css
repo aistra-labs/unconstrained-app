@@ -104,6 +104,7 @@
         justify-content: center;
         padding-top: 110px;
         column-gap: 80px;
+        height: 700px;
         .mission-content{
             display: flex;
             flex-direction: column;
@@ -140,7 +141,7 @@
     .team-banner-container{
         display: flex;
         justify-content: center;
-        padding: 80px;
+        /* padding: 80px; */
         .banner-content{
             display: flex;
             flex-direction: column;
