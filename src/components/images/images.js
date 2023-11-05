@@ -6,6 +6,7 @@ function importAll(r) {
 
 const images = {
     ...importAll(require.context('../../assets/jpg/', false, /\.(png|jpe?g|svg)$/)),
+    ...importAll(require.context('../../assets/png/', false, /\.(png|jpe?g|svg)$/)),
     ...importAll(require.context('../../assets/svg/', false, /\.(png|jpe?g|svg)$/))
 }
 

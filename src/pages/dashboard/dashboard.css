@@ -1,0 +1,118 @@
+@import '/src/toolkit/variables.css';
+
+/* .dashoboard-container {
+} */
+
+.dashboard-controller {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFFAF5;
+    /* border-bottom: 1px solid #FFEFDB; */
+    min-height: 340px;
+    position: relative;
+}
+
+.tree-logo {
+    position: absolute;
+    width: 253px;
+    height: 304px;
+    top: 36px;
+    right: 16px;
+}
+
+.dashboard-avatar{
+    margin-top: 32px;
+    width: 120px;
+    height: 120px;
+}
+
+.welcome-text {
+    font-size: var(--font-size-larger);
+    margin-top: 18px;
+}
+
+.university-logo-block{
+    margin: 15px 0 33px;
+}
+
+.university-logo{
+    margin-right: 12px;
+    width: 40px;
+    height: 40px;
+}
+
+.university-campus-logo{
+    margin-right: 12px;
+    width: 50px;
+    height: 40px;
+}
+
+.university-star-logo{
+    width: 40px;
+    height: 40px;
+}
+
+.tabs-controller{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.tab-content{
+    display: flex;
+    justify-content: center;
+
+    .dashboard-layout {
+        display: flex;
+        gap: 15px;
+    }
+}
+
+.nav-item {
+    max-width: 140px;
+}
+
+.nav-item .nav-link {
+    color: var(--foundation-black-black-800, #2C3032);
+
+  }
+  
+  .nav-item .nav-link.active {
+    /* border-radius: 8px; */
+    color: var(--foundation-orange-orange-500, #F28705);
+    text-align: center;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .tree-logo {
+        display: none;
+    }
+
+    .tab-pane{
+        width: 100%;
+    }
+
+    .tabs-controller{
+        margin-bottom: 10px;
+    }
+
+    .dashboard-layout{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .dashboard-layout{
+        flex-direction: column;
+        align-items: center;
+    }
+}

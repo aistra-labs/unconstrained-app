@@ -18,6 +18,7 @@ const Courses = lazy(() => import('./pages/courses/Courses'));
 const Coaching = lazy(() => import('./pages/coaching/Coaching'));
 const Community = lazy(() => import('./pages/community/Community'));
 const Resources = lazy(() => import('./pages/resources/Resources'));
+const Dashboard = lazy(() => import('./pages/dashboard'));
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/community" element={<Community />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/cards" element={<Cards />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
         <Footer />
       </Suspense>
