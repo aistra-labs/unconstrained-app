@@ -55,6 +55,7 @@
 
 .tabs-controller{
     display: flex;
+    background-color: #FFFAF5;
     justify-content: center;
     margin-bottom: 40px;
 }
@@ -102,6 +103,7 @@
 
     .tabs-controller{
         margin-bottom: 10px;
+        background-color: #FFFAF5;
     }
 
     .dashboard-layout{
