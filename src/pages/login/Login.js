@@ -49,7 +49,7 @@ const Login = () => {
           onChange={(e) => console.log('password', e)}
           details={'Use 8 or more characters with a mix of letters, numbers & symbols.'}
         />
-        <button class="signup-btn">Sign Up</button>
+        <button className="signup-btn">Sign Up</button>
         <div className="details">
           By signing up, you accept UnconstrainED privacy policy and terms of use.
         </div>

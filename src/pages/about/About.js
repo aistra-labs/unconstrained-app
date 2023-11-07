@@ -18,7 +18,7 @@ const About = () => {
             <span className="orange-title">UnconstrainED</span>
           </div>
           <div className="banner-desc">
-            UnConstrainED is dedicated to reclaiming time for teachers by offering professional learning in emerging technology. Through courses, community, coaching, and curated tools and resources, we aim to alleviate the time pressures educators face.
+            UnconstrainED is dedicated to reclaiming time for teachers by offering professional learning in emerging technology. Through courses, community, coaching, and curated tools and resources, we aim to alleviate the time pressures educators face.
           </div>
         </div>
       </div>

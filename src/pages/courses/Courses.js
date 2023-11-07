@@ -2,7 +2,7 @@
 import React, { memo } from "react";
 import Slider from "react-slick";
 import "./courses.css";
-import { images }from "../../components/images";
+import { images } from "../../components/images";
 import CourseCard from "../../components/courseCard/CourseCard";
 
 const Courses = () => {
@@ -81,11 +81,13 @@ const Courses = () => {
             <span className="orange-title">AI</span> for Learning Design
           </div>
           <div className="banner-desc">
-            <div>Enduring Understandings</div>
-            <div>AI offers transformative opportunities and challenges in the educational landscape.</div>
-            <div>Selecting appropriate AI tools and using them responsibly is crucial for maximizing their benefit in teaching and TIME</div>
-            <div>Ethical considerations play a pivotal role in AI's adoption in the classroom.</div>
-            <div>Effective integration of AI requires hands-on practice, collaboration, and reflective planning.</div>
+            <div>Learning Goals:</div>
+            <ul>
+              <li>AI offers transformative opportunities and challenges in the educational landscape.</li>
+              <li>Selecting appropriate AI tools and using them responsibly is crucial for maximizing their benefit in teaching and TIME</li>
+              <li>Ethical considerations play a pivotal role in AI's adoption in the classroom.</li>
+              <li>Effective integration of AI requires hands-on practice, collaboration, and reflective planning.</li>
+            </ul>
           </div>
           {/* <img className="signup-btn" src={images['courses-signup-btn.svg']} loading="lazy" alt="signup button" /> */}
         </div>
@@ -103,20 +105,20 @@ const Courses = () => {
           </div> */}
         </div>
         <div className="courses-cards">
-        <Slider {...settings}>
-          {cardData.map((card, index) => {
-            return(
-              <CourseCard 
-                imageUrl={card.imageUrl}
-                key={index}
-                header={card.header}
-                description={card.description}
-                rating={card.rating}
-                review={card.review}
-              />
-            )
-          })}
-        </Slider>
+          <Slider {...settings}>
+            {cardData.map((card, index) => {
+              return (
+                <CourseCard
+                  imageUrl={card.imageUrl}
+                  key={index}
+                  header={card.header}
+                  description={card.description}
+                  rating={card.rating}
+                  review={card.review}
+                />
+              )
+            })}
+          </Slider>
         </div>
       </div>
     </div>

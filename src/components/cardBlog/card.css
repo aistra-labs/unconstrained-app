@@ -31,6 +31,8 @@
         flex-direction: column;
         align-items: flex-start;
         padding: 20px;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 
     .card-blog-section {

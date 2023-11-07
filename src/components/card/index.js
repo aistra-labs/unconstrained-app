@@ -30,7 +30,7 @@ const Cards = () => {
     },
     {
       header: "Coaching with AI",
-      description: "Meet our coaches who can support you in planning and productivity. (changing that to who, taking out comma after planning and adding full stop after productivity)",
+      description: "Meet our coaches who can support you in planning and productivity.",
       imageUrl: images['p26.jpg'],
       link: '/coaching'
     },
@@ -48,7 +48,7 @@ const Cards = () => {
         <div className="card-section-header">What We Offer</div>
         <div className="card-container">
           {cardData.map((card, index) => (
-            <a href={card.link} class="offer-card">
+            <a href={card.link} className="offer-card">
             <Card
               key={index}
               imageUrl={card.imageUrl}
