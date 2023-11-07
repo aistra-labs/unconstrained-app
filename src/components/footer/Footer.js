@@ -1,17 +1,44 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { memo, useEffect, useRef } from "react";
+import React, { memo, useEffect, useRef, useState } from "react";
 import "./footer.css";
 import { images } from '../images';
 // import Form from 'react-bootstrap/Form';
 // import InputGroup from 'react-bootstrap/InputGroup';
 import { useLocation } from "react-router-dom";
-import { Form, InputGroup } from "react-bootstrap";
+import { Alert, Button, Form, InputGroup } from "react-bootstrap";
 
 // const footerLessRoutes = ['/coaching', '/signin'];
+
+const sendEmail = (email, onSuccess, onError) => {
+    var requestOptions = {
+        method: 'POST',
+        redirect: 'follow'
+    };
+
+    fetch(`http://51.112.12.168:8085/newsLetter/subscriber?email=${email}`, requestOptions)
+        .then(response => response.text())
+        .then(result => {
+            onSuccess(<Alert key={'success'} variant={'success'} dismissible>
+                Subscription successful
+            </Alert>)
+            console.log(result);
+        })
+        .catch(error => {
+            onError(<Alert key={'danger'} variant={'danger'} dismissible>
+                Failed to Subscribe
+            </Alert>);
+            console.log('error', error);
+        });
+}
+
 const footerLessRoutes = ['/signin'];
 
 const Footer = () => {
     const location = useLocation();
+    const [email, updateEmail] = useState();
+    const [alert, setAlert] = useState(null);
+    const onError = comp => setAlert(comp);
+    const onSuccess = comp => setAlert(comp);
     const isFooterLessRoutes = footerLessRoutes.filter(el => location.pathname.startsWith(el)).length > 0;
 
     const footerRef = useRef();
@@ -61,32 +88,32 @@ const Footer = () => {
                         <div className="sub-links">
                             <a href="/" rel="noopener noreferrer" className="link-no-deco">
                                 <span>
-                                Home
+                                    Home
                                 </span>
                             </a>
                             <a href="/about" rel="noopener noreferrer" className="link-no-deco">
                                 <span>
-                                About
+                                    About
                                 </span>
                             </a>
                             <a href="/courses" rel="noopener noreferrer" className="link-no-deco">
                                 <span>
-                                Courses
+                                    Courses
                                 </span>
                             </a>
                             <a href="/coaching" rel="noopener noreferrer" className="link-no-deco">
                                 <span>
-                                Coaching
+                                    Coaching
                                 </span>
                             </a>
                             <a href="https://discord.com/channels/1146791094890283018/1146795215429062708" rel="noopener noreferrer" className="link-no-deco">
                                 <span>
-                                Community
+                                    Community
                                 </span>
                             </a>
                             <a href="/resources" rel="noopener noreferrer" className="link-no-deco">
                                 <span>
-                                Curated Tools
+                                    Curated Tools
                                 </span>
                             </a>
                         </div>
@@ -96,12 +123,12 @@ const Footer = () => {
                         <div className="sub-links">
                             <a href="https://aistra.com/termsandcondition/" rel="noopener noreferrer" className="link-no-deco">
                                 <span>
-                                Terms of Services
+                                    Terms of Services
                                 </span>
                             </a>
                             <a href="https://aistra.com/privacypolicy/" target="_blank" rel="noopener noreferrer" className="link-no-deco">
                                 <span>
-                                Privacy Policy
+                                    Privacy Policy
                                 </span>
                             </a>
                             {/* <a href="/" rel="noopener noreferrer" className="link-no-deco">
@@ -111,7 +138,7 @@ const Footer = () => {
                             </a> */}
                             <a href="mailto:fiona@unconstrained.work" rel="noopener noreferrer" className="link-no-deco">
                                 <span>
-                                Contact Us
+                                    Contact Us
                                 </span>
                             </a>
                         </div>
@@ -126,12 +153,16 @@ const Footer = () => {
                                 placeholder="Email address"
                                 aria-label="Email address"
                                 aria-describedby="basic-addon2"
+                                onChange={e => updateEmail(e.target.value)}
                             />
-                            <InputGroup.Text className="subscribe-btn" id="basic-addon2">Subscribe</InputGroup.Text>
+                            <Button className="subscribe-bn" variant="btn-custom" onClick={() => sendEmail(email, onSuccess, onError)}>
+                                <InputGroup.Text className="subscribe-btn" id="basic-addon2">Subscribe</InputGroup.Text>
+                            </Button>
                         </InputGroup>
                     </div>
                 </div>
             </div>
+            {alert}
             <div className="bottom-footer">
                 Copyright 2023 The UnconstrainED  All Rights Reserved.
             </div>

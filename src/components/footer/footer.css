@@ -124,6 +124,11 @@
                 }
             }
 
+            .subscribe-bn {
+                border: 0;
+                padding: 0;
+            }
+
             .subscribe-btn {
                 cursor: pointer;
                 background: var(--foundation-red-light-red-light-400, #F54737);
