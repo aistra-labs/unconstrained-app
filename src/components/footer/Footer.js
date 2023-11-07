@@ -15,7 +15,7 @@ const sendEmail = (email, onSuccess, onError) => {
         redirect: 'follow'
     };
 
-    fetch(`http://3.28.123.148:8085/newsLetter/subscriber?email=${email}`, requestOptions)
+    fetch(`http://51.112.12.168:8085/newsLetter/subscriber?email=${email}`, requestOptions)
         .then(response => response.text())
         .then(result => {
             onSuccess(<Alert key={'success'} variant={'success'} dismissible>
