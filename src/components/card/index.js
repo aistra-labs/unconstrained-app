@@ -43,14 +43,14 @@ const Cards = () => {
   ];
 
   return (
-    <div className="card-css">
+    <div className="card-css" key="cards_offer">
       <div className="card-section">
         <div className="card-section-header">What We Offer</div>
         <div className="card-container">
-          {cardData.map((card, index) => (
+          {cardData.map((card) => (
             <a href={card.link} className="offer-card">
             <Card
-              key={index}
+              key={card.link}
               imageUrl={card.imageUrl}
               header={card.header}
               description={card.description}

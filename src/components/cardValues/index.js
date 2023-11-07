@@ -20,7 +20,7 @@ const Cards = () => {
   const cardData = [
     {
       header: "Humanness",
-      description: "Prioritize the human experience, ensuring that the needs of educators and students drive our work. Create universal entry points to technology solutions, ensuring all educators, regardless of location or resources, can benefit.",
+      description: "Prioritize the human experience, so that the needs of educators and students drive our work. Create universal entry points to technology solutions, ensuring all educators, regardless of location or resources, can benefit..",
       imageUrl: images['humanness.svg']
     },
     {

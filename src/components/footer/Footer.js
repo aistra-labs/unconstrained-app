@@ -5,7 +5,7 @@ import { images } from '../images';
 // import Form from 'react-bootstrap/Form';
 // import InputGroup from 'react-bootstrap/InputGroup';
 import { useLocation } from "react-router-dom";
-import { Form, InputGroup } from "react-bootstrap";
+// import { Form, InputGroup } from "react-bootstrap";
 
 // const footerLessRoutes = ['/coaching', '/signin'];
 const footerLessRoutes = ['/signin'];
@@ -117,7 +117,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="news-container">
+                {/* <div className="news-container">
                     <h3 className="footer-title">Newsletter</h3>
                     <div className="sub-links">
                         <span>Sign up and receive the lastest news via email.</span>
@@ -130,10 +130,10 @@ const Footer = () => {
                             <InputGroup.Text className="subscribe-btn" id="basic-addon2">Subscribe</InputGroup.Text>
                         </InputGroup>
                     </div>
-                </div>
+                </div> */}
             </div>
             <div className="bottom-footer">
-                Copyright 2023 The UnconstrainED  All Rights Reserved.
+                Copyright 2023 UnconstrainED  All Rights Reserved.
             </div>
         </div>
     );

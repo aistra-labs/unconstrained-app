@@ -31,14 +31,14 @@ const Courses = () => {
     },
     {
       header: "AI for Routine Tasks",
-      description: "",
+      description: "AI is a powerful tool that can be used to automate routine tasks. This can free up employees to focus on more strategic and creative work, which can lead to increased productivity and innovation",
       imageUrl: images['course1.png'],
       rating: '4.7',
       review: '207'
     },
     {
       header: "AI for Assessment",
-      description: "",
+      description: "AI in assessments can be used to administer situational judgment tests using realistic, chatbot-style conversations with candidates.",
       imageUrl: images['course2.png'],
       rating: '4.7',
       review: '720'
