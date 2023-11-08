@@ -81,10 +81,10 @@ const Courses = () => {
             <span className="orange-title">AI</span> for Learning Design
           </div>
           <div className="banner-desc">
-            <div>Learning Goals:</div>
+            <div><b>Learning Goals:</b></div>
             <ul>
               <li>AI offers transformative opportunities and challenges in the educational landscape.</li>
-              <li>Selecting appropriate AI tools and using them responsibly is crucial for maximizing their benefit in teaching and TIME</li>
+              <li>Selecting appropriate AI tools and using them responsibly is crucial for maximizing their benefit in teaching and TIME.</li>
               <li>Ethical considerations play a pivotal role in AI's adoption in the classroom.</li>
               <li>Effective integration of AI requires hands-on practice, collaboration, and reflective planning.</li>
             </ul>
