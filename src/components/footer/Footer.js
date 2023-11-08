@@ -15,7 +15,7 @@ const sendEmail = (email, onSuccess, onError) => {
         redirect: 'follow'
     };
 
-    fetch(`http://dev.api.unconstrained.work:8085/newsLetter/subscriber?email=${email}`, requestOptions)
+    fetch(`https://dev.api.unconstrained.work/newsLetter/subscriber?email=${email}`, requestOptions)
         .then(response => response.text())
         .then(result => {
             onSuccess(<Alert key={'success'} variant={'success'} dismissible>
