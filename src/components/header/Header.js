@@ -7,7 +7,7 @@ const headerLessRoutes = ['/signin']
 
 const Header = props => {
     const location = useLocation();
-    const isHeaderLessRoutes = headerLessRoutes.filter(el=>location.pathname.startsWith(el)).length>0;
+    const isHeaderLessRoutes = headerLessRoutes.filter(el => location.pathname.startsWith(el)).length > 0;
     const headerRef = useRef();
 
     useEffect(() => {
@@ -42,13 +42,15 @@ const Header = props => {
                 <Link to="/courses">Courses</Link>
                 <Link to="/coaching">Coaching</Link>
                 {/* <Link to="/community">Community</Link> */}
-                <Link target="_blank" to="https://discord.com/channels/1146791094890283018/1146795215429062708">Community</Link>
+                <Link target="_blank" to="https://discord.com/invite/qnXPjsuv5q">Community</Link>
                 <Link to="/resources">Curated Tools</Link>
             </div>
-            {/* <div className="login-btn-container">
-                <img className="login-btn" src={images['Login.svg']} alt="login button" />
-                <img className="login-btn" src={images['Signup.svg']} alt="signup button" />
-            </div> */}
+            <div className="login-btn-container">
+                <Link target="_blank" to="https://dev.api.unconstrained.work/login">
+                    <img className="login-btn" src={images['Login.svg']} alt="login button" />
+                </Link>
+                {/* <img className="login-btn" src={images['Signup.svg']} alt="signup button" /> */}
+            </div>
         </div>
     )
 }

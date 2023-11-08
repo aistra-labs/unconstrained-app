@@ -27,12 +27,12 @@ const Login = () => {
             Sign In here
           </div>
         </div>
-        <button className="signup-container">
+        <a className="signup-container" href="https://dev.api.unconstrained.work/oauth2/authorization/google">
           <img src={images['google.svg']} alt="Google Logo" width="24px" />
           <div className="signup-google">
             Sign Up with Google
           </div>
-        </button>
+        </a>
         <div className="line-text">
           <div className="register-with-email">
             Or register with an email
