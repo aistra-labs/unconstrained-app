@@ -46,7 +46,7 @@ const Header = props => {
                 <Link to="/resources">Curated Tools</Link>
             </div>
             <div className="login-btn-container">
-                <Link target="_blank" to="https://dev.api.unconstrained.work/login">
+                <Link to="https://dev.api.unconstrained.work/oauth2/authorization/google">
                     <img className="login-btn" src={images['Login.svg']} alt="login button" />
                 </Link>
                 {/* <img className="login-btn" src={images['Signup.svg']} alt="signup button" /> */}

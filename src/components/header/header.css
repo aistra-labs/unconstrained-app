@@ -31,6 +31,7 @@
     }
     .login-btn-container {
         display: flex;
+        justify-content: flex-end;
         column-gap: 16px;
         .login-btn{
             cursor: pointer;
