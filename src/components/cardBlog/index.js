@@ -39,7 +39,7 @@ const Cards = () => {
       header: "AI and the Evolution of Humanity: A Paradigm of Hope and Caution",
       description: "In an age dominated by algorithms and automated experiences, we find ourselves at a pivotal juncture, questioning the very essence of progress. Is there genuine merit in automating facets of our lives, particularly without a blueprint for the enriched future we envision? Such reflections underscore the profound responsibility we ...",
       imageUrl: images['blog2.jpg'],
-      linkUrl: "https://docs.google.com/document/d/1kGChoeLOfZBswmJPejlQFNEikPAEOQ_oZqxAY00SKBY/edit",
+      linkUrl: "https://unconstrained.blog/2023/10/31/ai-and-the-evolution-of-humanity-a-paradigm-of-hope-and-caution/",
       author: "Craig Johnson",
       date: "Oct 30, 2023"
     }

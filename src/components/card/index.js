@@ -18,25 +18,25 @@ const Cards = () => {
   const cardData = [
     {
       header: "Courses",
-      description: "Our courses are designed to help you to understand and harness emerging technologies so that you can spend more time doing what you do best - supporting your students.",
+      description: "Imagined and designed to help you harness and leverage emerging technologies specifically AI so that you can spend more time doing what you do best: Supporting your students.",
       imageUrl: images['p25.jpg'],
       link: '/courses'
     },
     {
-      header: "Curated Tools and Resources",
-      description: "We vet the newest tools and resources in emerging technology and let you know how they can best support you and your students and give you back time.",
+      header: "Curation",
+      description: "Vetted and curated for you to grab-n-go; saving you still more time for what matters most: Deeper teaching and relationships.",
       imageUrl: images['p28.jpg'],
       link: '/resources'
     },
     {
-      header: "Coaching with AI",
-      description: "Meet our coaches who can support you in planning and productivity.",
+      header: "Coaching",
+      description: "Created and trained to support you; our coaches are your coaches for: planning, assessing, working with data, and general productivity.",
       imageUrl: images['p26.jpg'],
       link: '/coaching'
     },
     {
       header: "Community",
-      description: "Connect with educators like you who are ready to explore and exchange ideas.",
+      description: "Empowered and connected educators like you, from around the globe, are ready to: Play with and explore the integration of emerging technologies into the teaching and learning journey.",
       imageUrl: images['p27.jpg'],
       link: '/community'
     }

@@ -8,22 +8,22 @@ import CourseCard from "../../components/courseCard/CourseCard";
 const Courses = () => {
 
   const cardData = [
+    // {
+    //   header: "AI for Routine Tasks: Coming Soon",
+    //   description: "Learn how to automate your workflows related to email, report writing, and other non-student related tasks.",
+    //   imageUrl: images['course1.png'],
+    //   rating: '4.7',
+    //   review: '207'
+    // },
+    // {
+    //   header: "AI for Assessment: Coming Soon",
+    //   description: "Learn how to use AI to give feedback to your students, create assessments, and support grading, as well as how to create AI Proof assignments (and it's not using an AI detector).",
+    //   imageUrl: images['course2.png'],
+    //   rating: '4.7',
+    //   review: '720'
+    // },
     {
-      header: "AI for Routine Tasks: Coming Soon",
-      description: "Learn how to automate your workflows related to email, report writing, and other non-student related tasks.",
-      imageUrl: images['course1.png'],
-      rating: '4.7',
-      review: '207'
-    },
-    {
-      header: "AI for Assessment: Coming Soon",
-      description: "Learn how to use AI to give feedback to your students, create assessments, and support grading, as well as how to create AI Proof assignments (and it's not using an AI detector).",
-      imageUrl: images['course2.png'],
-      rating: '4.7',
-      review: '720'
-    },
-    {
-      header: "AI for Differentiation: Coming Soon",
+      header: "AI for Differentiation",
       description: "Learn how to use AI to create lessons, units, and assignments that meet the diverse needs of your students and inspire them based on their interests.",
       imageUrl: images['course3.png'],
       rating: '4.7',

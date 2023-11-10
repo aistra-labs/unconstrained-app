@@ -1,7 +1,8 @@
-.courses-container{
+.courses-container {
     display: flex;
     flex-direction: column;
-    .courses-banner-container{
+
+    .courses-banner-container {
         display: flex;
         width: 100%;
         height: auto;
@@ -10,34 +11,40 @@
         column-gap: 64px;
         align-items: center;
         background: url('../../assets/svg/courses-banner-bg.svg'), lightgray 50% / cover no-repeat;
-        .banner-content{
+
+        .banner-content {
             display: flex;
             width: 490px;
             flex-direction: column;
             row-gap: 26px;
-            .banner-title{
+
+            .banner-title {
                 color: var(--foundation-blue-blue-800, #120123);
                 font-family: Inter;
                 font-size: 48px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
-                .orange-title{
+
+                .orange-title {
                     color: #D9042B;
                     font-weight: 800;
                 }
             }
-            .signup-btn{
+
+            .signup-btn {
                 width: 234px;
                 height: 56px;
                 cursor: pointer;
             }
         }
-        .courses-banner{
-            .banner-image-container{
+
+        .courses-banner {
+            .banner-image-container {
                 width: 560px;
                 height: 420px;
-                .courses-banner{
+
+                .courses-banner {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
@@ -45,17 +52,20 @@
             }
         }
     }
-    .educators-container{
+
+    .educators-container {
         display: flex;
         flex-direction: column;
         padding: 40px 125px;
         row-gap: 28px;
-        .educators-header{
+
+        .educators-header {
             display: flex;
             justify-content: space-between;
             padding-left: 8px;
             padding-right: 50px;
-            .title{
+
+            .title {
                 color: var(--foundation-black-black-900, #222526);
                 font-family: Inter;
                 font-size: 36px;
@@ -63,40 +73,50 @@
                 font-weight: 700;
                 line-height: normal;
             }
-            .btn-container{
+
+            .btn-container {
                 width: 95px;
                 height: 40px;
                 cursor: pointer;
-                .view-all-btn{
+
+                .view-all-btn {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                 }
             }
         }
-        .courses-cards{
-            .slick-slider{
+
+        .courses-cards {
+            .slick-slider {
                 display: flex;
+
+                .slick-list {
+                    overflow: hidden;
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                }
+
                 /* .slick-slide > div {
                     margin: 0 10px;
-                }
-                .slick-list {
-                    margin: 0 -10px;
                 } */
                 /* .slick-track{
                     margin-left: 14px;
                 } */
-                .arrow-container{
+                .arrow-container {
                     width: 48px;
                     height: 48px;
                     cursor: pointer;
-                    .left-arrow{
+
+                    .left-arrow {
                         position: absolute;
                         z-index: 1;
                         top: 30%;
                         left: -10px;
                     }
-                    .right-arrow{
+
+                    .right-arrow {
                         position: absolute;
                         z-index: 1;
                         top: 30%;
@@ -109,28 +129,33 @@
 }
 
 @media only screen and (max-width: 767px) {
-    .courses-container{
-        .courses-banner-container{
+    .courses-container {
+        .courses-banner-container {
             flex-direction: column;
             justify-content: initial;
             align-items: inherit;
             row-gap: 20px;
             padding: 20px 10px;
             height: auto;
-            .banner-content{
+
+            .banner-content {
                 width: auto;
-                .banner-title{
+
+                .banner-title {
                     font-size: 36px;
                 }
             }
-            .courses-banner{
+
+            .courses-banner {
                 display: flex;
                 justify-content: center;
+
                 .banner-image-container {
                     width: 360px;
                     height: 270px;
                     border-radius: 24px;
-                    .courses-banner{
+
+                    .courses-banner {
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
@@ -138,16 +163,19 @@
                 }
             }
         }
-        .educators-container{
+
+        .educators-container {
             padding: 40px 25px;
-            .courses-cards{
-                .slick-slider{
-                    .arrow-container{
-                        .left-arrow{
+
+            .courses-cards {
+                .slick-slider {
+                    .arrow-container {
+                        .left-arrow {
                             top: 18%;
                             left: -18px;
                         }
-                        .right-arrow{
+
+                        .right-arrow {
                             top: 18%;
                             right: -22px;
                         }
