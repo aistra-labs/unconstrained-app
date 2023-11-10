@@ -1,0 +1,24 @@
+{
+    "courses": [
+        {
+            "id": "523788643592",
+            "name": "AI for Education Design",
+            "section": "Cohort 1",
+            "descriptionHeading": "AI in Education 1",
+            "room": "0",
+            "ownerId": "116918884464760439263",
+            "creationTime": "2023-08-28T15:35:13.229Z",
+            "updateTime": "2023-10-11T02:14:35.796Z",
+            "courseState": "ACTIVE",
+            "alternateLink": "https://classroom.google.com/c/NTIzNzg4NjQzNTky",
+            "teacherGroupEmail": "AI_in_Education_1_teachers_5efb4b2b@unconstrained.work",
+            "courseGroupEmail": "AI_in_Education_1_0a27a12b@unconstrained.work",
+            "guardiansEnabled": false,
+            "calendarId": "c_classroomb5a14af7@group.calendar.google.com",
+            "gradebookSettings": {
+                "calculationType": "TOTAL_POINTS",
+                "displaySetting": "HIDE_OVERALL_GRADE"
+            }
+        }
+    ]
+}
