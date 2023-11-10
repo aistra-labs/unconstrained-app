@@ -12,7 +12,6 @@ import { useSelector, useDispatch } from 'react-redux'
 const Dashboard = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const userData = useSelector((state) => state.user.userData)
-  console.log('userData from redux', userData);
   const dispatch = useDispatch()
   useEffect(() => {
     const profileData = {
@@ -23,9 +22,9 @@ const Dashboard = () => {
     }
     if (profileData?.cookie) {
       dispatch(setUserdata(profileData))
+      setSearchParams('');
     }
-    setSearchParams('');
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   // http://localhost:3000/dashboard?cookie=JSESSIONID=2A52B2D288B9A0F447D23D94D8B1E5E5;%20Path=/;%20HttpOnly&name=Abhishek%20jha&email=abhishekcr@unconstrained.work&image=https://lh3.googleusercontent.com/a/ACg8ocLHYKU8Q-rCsy3PzAHLGLV7pNHJRiIts9_biKQPaswB=s96-c
 
