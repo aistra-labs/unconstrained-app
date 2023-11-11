@@ -16,6 +16,10 @@
         display: flex;
         flex-direction: column;
 
+        .upcoming-assignment-card {
+            text-decoration: none;
+        }
+
         .upcoming-assignment-container {
             padding: 24px 32px 24px 20px;
             .assignment-number {

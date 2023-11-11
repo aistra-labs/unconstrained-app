@@ -45,11 +45,11 @@ const Header = props => {
                 <Link target="_blank" to="https://discord.com/invite/qnXPjsuv5q">Community</Link>
                 <Link to="/resources">Curated Tools</Link>
             </div>
-            {/* <div className="login-btn-container">
+            <div className="login-btn-container">
                 <Link to="https://dev.api.unconstrained.work/oauth2/authorization/google">
                     <img className="login-btn" src={images['Login.svg']} alt="login button" />
                 </Link>
-            </div> */}
+            </div>
         </div>
     )
 }

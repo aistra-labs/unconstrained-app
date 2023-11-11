@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from "react";
+import React, { memo, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import "./dashboard.css";
 import Tab from 'react-bootstrap/Tab';
@@ -8,24 +8,33 @@ import CurrentCourseProgressCard from './CurrentCourseProgressCard';
 import UpcomingAssignments from './UpcomingAssignments';
 import { setUserdata } from '../../redux/userSlice'
 import { useSelector, useDispatch } from 'react-redux'
+// import Cookies from 'universal-cookie';
 
 const Dashboard = () => {
+  const [currentCardId, setCurrentCardId] = useState();
   const [searchParams, setSearchParams] = useSearchParams();
   const userData = useSelector((state) => state.user.userData)
   const dispatch = useDispatch()
   useEffect(() => {
     const profileData = {
-      cookie: searchParams.get("cookie"),
+      cookie: searchParams.get("cookie")?.replace('; HttpOnly', ';'),
       name: searchParams.get("name"),
       email: searchParams.get("email"),
       image: searchParams.get("image")
     }
     if (profileData?.cookie) {
-      dispatch(setUserdata(profileData))
+      dispatch(setUserdata(profileData));
+
+      console.log('profileData?.cookie.....', profileData?.cookie);
+      console.log('profileData?.cookie.....', typeof profileData?.cookie);
+      document.cookie = profileData?.cookie;
       setSearchParams('');
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  useEffect(()=>{
+    console.log('currentCardId....', currentCardId);
+  }, [currentCardId])
   // http://localhost:3000/dashboard?cookie=JSESSIONID=2A52B2D288B9A0F447D23D94D8B1E5E5;%20Path=/;%20HttpOnly&name=Abhishek%20jha&email=abhishekcr@unconstrained.work&image=https://lh3.googleusercontent.com/a/ACg8ocLHYKU8Q-rCsy3PzAHLGLV7pNHJRiIts9_biKQPaswB=s96-c
 
   return (
@@ -49,8 +58,8 @@ const Dashboard = () => {
       >
         <Tab eventKey="dashboard" title="DASHBOARD" tabClassName="tab-content">
           <div className="dashboard-layout">
-            <CurrentCourseProgressCard />
-            <UpcomingAssignments />
+            <CurrentCourseProgressCard setCurrentCardId={setCurrentCardId} />
+            <UpcomingAssignments currentCardId={currentCardId} />
           </div>
         </Tab>
         <Tab eventKey="Dashboard" title="COURSES" tabClassName="tab-content">
