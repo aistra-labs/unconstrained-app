@@ -25,9 +25,7 @@ const Dashboard = () => {
     if (profileData?.cookie) {
       dispatch(setUserdata(profileData));
 
-      console.log('profileData?.cookie.....', profileData?.cookie);
-      console.log('profileData?.cookie.....', typeof profileData?.cookie);
-      document.cookie = profileData?.cookie;
+      // document.cookie = profileData?.cookie;
       setSearchParams('');
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
