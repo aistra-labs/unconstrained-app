@@ -7,7 +7,7 @@ import { groupTestimony } from './data-helper';
 
 function CarouselItem({ data }) {
     return (<div className="carousel-slide-container">
-        {data.map(cardData => {
+        {data?.map(cardData => {
             return (
                 <div className="card" key={cardData.id}>
                     <div className='testimonial-container'>

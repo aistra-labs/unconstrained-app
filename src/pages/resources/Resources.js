@@ -13,7 +13,7 @@ const Resources = () => {
           Curated Tools and Resources
         </div>
         <div className="resources-content">
-          {data.map((card, i) => {
+          {data?.map((card, i) => {
             return (
               <div key={i} className="resource-card">
                 <div className="card-top">

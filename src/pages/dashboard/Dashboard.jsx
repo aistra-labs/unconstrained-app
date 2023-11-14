@@ -8,7 +8,6 @@ import CurrentCourseProgressCard from './CurrentCourseProgressCard';
 import UpcomingAssignments from './UpcomingAssignments';
 import { setUserdata } from '../../redux/userSlice'
 import { useSelector, useDispatch } from 'react-redux'
-// import Cookies from 'universal-cookie';
 
 const Dashboard = () => {
   const [currentCardId, setCurrentCardId] = useState();
@@ -17,15 +16,14 @@ const Dashboard = () => {
   const dispatch = useDispatch()
   useEffect(() => {
     const profileData = {
-      cookie: searchParams.get("cookie")?.replace('; HttpOnly', ';'),
       name: searchParams.get("name"),
       email: searchParams.get("email"),
-      image: searchParams.get("image")
+      image: searchParams.get("image"),
+      token: searchParams.get("token")
     }
-    if (profileData?.cookie) {
+    if (profileData?.token) {
       dispatch(setUserdata(profileData));
 
-      // document.cookie = profileData?.cookie;
       setSearchParams('');
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

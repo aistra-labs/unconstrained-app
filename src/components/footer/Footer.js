@@ -6,13 +6,15 @@ import { images } from '../images';
 // import InputGroup from 'react-bootstrap/InputGroup';
 import { useLocation } from "react-router-dom";
 import { Alert, Button, Form, InputGroup } from "react-bootstrap";
+import { useSelector } from "react-redux";
 
 // const footerLessRoutes = ['/coaching', '/signin'];
 
-const sendEmail = (email, onSuccess, onError) => {
+const sendEmail = (token, email, onSuccess, onError) => {
     var requestOptions = {
         method: 'POST',
-        redirect: 'follow'
+        redirect: 'follow',
+        headers: { token }
     };
 
     fetch(`https://dev.api.unconstrained.work/newsLetter/subscriber?email=${email}`, requestOptions)
@@ -34,7 +36,8 @@ const sendEmail = (email, onSuccess, onError) => {
 const footerLessRoutes = ['/signin'];
 
 const Footer = () => {
-    const location = useLocation();
+  const userData = useSelector((state) => state.user.userData);
+  const location = useLocation();
     const [email, updateEmail] = useState();
     const [alert, setAlert] = useState(null);
     const onError = comp => setAlert(comp);
@@ -155,7 +158,7 @@ const Footer = () => {
                                 aria-describedby="basic-addon2"
                                 onChange={e => updateEmail(e.target.value)}
                             />
-                            <Button className="subscribe-bn" variant="btn-custom" onClick={() => sendEmail(email, onSuccess, onError)}>
+                            <Button className="subscribe-bn" variant="btn-custom" onClick={() => sendEmail(userData?.token, email, onSuccess, onError)}>
                                 <InputGroup.Text className="subscribe-btn" id="basic-addon2">Subscribe</InputGroup.Text>
                             </Button>
                         </InputGroup>

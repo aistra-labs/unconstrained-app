@@ -38,6 +38,8 @@
                     color: var(--foundation-black-black-900, #222526);
                     font-size: 16px;
                     font-weight: 500;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
                 }
             }
 

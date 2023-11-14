@@ -1,6 +1,7 @@
 import React, { memo, useEffect, useState } from "react";
 import './UpcomingAssigments.css';
 import { images } from "../../components/images";
+import { useSelector } from "react-redux";
 
 const data = {
     "courseWork": [
@@ -222,6 +223,7 @@ const data = {
     "nextPageToken": "GjcSNRIzEjEKBwig5Ju7sjEKDmIMCOuCs6cGEMDSoc4CCgoIgICA8PmFj9sQCgoIgICA8PmF17Fd"
 }
 
+
 const upcomingAssignment = data => data?.map(assignment => (
     <a href={assignment.alternateLink} rel="noreferrer" className="upcoming-assignment-card" target="_blank">
         <div key={assignment.id} className={`upcoming-assignment-container ${assignment.id !== data.length ? 'upcoming-assignment-bottom-border' : ''}`}>
@@ -241,10 +243,9 @@ const upcomingAssignment = data => data?.map(assignment => (
     </a>
 ));
 
-function getAssignments(id, successCb) {
-    // const headers = { Cookie: "JSESSIONID=1A291EC748D592310E5AC6957CE473E7" };
-
-    fetch(`https://dev.api.unconstrained.work/classroom/course/${id}?pageSize=4`, { credentials: 'include' })
+function getAssignments(token, id, successCb) {
+    if (!id) { return false; }
+    fetch(`https://dev.api.unconstrained.work/classroom/course/${id}?pageSize=4`, { headers: { token } })
         .then(response => response.json())
         .then(result => successCb(result))
         .catch(error => {
@@ -254,19 +255,19 @@ function getAssignments(id, successCb) {
 }
 
 const UpcomingAssignments = (props) => {
+    const userData = useSelector((state) => state.user.userData);
     const [data, setData] = useState();
 
     useEffect(() => {
-        getAssignments(props.currentCardId, setData)
-    }, [props.currentCardId]);
-
+        getAssignments(userData?.token, props.currentCardId, setData)
+    }, [userData?.token, props.currentCardId]);
     return (
         <div className="upcoming-assignments-card-container">
             <div className="card-title">
                 Upcoming Assignments
             </div>
             <div className="card-content-container">
-                {upcomingAssignment(data)}
+                {data && upcomingAssignment(data?.courseWork)}
             </div>
         </div>
     );
