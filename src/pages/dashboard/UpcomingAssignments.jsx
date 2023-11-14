@@ -223,6 +223,19 @@ const data = {
     "nextPageToken": "GjcSNRIzEjEKBwig5Ju7sjEKDmIMCOuCs6cGEMDSoc4CCgoIgICA8PmFj9sQCgoIgICA8PmF17Fd"
 }
 
+function smartTrim(string, maxLength) {
+    if (!string) return string;
+    if (maxLength < 1) return string;
+    if (string.length <= maxLength) return string;
+    if (maxLength === 1) return string.substring(0,1) + '...';
+
+    var midpoint = Math.ceil(string.length / 2);
+    var toremove = string.length - maxLength;
+    var lstrip = Math.ceil(toremove/2);
+    var rstrip = toremove - lstrip;
+    return string.substring(0, midpoint-lstrip) + ' ... '
+    + string.substring(midpoint+rstrip);
+}   
 
 const upcomingAssignment = data => data?.map(assignment => (
     <a href={assignment.alternateLink} rel="noreferrer" className="upcoming-assignment-card" target="_blank">
@@ -232,7 +245,7 @@ const upcomingAssignment = data => data?.map(assignment => (
             </div>
             <div className="assignment-description-block">
                 <div className="assignment-description">
-                    {assignment.description}
+                    {smartTrim(assignment.description, 200)}
                 </div>
                 <img src={images['chevron-right.svg']} loading="lazy" alt="right arrow button" />
             </div>
