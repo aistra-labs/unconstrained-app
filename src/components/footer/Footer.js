@@ -36,8 +36,8 @@ const sendEmail = (token, email, onSuccess, onError) => {
 const footerLessRoutes = ['/signin'];
 
 const Footer = () => {
-  const userData = useSelector((state) => state.user.userData);
-  const location = useLocation();
+    const userData = useSelector((state) => state.user.userData);
+    const location = useLocation();
     const [email, updateEmail] = useState();
     const [alert, setAlert] = useState(null);
     const onError = comp => setAlert(comp);
@@ -114,11 +114,11 @@ const Footer = () => {
                                     Community
                                 </span>
                             </a>
-                            <a href="/resources" rel="noopener noreferrer" className="link-no-deco">
+                            {userData?.token && <a href="/resources" rel="noopener noreferrer" className="link-no-deco">
                                 <span>
                                     Curated Tools
                                 </span>
-                            </a>
+                            </a>}
                         </div>
                     </div>
                     <div className="mid-footer">

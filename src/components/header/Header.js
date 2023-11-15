@@ -59,7 +59,7 @@ const Header = () => {
                 <Link to="/coaching">Coaching</Link>
                 {/* <Link to="/community">Community</Link> */}
                 <Link target="_blank" to="https://discord.com/invite/qnXPjsuv5q">Community</Link>
-                <Link to="/resources">Resources</Link>
+                {userData?.token && <Link to="/resources">Curated Tools</Link>}
             </div>
             <div className="login-btn-container">
                 {userData?.token ?
