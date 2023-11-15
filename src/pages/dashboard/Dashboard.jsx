@@ -13,7 +13,7 @@ const Dashboard = () => {
   const [currentCardId, setCurrentCardId] = useState();
   const [searchParams, setSearchParams] = useSearchParams();
   const userData = useSelector((state) => state.user.userData)
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   useEffect(() => {
     const profileData = {
       name: searchParams.get("name"),
@@ -28,10 +28,6 @@ const Dashboard = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  useEffect(()=>{
-    console.log('currentCardId....', currentCardId);
-  }, [currentCardId])
-  // http://localhost:3000/dashboard?cookie=JSESSIONID=2A52B2D288B9A0F447D23D94D8B1E5E5;%20Path=/;%20HttpOnly&name=Abhishek%20jha&email=abhishekcr@unconstrained.work&image=https://lh3.googleusercontent.com/a/ACg8ocLHYKU8Q-rCsy3PzAHLGLV7pNHJRiIts9_biKQPaswB=s96-c
 
   return (
     <div className="dashoboard-container">

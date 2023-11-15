@@ -1,14 +1,30 @@
 import React, { memo, useEffect, useRef } from "react"
 import "./header.css"
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import { images } from "../images"
+import { useDispatch, useSelector } from "react-redux"
+import { Dropdown } from "react-bootstrap"
+import { setUserdata } from "../../redux/userSlice"
 
 const headerLessRoutes = ['/signin']
 
-const Header = props => {
+const Header = () => {
+    const userData = useSelector((state) => state.user.userData)
+    const dispatch = useDispatch()
+    const navigate = useNavigate();
+    function logout() {
+        dispatch(setUserdata({}));
+    }
     const location = useLocation();
     const isHeaderLessRoutes = headerLessRoutes.filter(el => location.pathname.startsWith(el)).length > 0;
     const headerRef = useRef();
+
+    useEffect(() => {
+        if (!userData?.token) {
+            navigate('/');
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [userData?.token]);
 
     useEffect(() => {
         if (isHeaderLessRoutes) {
@@ -46,9 +62,20 @@ const Header = props => {
                 <Link to="/resources">Curated Tools</Link>
             </div>
             <div className="login-btn-container">
-                <Link to="https://dev.api.unconstrained.work/oauth2/authorization/google">
-                    <img className="login-btn" src={images['Login.svg']} alt="login button" />
-                </Link>
+                {userData?.token ?
+                    <Dropdown>
+                        <Dropdown.Toggle id="dropdown-basic" className="user">
+                            <img className="user" src={userData?.image} alt="user" />
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                            <Dropdown.Item onClick={logout}>Logout</Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown> :
+                    <Link to="https://dev.api.unconstrained.work/oauth2/authorization/google">
+                        <img className="login-btn" src={images['Login.svg']} alt="login button" />
+                    </Link>
+                }
             </div>
         </div>
     )
