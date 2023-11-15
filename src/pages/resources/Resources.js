@@ -2,7 +2,7 @@
 import React, { memo, useEffect, useState } from "react";
 import "./resources.css";
 import { images } from "../../components/images";
-import data, { resourceResultData } from './data';
+import data from './data';
 import { useSelector } from "react-redux";
 
 function getCuratedTools(token, successCb) {
