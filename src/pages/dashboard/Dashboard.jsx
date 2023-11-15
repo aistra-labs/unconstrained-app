@@ -12,7 +12,7 @@ import { useSelector, useDispatch } from 'react-redux'
 const Dashboard = () => {
   const [currentCardId, setCurrentCardId] = useState();
   const [searchParams, setSearchParams] = useSearchParams();
-  const userData = useSelector((state) => state.user.userData)
+  const userData = useSelector((state) => state.user.userData);
   const dispatch = useDispatch();
   useEffect(() => {
     const profileData = {
