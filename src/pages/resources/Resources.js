@@ -1,11 +1,28 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { memo } from "react";
+import React, { memo, useEffect, useState } from "react";
 import "./resources.css";
 import { images } from "../../components/images";
 import data, { resourceResultData } from './data';
+import { useSelector } from "react-redux";
+
+function getCuratedTools(token, successCb) {
+  fetch("https://dev.api.unconstrained.work/curated-tools", { headers: { token } })
+    .then(response => response.json())
+    .then(result => successCb(result?.['curatedTools']))
+    .catch(error => {
+      console.log('error', error);
+    });
+}
 
 const Resources = () => {
+  const userData = useSelector((state) => state.user.userData);
+  const [curatedData, setCuratedData] = useState();
 
+  useEffect(() => {
+    if(userData?.token) {
+      getCuratedTools(userData?.token, setCuratedData);
+    }
+  }, [userData?.token]);
   return (
     <div className="resources-container">
       <div className="resources-top">
@@ -18,9 +35,9 @@ const Resources = () => {
               <div key={i} className="resource-card">
                 <div className="card-top">
                   <div className="icon-container">
-                    <img className="card-image" src={card.imageUrl} loading="lazy" alt="card-icon" />
+                    <img className="card-image" src={card.imageLink} loading="lazy" alt="card-icon" />
                   </div>
-                  <div className="icon-heading">{card.title}</div>
+                  <div className="icon-heading">{card.name}</div>
                 </div>
                 <div className="card-bottom">
                   <div className="card-title">
@@ -52,15 +69,15 @@ const Resources = () => {
             Resources/tools  results
           </div>
           {
-            resourceResultData.map((resource) => {
+            curatedData?.map((resource) => {
               return (
                 <div className="resource-result-card">
-                  <img className="resource-result-image" src={resource.imageUrl} loading="lazy" alt="card-icon" />
+                  <img className="resource-result-image" src={resource.imageLink} loading="lazy" alt="card-icon" />
                   <div>
                     <div className="resource-result-card-title">
-                      {resource.title}
+                      {resource.name}
                     </div>
-                    <a href={resource.url} className="resource-result-card-url">
+                    <a href={resource.url} className="resource-result-card-url" target="_blank" rel="noreferrer">
                       {resource.url}
                     </a>
                   </div>
