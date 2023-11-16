@@ -69,6 +69,7 @@ const Header = () => {
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
+                            <Dropdown.Item onClick={()=>navigate('/dashboard')}>Dashboard</Dropdown.Item>
                             <Dropdown.Item onClick={logout}>Logout</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown> :

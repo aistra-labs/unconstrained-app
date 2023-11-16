@@ -139,36 +139,44 @@
                 margin-bottom: 20px;
             }
 
-            .resource-result-card {
-                border-radius: 12px;
-                border: 1px solid var(--foundation-blue-blue-50, #E9E6EC);
-                background: #FFF;
-                display: grid;
-                grid-template-columns: 213px 1fr 56px;
-                grid-column-gap: 18px;
-                align-items: center;
-                margin-bottom: 12px;
 
-                .resource-result-image {
-                    margin: 4px 0px 4px 4px;
-                    border-radius: 8px;
-                    width: 213px;
-                    height: 120px;
+            .resource-result-card-url {
+                color: var(--foundation-black-black-400, #73797C);
+                font-size: 14px;
+                font-weight: 400;
+                text-decoration: none;
+
+                .resource-result-card {
+                    border-radius: 12px;
+                    border: 1px solid var(--foundation-blue-blue-50, #E9E6EC);
+                    background: #FFF;
+                    display: grid;
+                    grid-template-columns: 213px 1fr 56px;
+                    grid-column-gap: 18px;
+                    align-items: center;
+                    margin-bottom: 12px;
+
+                    .card-cont {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .resource-result-image {
+                        margin: 4px 0px 4px 4px;
+                        border-radius: 8px;
+                        width: 213px;
+                        height: 120px;
+                    }
+
+                    .resource-result-card-title {
+                        color: var(--foundation-black-black-900, #222526);
+                        font-size: 18px;
+                        font-weight: 700;
+
+                    }
+
                 }
-
-                .resource-result-card-title {
-                    color: var(--foundation-black-black-900, #222526);
-                    font-size: 18px;
-                    font-weight: 700;
-                }
-
-                .resource-result-card-url {
-                    color: var(--foundation-black-black-400, #73797C);
-                    font-size: 14px;
-                    font-weight: 400;
-                    text-decoration: none;
-                }
-
             }
         }
     }

@@ -18,7 +18,7 @@ const Home = () => {
           <div className="banner-desc">
             Partnering with teachers to harness the power of
             emerging technology to enable a human-centred
-            approach to learning
+            approach to learning.
           </div>
           {/* <img className="demo-btn" src={images['demo-video-btn.svg']} loading="lazy" alt="demo button" /> */}
         </div>

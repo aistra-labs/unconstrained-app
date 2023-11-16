@@ -81,18 +81,18 @@ const Resources = () => {
           {
             curatedData?.map((resource) => {
               return (
-                <div className="resource-result-card">
-                  <img className="resource-result-image" src={resource.imageLink} loading="lazy" alt="card-icon" />
-                  <div>
-                    <div className="resource-result-card-title">
-                      {resource.name}
-                    </div>
-                    <a href={resource.url} className="resource-result-card-url" target="_blank" rel="noreferrer">
+                <a href={resource.url} className="resource-result-card-url" target="_blank" rel="noreferrer">
+                  <div className="resource-result-card">
+                    <img className="resource-result-image" src={resource.imageLink} loading="lazy" alt="card-icon" />
+                    <div className="card-cont">
+                      <div className="resource-result-card-title">
+                        {resource.name}
+                      </div>
                       {resource.url}
-                    </a>
+                    </div>
+                    <img src={images['chevron-right.svg']} loading="lazy" alt="right arrow button" />
                   </div>
-                  <img src={images['chevron-right.svg']} loading="lazy" alt="right arrow button" />
-                </div>
+                </a>
               )
             })
           }

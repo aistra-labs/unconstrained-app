@@ -79,12 +79,15 @@ function CarouselItem({ data }) {
                 </div>
               </div>
             </div>
-            <Button
-              className="go-to-course-btn"
-              variant="outline-primary"
-            >
-              Go to Course
-            </Button>
+            <form action={data?.alternateLink} target="_blank">
+              <Button
+                className="go-to-course-btn"
+                variant="outline-primary"
+                type="submit"
+              >
+                Go to Course
+              </Button>
+            </form>
           </div>
         </div>
       </div>
@@ -117,7 +120,7 @@ const CurrentCourseProgressCard = (props) => {
   }, [data])
 
   useEffect(() => {
-    if(userData?.token) {
+    if (userData?.token) {
       getCourses(userData?.token, setData);
     }
   }, [userData?.token]);
