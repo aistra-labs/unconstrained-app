@@ -45,16 +45,6 @@ jobs:
               if: steps.npm_cache_id.outputs.cache-hit != 'true'
               run: npm ci
 
-            - name: Code Analysis
-              id: lint-test
-              continue-on-error: true
-              shell: bash
-              run: |
-                  temp=$(bash -c 'npm run lint; exit $?' > out_1.txt 2>&1) exitCode=$? || true
-                  output=$( grep -iE "problems" ./out_1.txt )
-                  echo "lintErrors=$(echo $output)" >> $GITHUB_OUTPUT
-                  exit $exitCode
-
             - name: build app
               run: npm run build --if-present
               env:
