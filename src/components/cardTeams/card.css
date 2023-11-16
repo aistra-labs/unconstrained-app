@@ -10,7 +10,7 @@
     }
 
     .card-image-container {
-        height: 158px;
+        margin-top: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
