@@ -5,7 +5,6 @@ import {
   Route,
   Navigate,
   Outlet,
-  useLocation,
 } from 'react-router-dom';
 // import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -25,15 +24,9 @@ const Community = lazy(() => import('./pages/community/Community'));
 const Resources = lazy(() => import('./pages/resources/Resources'));
 const Dashboard = lazy(() => import('./pages/dashboard'));
 
-function RequireAuth() {
+const PrivateRoute = () => {
   const userData = useSelector((state) => state.user.userData);
-  let location = useLocation();
-
-  if (!userData.token) {
-    return <Navigate to="/" state={{ from: location }} />;
-  }
-
-  return <Outlet />;
+  return userData?.token ? <Outlet /> : <Navigate to="/" />;
 }
 
 function App() {
@@ -47,13 +40,9 @@ function App() {
           <Route path="/courses" element={<Courses />} />
           <Route path="/coaching" element={<Coaching />} />
           <Route path="/community" element={<Community />} />
-          <Route
-            path="/resources"
-            element={
-              <RequireAuth>
-                <Resources />
-              </RequireAuth>}
-          />
+          <Route path="/resources" element={<PrivateRoute />}>
+            <Route path="/resources" element={<Resources />} />
+          </Route>
           <Route path="/cards" element={<Cards />} />
           {/* <Route path="/signin" element={<Login />} /> */}
           <Route path="/dashboard" element={<Dashboard />} />
