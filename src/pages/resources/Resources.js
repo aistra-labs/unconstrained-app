@@ -14,12 +14,23 @@ function getCuratedTools(token, successCb) {
     });
 }
 
+function clearAll(name, resourceData, setResourceData) {
+  const newData = resourceData.map(el => {
+    if (el.name === name) {
+      el.list = el.list.map(item => ({ ...item, isSelected: false }));
+    }
+    return el;
+  })
+  setResourceData(newData)
+}
+
 const Resources = () => {
   const userData = useSelector((state) => state.user.userData);
   const [curatedData, setCuratedData] = useState();
+  const [resourceData, setResourceData] = useState(data);
 
   useEffect(() => {
-    if(userData?.token) {
+    if (userData?.token) {
       getCuratedTools(userData?.token, setCuratedData);
     }
   }, [userData?.token]);
@@ -30,7 +41,7 @@ const Resources = () => {
           Curated Tools and Resources
         </div>
         <div className="resources-content">
-          {data?.map((card, i) => {
+          {resourceData?.map((card, i) => {
             return (
               <div key={i} className="resource-card">
                 <div className="card-top">
@@ -42,16 +53,15 @@ const Resources = () => {
                 <div className="card-bottom">
                   <div className="card-title">
                     Resource you're looking for:
-
-                    <span> 
+                    {card.list.filter(el => el?.isSelected).length > 0 ? <button onClick={() => clearAll(card.name, resourceData, setResourceData)} className="clear-all">
                       <img src={images['clear-icon.svg']} loading="lazy" alt="clear-icon" />
                       Clear All
-                    </span>
+                    </button> : null}
                   </div>
                   <div className="resources-list-container">
                     {card.list.map((res, k) => {
                       return (
-                        <div key={k} className = {`resource ${ res.isSelected ? 'higlight-border' : ''}`}>
+                        <div key={k} className={`resource ${res.isSelected ? 'higlight-border' : ''}`}>
                           {res.platform}
                         </div>
                       )

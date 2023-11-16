@@ -80,6 +80,11 @@
                         font-style: normal;
                         font-weight: 700;
                         line-height: normal;
+
+                        .clear-all {
+                            background: none;
+                            border: none;
+                        }
                     }
 
                     .card-title span {
@@ -88,7 +93,7 @@
                         font-size: 14px;
                         font-style: normal;
                         font-weight: 500;
-                        line-height: normal; 
+                        line-height: normal;
                     }
 
                     .card-title img {
@@ -123,15 +128,18 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
         .resources-bottom-container {
             width: 90%;
+
             .resources-results-title {
                 color: var(--foundation-black-black-800, #2C3032);
                 font-size: 24px;
                 font-weight: 700;
                 margin-bottom: 20px;
             }
-            .resource-result-card{
+
+            .resource-result-card {
                 border-radius: 12px;
                 border: 1px solid var(--foundation-blue-blue-50, #E9E6EC);
                 background: #FFF;
@@ -148,13 +156,13 @@
                     height: 120px;
                 }
 
-                .resource-result-card-title{
+                .resource-result-card-title {
                     color: var(--foundation-black-black-900, #222526);
                     font-size: 18px;
                     font-weight: 700;
                 }
 
-                .resource-result-card-url{
+                .resource-result-card-url {
                     color: var(--foundation-black-black-400, #73797C);
                     font-size: 14px;
                     font-weight: 400;
@@ -170,6 +178,7 @@
     .resources-container {
         .resources-top {
             margin-bottom: 20px;
+
             .resources-title {
                 font-size: 24px;
             }
@@ -177,34 +186,28 @@
             .resources-content {
                 flex-direction: column;
                 row-gap: 16px;
-
-                .resource-card {
-                    /* width: 352px; */
-                }
             }
         }
 
         .resources-bottom {
             .resources-bottom-container {
-                .resources-results-title {
-                }
-                .resource-result-card{
+                .resource-result-card {
 
                     grid-template-columns: 100px 1fr 32px;
                     grid-column-gap: 10px;
-    
+
                     .resource-result-image {
                         width: 100px;
                     }
-    
-                    .resource-result-card-title{
+
+                    .resource-result-card-title {
                         font-size: 14px;
                     }
-    
+
                     .resource-result-card-url {
                         font-size: 12px;
                     }
-    
+
                 }
             }
         }
