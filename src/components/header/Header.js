@@ -10,7 +10,7 @@ const headerLessRoutes = ['/signin']
 
 const Header = () => {
     const userData = useSelector((state) => state.user.userData)
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
     const navigate = useNavigate();
     function logout() {
         dispatch(setUserdata({}));

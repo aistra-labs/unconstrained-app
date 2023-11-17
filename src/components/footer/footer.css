@@ -106,33 +106,6 @@
                 font-weight: 500;
                 line-height: 140%;
             }
-
-            .sub-links {
-                display: flex;
-                flex-direction: column;
-                color: var(--foundation-black-black-500, #50585B);
-                font-family: Inter;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 160%;
-                row-gap: 10px;
-
-                .link-no-deco {
-                    text-decoration: none;
-                    color: #000;
-                }
-            }
-
-            .subscribe-bn {
-                margin: 0;
-                padding: 0;
-
-                .subscribe-btn {
-                    cursor: pointer;
-                    background: var(--foundation-red-light-red-light-400, #F54737);
-                }
-            }
         }
     }
 
@@ -183,16 +156,6 @@
 
             .news-container {
                 row-gap: 5px;
-
-                .sub-links {
-                    .link-no-deco {
-                        text-decoration: none;
-                        color: #000;
-                    }
-                    .subscribe-style {
-                        padding-right: 20px;
-                    }
-                }
             }
         }
     }

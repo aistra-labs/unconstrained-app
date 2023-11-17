@@ -1,47 +1,21 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { memo, useEffect, useRef, useState } from "react";
+import React, { memo, useEffect, useRef } from "react";
 import "./footer.css";
 import { images } from '../images';
 // import Form from 'react-bootstrap/Form';
 // import InputGroup from 'react-bootstrap/InputGroup';
 import { useLocation } from "react-router-dom";
-import { Alert, Button, Form, InputGroup } from "react-bootstrap";
 import { useSelector } from "react-redux";
+import SubscribeComponent from "../subscribeComponent";
 
 // const footerLessRoutes = ['/coaching', '/signin'];
 
-const sendEmail = (token, email, onSuccess, onError) => {
-    var requestOptions = {
-        method: 'POST',
-        redirect: 'follow',
-        headers: { token }
-    };
-
-    fetch(`https://dev.api.unconstrained.work/newsLetter/subscriber?email=${email}`, requestOptions)
-        .then(response => response.text())
-        .then(result => {
-            onSuccess(<Alert key={'success'} variant={'success'} dismissible>
-                Subscription successful
-            </Alert>)
-            console.log(result);
-        })
-        .catch(error => {
-            onError(<Alert key={'danger'} variant={'danger'} dismissible>
-                Failed to Subscribe
-            </Alert>);
-            console.log('error', error);
-        });
-}
 
 const footerLessRoutes = ['/signin'];
 
 const Footer = () => {
     const userData = useSelector((state) => state.user.userData);
     const location = useLocation();
-    const [email, updateEmail] = useState();
-    const [alert, setAlert] = useState(null);
-    const onError = comp => setAlert(comp);
-    const onSuccess = comp => setAlert(comp);
     const isFooterLessRoutes = footerLessRoutes.filter(el => location.pathname.startsWith(el)).length > 0;
 
     const footerRef = useRef();
@@ -149,23 +123,9 @@ const Footer = () => {
                 </div>
                 <div className="news-container">
                     <h3 className="footer-title">Newsletter</h3>
-                    <div className="sub-links">
-                        <span>Sign up and receive the lastest news via email.</span>
-                        <InputGroup className="mb-3 subscribe-style">
-                            <Form.Control
-                                placeholder="Email address"
-                                aria-label="Email address"
-                                aria-describedby="basic-addon2"
-                                onChange={e => updateEmail(e.target.value)}
-                            />
-                            <Button className="subscribe-bn" variant="btn-custom" onClick={() => sendEmail(userData?.token, email, onSuccess, onError)}>
-                                <InputGroup.Text className="subscribe-btn" id="basic-addon2">Subscribe</InputGroup.Text>
-                            </Button>
-                        </InputGroup>
-                    </div>
+                    <SubscribeComponent />
                 </div>
             </div>
-            {alert}
             <div className="bottom-footer">
                 Copyright 2023 UnconstrainED  All Rights Reserved.
             </div>
