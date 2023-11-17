@@ -1,7 +1,8 @@
 import React, { memo, useEffect, useState } from "react";
 import './UpcomingAssigments.css';
 import { images } from "../../components/images";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { processResponse } from "../../utils";
 
 const data = {
     "courseWork": [
@@ -227,15 +228,15 @@ function smartTrim(string, maxLength) {
     if (!string) return string;
     if (maxLength < 1) return string;
     if (string.length <= maxLength) return string;
-    if (maxLength === 1) return string.substring(0,1) + '...';
+    if (maxLength === 1) return string.substring(0, 1) + '...';
 
     var midpoint = Math.ceil(string.length / 2);
     var toremove = string.length - maxLength;
-    var lstrip = Math.ceil(toremove/2);
+    var lstrip = Math.ceil(toremove / 2);
     var rstrip = toremove - lstrip;
-    return string.substring(0, midpoint-lstrip) + ' ... '
-    + string.substring(midpoint+rstrip);
-}   
+    return string.substring(0, midpoint - lstrip) + ' ... '
+        + string.substring(midpoint + rstrip);
+}
 
 const upcomingAssignment = data => data?.map(assignment => (
     <a href={assignment.alternateLink} rel="noreferrer" className="upcoming-assignment-card" target="_blank">
@@ -256,10 +257,10 @@ const upcomingAssignment = data => data?.map(assignment => (
     </a>
 ));
 
-function getAssignments(token, id, successCb) {
+function getAssignments(token, id, successCb, dispatch) {
     if (!id) { return false; }
     fetch(`https://dev.api.unconstrained.work/classroom/course/${id}?pageSize=4`, { headers: { token } })
-        .then(response => response.json())
+        .then(response => processResponse(response, dispatch))
         .then(result => successCb(result))
         .catch(error => {
             console.log('error', error);
@@ -269,11 +270,12 @@ function getAssignments(token, id, successCb) {
 
 const UpcomingAssignments = (props) => {
     const userData = useSelector((state) => state.user.userData);
+    const dispatch = useDispatch();
     const [data, setData] = useState();
 
     useEffect(() => {
-        getAssignments(userData?.token, props.currentCardId, setData)
-    }, [userData?.token, props.currentCardId]);
+        getAssignments(userData?.token, props.currentCardId, setData, dispatch)
+    }, [userData?.token, props.currentCardId, dispatch]);
     return (
         <div className="upcoming-assignments-card-container">
             <div className="card-title">

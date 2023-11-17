@@ -4,17 +4,15 @@ import { Link, useLocation, useNavigate } from "react-router-dom"
 import { images } from "../images"
 import { useDispatch, useSelector } from "react-redux"
 import { Dropdown } from "react-bootstrap"
-import { setUserdata } from "../../redux/userSlice"
+// import { setUserdata } from "../../redux/userSlice"
+import { logout } from "../../utils"
 
 const headerLessRoutes = ['/signin']
 
 const Header = () => {
     const userData = useSelector((state) => state.user.userData)
-    const dispatch = useDispatch();
     const navigate = useNavigate();
-    function logout() {
-        dispatch(setUserdata({}));
-    }
+    const dispatch = useDispatch();
     const location = useLocation();
     const isHeaderLessRoutes = headerLessRoutes.filter(el => location.pathname.startsWith(el)).length > 0;
     const headerRef = useRef();
@@ -23,7 +21,7 @@ const Header = () => {
         if (!userData?.token) {
             navigate('/');
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [userData?.token]);
 
     useEffect(() => {
@@ -69,8 +67,8 @@ const Header = () => {
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                            <Dropdown.Item onClick={()=>navigate('/dashboard')}>Dashboard</Dropdown.Item>
-                            <Dropdown.Item onClick={logout}>Logout</Dropdown.Item>
+                            <Dropdown.Item onClick={() => navigate('/dashboard')}>Dashboard</Dropdown.Item>
+                            <Dropdown.Item onClick={() => logout(dispatch)}>Logout</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown> :
                     <Link to="https://dev.api.unconstrained.work/oauth2/authorization/google">

@@ -33,12 +33,8 @@ const sendEmail = (token, dispatch, email, onSuccess, onError) => {
     };
 
     fetch(`https://dev.api.unconstrained.work/newsLetter/subscriber?email=${email}`, requestOptions)
-        .then(response => {
-            console.log('response...', response);
-            return processResponse(response, dispatch);
-        })
+        .then(response => processResponse(response, dispatch))
         .then(result => {
-            console.log('result....', result);
             onSuccess(getAlert())
             console.log(result);
         })

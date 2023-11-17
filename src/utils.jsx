@@ -13,7 +13,7 @@ export function processResponse(resp, dispatch) {
             case 403: logout(dispatch);
                 throw new Error('Not Authorized');
             default:
-                return resp.text()
+                return resp.json()
         }
     }
 }

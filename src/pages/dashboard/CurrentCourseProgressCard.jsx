@@ -4,7 +4,8 @@ import ProgressBar from 'react-bootstrap/ProgressBar';
 import Button from 'react-bootstrap/Button';
 import './CurrentCourseProgressCard.css';
 // import { images } from "../../components/images";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { processResponse } from "../../utils";
 
 const cardData = {
   "courses": [
@@ -95,9 +96,9 @@ function CarouselItem({ data }) {
   );
 }
 
-function getCourses(token, successCb) {
+function getCourses(token, successCb, dispatch) {
   fetch("https://dev.api.unconstrained.work/classroom/course", { headers: { token } })
-    .then(response => response.json())
+    .then(response => processResponse(response, dispatch))
     .then(result => successCb(result?.['courses']))
     .catch(error => {
       console.log('error', error);
@@ -107,6 +108,7 @@ function getCourses(token, successCb) {
 
 const CurrentCourseProgressCard = (props) => {
   const userData = useSelector((state) => state.user.userData);
+  const dispatch = useDispatch();
   const [data, setData] = useState();
   const [index, setIndex] = useState(0);
   const handleSelect = (selectedIndex) => {
@@ -121,9 +123,9 @@ const CurrentCourseProgressCard = (props) => {
 
   useEffect(() => {
     if (userData?.token) {
-      getCourses(userData?.token, setData);
+      getCourses(userData?.token, setData, dispatch);
     }
-  }, [userData?.token]);
+  }, [dispatch, userData?.token]);
 
   return (
     <Carousel activeIndex={index} onSelect={handleSelect} className="carousel-container" controls={false} slide={false} interval={null}>
