@@ -49,6 +49,7 @@
         line-height: 44px;
         letter-spacing: 0em;
         text-align: left;
+        padding-left: 15px;
     }
 
     .card-blog-header {
@@ -83,6 +84,7 @@
         }
         .card-blog-section-header{
             text-align: center;
+            padding-left: 15px;
         }
         .card-blog {
             height: auto;

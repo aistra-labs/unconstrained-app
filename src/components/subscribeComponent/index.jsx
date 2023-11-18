@@ -44,7 +44,7 @@ const sendEmail = (token, dispatch, email, onSuccess, onError) => {
         });
 }
 
-const SubscribeComponent = ({ title = 'Sign up and receive the lastest news via email.', marginRight = 0 }) => {
+const SubscribeComponent = ({ title = 'Sign up and receive the lastest news via email.' }) => {
     const userData = useSelector((state) => state.user.userData);
     const dispatch = useDispatch();
     const [email, updateEmail] = useState();
@@ -60,7 +60,7 @@ const SubscribeComponent = ({ title = 'Sign up and receive the lastest news via 
                         placeholder="Email address"
                         aria-label="Email address"
                         aria-describedby="basic-addon2"
-                        style={{ marginRight }}
+                        className="email-input"
                         onChange={e => updateEmail(e.target.value)}
                     />
                     <Button className="subscribe-bn" variant="btn-custom" onClick={() => sendEmail(userData?.token, dispatch, email, onSuccess, onError)}>
