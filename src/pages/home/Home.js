@@ -22,7 +22,7 @@ const Home = () => {
             approach to learning.
           </div>
           <div className="banner-desc">
-            <SubscribeComponent title="Get in Touch" />
+            <SubscribeComponent title="Get in Touch" marginRight={20}/>
           </div>
           {/* <img className="demo-btn" src={images['demo-video-btn.svg']} loading="lazy" alt="demo button" /> */}
         </div>
