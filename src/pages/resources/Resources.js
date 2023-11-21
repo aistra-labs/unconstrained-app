@@ -10,7 +10,7 @@ const Resources = () => {
   const userData = useSelector((state) => state.user.userData);
   const dispatch = useDispatch();
   const [curatedData, setCuratedData] = useState();
-  const [filterData, setFilterData] = useState({});
+  const [filterData, setFilterData] = useState([]);
   const [selectedFilters, setSelectedFilters] = useState([]);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const Resources = () => {
 
   function clearAll(key) {
     setSelectedFilters(selectedFilters.filter(el => el[0] !== key));
-    const newData = filterData.map(el => {
+    const newData = filterData?.map(el => {
       if (el.key === key) {
         el.list = el.list.map(item => ({ ...item, isSelected: false }));
       }

@@ -113,7 +113,7 @@ const Footer = () => {
                                 Cookie Policy
                                 </span>
                             </a> */}
-                            <a href="mailto:fiona@unconstrained.work" rel="noopener noreferrer" className="link-no-deco">
+                            <a href="mailto:info@unconstrained.work" rel="noopener noreferrer" className="link-no-deco">
                                 <span>
                                     Contact Us
                                 </span>
