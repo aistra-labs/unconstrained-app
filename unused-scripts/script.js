@@ -4,14 +4,17 @@ function getSpentTime(str) {
 
 function getTasksForEpic() {
     let t = document.querySelectorAll('[data-issue-key*="GEN"]');
+    let dates = document.getElementsByClassName('created');
     let resText = "";
-    // const res = [];
+    const res = [];
+    let k = 0;
     for (let i = 2; i < t.length; i += 3) {
-        // res.push([t[i].textContent, getSpentTime(t[i].textContent)]);
-        resText += t[i].textContent.split('(')[0] + '\t' + getSpentTime(t[i].textContent) + '\n';
+        const date = dates[k++];
+        const rowData = [(date?.textContent ? date.textContent : ''), t[i].href, t[i].textContent.split('(')[0], getSpentTime(t[i].textContent)];
+        res.push(rowData);
     }
+    res.forEach(el => resText = resText + el.join('\t') + '\n');
     navigator.clipboard.writeText(resText)
-    // return res;
     return resText;
 }
 let res = getTasksForEpic();
