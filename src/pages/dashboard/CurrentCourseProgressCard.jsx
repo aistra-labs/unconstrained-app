@@ -60,7 +60,11 @@ function CarouselItem({ data }) {
         {data.name}
       </div>
       <div className="card-content-container">
-        <img className="card-img" src={data.alternateLink} loading="lazy" alt="ai-learninng-design" />
+        <img
+          className="card-img"
+          src={data?.imageLink || 'https://unconstrained-prod.s3.me-central-1.amazonaws.com/ai-learninng-design.png'}
+          loading="lazy" alt="ai-learninng-design"
+        />
         <div className="card-bottom-container">
           <p className="content-title">
             {data.section}

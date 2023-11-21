@@ -9,25 +9,11 @@
     line-height: 160%;
     row-gap: 10px;
 
-    .email-input {
-        margin-right: 16px;
-        border-radius: 5px !important;
-    }
 
-    .link-no-deco {
-        text-decoration: none;
-        color: #000;
-    }
-
-    .subscribe-bn {
-        margin: 0;
-        padding: 0;
-
-        .subscribe-btn {
-            cursor: pointer;
-            background: var(--foundation-red-light-red-light-400, #F54737);
-            color: white;
-        }
+    .subscribe-btn {
+        cursor: pointer;
+        background: var(--foundation-red-light-red-light-400, #F54737);
+        color: white;
     }
 }
 
