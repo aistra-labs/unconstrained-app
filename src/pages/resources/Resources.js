@@ -10,7 +10,7 @@ const Resources = () => {
   const userData = useSelector((state) => state.user.userData);
   const dispatch = useDispatch();
   const [curatedData, setCuratedData] = useState();
-  const [filterData, setFilterData] = useState();
+  const [filterData, setFilterData] = useState({});
   const [selectedFilters, setSelectedFilters] = useState([]);
 
   useEffect(() => {
@@ -21,13 +21,11 @@ const Resources = () => {
   }, [userData?.token]);
 
   useEffect(() => {
-    if (filterData) {
-      let body = {};
-      selectedFilters.forEach(el => {
-        body = { ...body, [el[0]]: [...(body?.[el[0]] || []), el[1]] }
-      })
-      getCuratedTools(userData?.token, setCuratedData, body, dispatch);
-    }
+    let body = {};
+    selectedFilters.forEach(el => {
+      body = { ...body, [el[0]]: [...(body?.[el[0]] || []), el[1]] }
+    })
+    getCuratedTools(userData?.token, setCuratedData, body, dispatch);
   }, [selectedFilters])
 
   function clearAll(key) {
