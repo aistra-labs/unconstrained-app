@@ -2,48 +2,73 @@
 import React, { memo, useEffect, useState } from "react";
 import "./resources.css";
 import { images } from "../../components/images";
-// import data from './data';
 import { useDispatch, useSelector } from "react-redux";
-import { processResponse } from "../../utils";
+import { getCuratedToolFilters, getCuratedTools } from "./actions";
 
-function getCuratedTools(token, successCb, dispatch) {
-  fetch("https://dev.api.unconstrained.work/curated-tools", { headers: { token } })
-    .then(response => processResponse(response, dispatch))
-    .then(result => successCb(result?.['curatedTools']))
-    .catch(error => {
-      console.log('error', error);
-    });
-}
-
-// function clearAll(name, resourceData, setResourceData) {
-//   const newData = resourceData.map(el => {
-//     if (el.name === name) {
-//       el.list = el.list.map(item => ({ ...item, isSelected: false }));
-//     }
-//     return el;
-//   })
-//   setResourceData(newData)
-// }
 
 const Resources = () => {
   const userData = useSelector((state) => state.user.userData);
   const dispatch = useDispatch();
   const [curatedData, setCuratedData] = useState();
-  // const [resourceData, setResourceData] = useState(data);
+  const [filterData, setFilterData] = useState();
+  const [selectedFilters, setSelectedFilters] = useState([]);
 
   useEffect(() => {
     if (userData?.token) {
-      getCuratedTools(userData?.token, setCuratedData, dispatch);
+      getCuratedToolFilters(userData?.token, setFilterData, dispatch);
+
     }
   }, [userData?.token]);
+
+  useEffect(() => {
+    if (filterData) {
+      let body = {};
+      selectedFilters.forEach(el => {
+        body = { ...body, [el[0]]: [...(body?.[el[0]] || []), el[1]] }
+      })
+      getCuratedTools(userData?.token, setCuratedData, body, dispatch);
+    }
+  }, [selectedFilters])
+
+  function clearAll(key) {
+    setSelectedFilters(selectedFilters.filter(el => el[0] !== key));
+    const newData = filterData.map(el => {
+      if (el.key === key) {
+        el.list = el.list.map(item => ({ ...item, isSelected: false }));
+      }
+      return el;
+    })
+    setFilterData(newData)
+  }
+  function selectFilter(category, value) {
+    let deSelected = false;
+    setFilterData(filterData.map(el => {
+      if (el?.key === category) {
+        el.list = el.list.map(option => {
+          if (option.platform === value) {
+            if (option.isSelected) deSelected = true;
+            option.isSelected = !option.isSelected;
+          }
+          return option;
+        })
+      }
+      return el;
+    }));
+    if (deSelected) {
+      setSelectedFilters(selectedFilters.filter(el => !(el[0] === category && el[1] === value)));
+    } else {
+      setSelectedFilters([...selectedFilters, [category, value]]);
+    }
+  }
+
   return (
     <div className="resources-container">
       <div className="resources-top">
         <div className="resources-title">
           Curated Tools and Resources
         </div>
-        {/* <div className="resources-content">
-          {resourceData?.map((card, i) => {
+        <div className="resources-content">
+          {filterData?.map((card, i) => {
             return (
               <div key={i} className="resource-card">
                 <div className="card-top">
@@ -55,7 +80,7 @@ const Resources = () => {
                 <div className="card-bottom">
                   <div className="card-title">
                     Resource you're looking for:
-                    {card.list.filter(el => el?.isSelected).length > 0 ? <button onClick={() => clearAll(card.name, resourceData, setResourceData)} className="clear-all">
+                    {card.list.filter(el => el?.isSelected).length > 0 ? <button onClick={() => clearAll(card.key)} className="clear-all">
                       <img src={images['clear-icon.svg']} loading="lazy" alt="clear-icon" />
                       Clear All
                     </button> : null}
@@ -63,9 +88,11 @@ const Resources = () => {
                   <div className="resources-list-container">
                     {card.list.map((res, k) => {
                       return (
-                        <div key={k} className={`resource ${res.isSelected ? 'higlight-border' : ''}`}>
-                          {res.platform}
-                        </div>
+                        <button className="resource-btn" onClick={() => selectFilter(card.key, res.platform)}>
+                          <div key={k} className={`resource ${res.isSelected ? 'higlight-border' : ''}`}>
+                            {res.platform}
+                          </div>
+                        </button>
                       )
                     })}
                   </div>
@@ -73,13 +100,13 @@ const Resources = () => {
               </div>
             )
           })}
-        </div> */}
+        </div>
       </div>
       <div className="resources-bottom">
         <div className="resources-bottom-container">
-          {/* <div className="resources-results-title">
+          <div className="resources-results-title">
             Resources/tools  results
-          </div> */}
+          </div>
           {
             curatedData?.map((resource) => {
               return (
