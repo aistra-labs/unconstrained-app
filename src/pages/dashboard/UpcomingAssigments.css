@@ -1,8 +1,10 @@
 .upcoming-assignments-card-container {
     width: 590px;
+
     .card-title {
         font-weight: var(--heading-font-weight);
         font-size: var(--font-size-larger);
+        margin-top: 16px;
         line-height: 24px;
         letter-spacing: 0em;
         font-family: Inter;
@@ -22,6 +24,7 @@
 
         .upcoming-assignment-container {
             padding: 24px 32px 24px 20px;
+
             .assignment-number {
                 color: var(--foundation-black-black-400, #73797C);
                 font-size: 12px;
@@ -34,6 +37,7 @@
                 align-items: center;
                 justify-content: space-between;
                 margin-bottom: 5px;
+
                 .assignment-description {
                     color: var(--foundation-black-black-900, #222526);
                     font-size: 16px;
@@ -43,7 +47,7 @@
                 }
             }
 
-            .assignment-due-date{
+            .assignment-due-date {
                 color: var(--foundation-black-black-500, #50585B);
                 font-size: 14px;
                 font-weight: 400;
@@ -52,7 +56,7 @@
 
         .upcoming-assignment-bottom-border {
             border-bottom: 1px solid #E8E8E8;
-        }  
+        }
     }
 }
 
