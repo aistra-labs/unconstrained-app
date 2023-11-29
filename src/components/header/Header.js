@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { Dropdown } from "react-bootstrap"
 // import { setUserdata } from "../../redux/userSlice"
 import { logout } from "../../utils"
+import { URLS } from "../../urls"
 
 const headerLessRoutes = ['/signin']
 
@@ -71,7 +72,7 @@ const Header = () => {
                             <Dropdown.Item onClick={() => logout(dispatch)}>Logout</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown> :
-                    <Link to="https://dev.api.unconstrained.work/oauth2/authorization/google">
+                    <Link to={URLS.GOOGLE_SIGNIN}>
                         <img className="login-btn" src={images['Login.svg']} alt="login button" />
                     </Link>
                 }

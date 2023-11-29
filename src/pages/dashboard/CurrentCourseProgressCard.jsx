@@ -6,6 +6,7 @@ import './CurrentCourseProgressCard.css';
 // import { images } from "../../components/images";
 import { useDispatch, useSelector } from "react-redux";
 import { processResponse } from "../../utils";
+import { URLS } from "../../urls";
 
 const cardData = {
   "courses": [
@@ -101,7 +102,7 @@ function CarouselItem({ data }) {
 }
 
 function getCourses(token, successCb, dispatch) {
-  fetch("https://dev.api.unconstrained.work/classroom/course", { headers: { token } })
+  fetch(URLS.GET_COURSES, { headers: { token } })
     .then(response => processResponse(response, dispatch))
     .then(result => successCb(result?.['courses']))
     .catch(error => {

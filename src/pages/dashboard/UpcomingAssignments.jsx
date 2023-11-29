@@ -3,6 +3,7 @@ import './UpcomingAssigments.css';
 import { images } from "../../components/images";
 import { useDispatch, useSelector } from "react-redux";
 import { processResponse } from "../../utils";
+import { URLS } from "../../urls";
 
 const data = {
     "courseWork": [
@@ -259,7 +260,7 @@ const upcomingAssignment = data => data?.map(assignment => (
 
 function getAssignments(token, id, successCb, dispatch) {
     if (!id) { return false; }
-    fetch(`https://dev.api.unconstrained.work/classroom/course/${id}?pageSize=4`, { headers: { token } })
+    fetch(URLS.GET_ASSIGNMENTS(id), { headers: { token } })
         .then(response => processResponse(response, dispatch))
         .then(result => successCb(result))
         .catch(error => {

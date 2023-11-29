@@ -3,6 +3,7 @@ import "./login.css";
 import { images } from "../../components/images";
 import { Link } from "react-router-dom";
 import InputField from "../../components/inputField";
+import { URLS } from "../../urls";
 
 const Login = () => {
 
@@ -27,7 +28,7 @@ const Login = () => {
             Sign In here
           </div>
         </div>
-        <a className="signup-container" href="https://dev.api.unconstrained.work/oauth2/authorization/google">
+        <a className="signup-container" href={URLS.GOOGLE_SIGNIN}>
           <img src={images['google.svg']} alt="Google Logo" width="24px" />
           <div className="signup-google">
             Sign Up with Google

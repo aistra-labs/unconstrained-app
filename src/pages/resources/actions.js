@@ -1,8 +1,9 @@
 import { images } from "../../components/images";
+import { URLS } from "../../urls";
 import { processResponse } from "../../utils";
 
 export function getCuratedTools(token, successCb, body = {}, dispatch) {
-    fetch("https://dev.api.unconstrained.work/curated-tools/search", {
+    fetch(URLS.GET_CURATEDTOOLS, {
         headers: {
             token,
             'Accept': 'application/json',
@@ -44,7 +45,7 @@ function transformFilterData(data) {
 }
 
 export function getCuratedToolFilters(token, successCb, dispatch) {
-    fetch("https://dev.api.unconstrained.work/curated-tools/filters", {
+    fetch(URLS.GET_CURATEDTOOLS_FILTERS, {
         headers: {
             token,
             'Accept': 'application/json',
