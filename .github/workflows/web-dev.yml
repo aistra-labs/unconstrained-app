@@ -41,6 +41,9 @@ jobs:
                       ${{ runner.os }}-DEV-npm-cache-
                       ${{ runner.os }}-DEV-
 
+            - name: Change Environment
+              run: mv .env.development .env
+
             - name: Install Dependencies
               if: steps.npm_cache_id.outputs.cache-hit != 'true'
               run: npm ci
