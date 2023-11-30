@@ -21,17 +21,17 @@ export function getCuratedTools(token, successCb, body = {}, dispatch) {
 
 const dataMap = [
     {
-        "imageLink": images["resource-img2.svg"],
+        "imageLink": images["purpose_heading.png"],
         "name": "Purpose",
         "key": "categories"
     },
     {
-        "imageLink": images["resource-img1.svg"],
+        "imageLink": images["tool_type.png"],
         "name": "Tool Type",
         "key": "toolTypes"
     },
     {
-        "imageLink": images["resource-img3.svg"],
+        "imageLink": images["user_type.png"],
         "name": "User",
         "key": "userTypes"
     }

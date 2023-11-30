@@ -24,22 +24,43 @@ const Courses = () => {
     // },
     {
       header: "AI for Differentiation",
-      description: "Learn how to use AI to create lessons, units, and assignments that meet the diverse needs of your students and inspire them based on their interests.",
+      description: "Create lessons, units, and assignments that meet the diverse needs of your students  Inspire students with approaches based on their interests Incorporate culturally responsive lessons, units, & assignments Collaborate to plan and reflect on effective integration of AI tools and resources",
       imageUrl: images['course3.png'],
       rating: '4.7',
       review: '480'
     },
     {
       header: "AI for Routine Tasks",
-      description: "AI is a powerful tool that can be used to automate routine tasks. This can free up employees to focus on more strategic and creative work, which can lead to increased productivity and innovation",
+      description: "Evaluate and select appropriate AI tools to automate recurring tasks Train AI tools to better assist you in your role Collaborate to plan and reflect on effective integration of AI tools and resources",
       imageUrl: images['course1.png'],
       rating: '4.7',
       review: '207'
     },
     {
       header: "AI for Assessment",
-      description: "AI in assessments can be used to administer situational judgment tests using realistic, chatbot-style conversations with candidates.",
+      description: "Develop assessments using AI tools Create feedback mechanisms using AI Analyze trends in your assessment data to use for future planning Collaborate to plan and reflect on effective integration of AI tools and resources",
       imageUrl: images['course2.png'],
+      rating: '4.7',
+      review: '720'
+    },
+    {
+      header: "AI for Data Analysis",
+      description: "Evaluate and select appropriate AI tools to use with different kinds of data Understand how to collect data to more easily employ AI tools Automate data analysis so that you can get to the important work of asking questions and planning forward Analyze trends in data to use for future planning",
+      imageUrl: images['data_analysis.png'],
+      rating: '4.7',
+      review: '720'
+    },
+    {
+      header: "AI for Leaders",
+      description: "Understand the roles that AI will play in education and schools in the present and future Evaluate and select appropriate AI tools to automate recurring tasks in finance, operations, HR Train AI tools to better assist you in your roles Collaborate to plan and reflect on effective integration of AI tools and resources",
+      imageUrl: images['ai_for_leaders.png'],
+      rating: '4.7',
+      review: '720'
+    },
+    {
+      header: "AI for Parents",
+      description: "Understand how AI works Evaluate opportunities and challenges of using AI in education Explain how AI can support your child’s learning while upholding academic integrity",
+      imageUrl: images['ai_for_parent.png'],
       rating: '4.7',
       review: '720'
     },
