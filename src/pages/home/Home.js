@@ -22,7 +22,7 @@ const Home = () => {
             approach to learning.
           </div>
           <div className="banner-desc">
-            <SubscribeComponent title=""/>
+            <SubscribeComponent title="" />
           </div>
           {/* <img className="demo-btn" src={images['demo-video-btn.svg']} loading="lazy" alt="demo button" /> */}
         </div>
@@ -38,12 +38,14 @@ const Home = () => {
       <div className="bottom-banner">
         <img className="banner-image" src={images['home-bottom-banner.svg']} loading="lazy" alt="banner" />
         <div className="banner-content">
-          <div className="banner-title">
-            Join UnconstrainED
-          </div>
-          <div className="banner-desc">
-            Become a member of our dedicated team and contribute to our mission of uplifting educators and their students.
-          </div>
+          <a href="http://eepurl.com/iAgD2w" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
+            <div className="banner-title">
+              Join UnconstrainED
+            </div>
+            <div className="banner-desc">
+              Become a member of our dedicated team and contribute to our mission of uplifting educators and their students.
+            </div>
+          </a>
           {/* <div className="banner-btn">
             <img className="login-btn" src={images['JoinTeam-btn.svg']} alt="Join button" />
           </div> */}

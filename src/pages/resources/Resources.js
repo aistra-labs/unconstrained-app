@@ -104,7 +104,7 @@ const Resources = () => {
       <div className="resources-bottom">
         <div className="resources-bottom-container">
           <div className="resources-results-title">
-            Resources/tools  results
+            Resources/Tools Results
           </div>
           <ProdCard data={curatedData} />
         </div>
