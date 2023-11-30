@@ -4,6 +4,7 @@ import "./resources.css";
 import { images } from "../../components/images";
 import { useDispatch, useSelector } from "react-redux";
 import { getCuratedToolFilters, getCuratedTools } from "./actions";
+import ProdCard from "../../components/curatedToolResCard";
 
 
 const Resources = () => {
@@ -83,13 +84,13 @@ const Resources = () => {
                       Clear All
                     </button> : null}
                   </div>
-                  <div className="resources-list-container">
+                  <div className="resources-list-container frame">
                     {card.list.map((res, k) => {
                       return (
                         <button className="resource-btn" onClick={() => selectFilter(card.key, res.platform)}>
-                          <div key={k} className={`resource ${res.isSelected ? 'higlight-border' : ''}`}>
+                          <span key={k} className={`resource ${res.isSelected ? 'higlight-border' : ''}`}>
                             {res.platform}
-                          </div>
+                          </span>
                         </button>
                       )
                     })}
@@ -105,24 +106,7 @@ const Resources = () => {
           <div className="resources-results-title">
             Resources/tools  results
           </div>
-          {
-            curatedData?.map((resource) => {
-              return (
-                <a href={resource.url} key={`key_${resource.url}`} className="resource-result-card-url" target="_blank" rel="noreferrer">
-                  <div className="resource-result-card">
-                    <img className="resource-result-image" src={resource.imageLink} loading="lazy" alt="card-icon" />
-                    <div className="card-cont">
-                      <div className="resource-result-card-title">
-                        {resource.name}
-                      </div>
-                      {/* {resource.url} */}
-                    </div>
-                    <img src={images['chevron-right.svg']} loading="lazy" alt="right arrow button" />
-                  </div>
-                </a>
-              )
-            })
-          }
+          <ProdCard data={curatedData} />
         </div>
       </div>
     </div>

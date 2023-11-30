@@ -1,0 +1,15 @@
+.mycard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .mycard2 {
+        text-decoration: none;
+        margin: 20px;
+
+        .image-cd {
+            height: 200px;
+            width: 320px
+        }
+    }
+}

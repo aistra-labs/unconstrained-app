@@ -32,8 +32,8 @@
                 flex-direction: column;
                 flex: 1;
                 /* width: 382px; */
-                row-gap: 50px;
-                padding: 30px 20px;
+                row-gap: 20px;
+                padding: 20px;
                 border-radius: 12px;
                 background: #FFF;
                 box-shadow: 0px 6px 50px 5px rgba(6, 14, 26, 0.05);
@@ -70,6 +70,7 @@
                     display: flex;
                     flex-direction: column;
                     row-gap: 20px;
+                    height: 130px;
 
                     .card-title {
                         display: flex;
@@ -101,11 +102,42 @@
                         margin-right: 6px;
                     }
 
+                    .frame {
+                        overflow-y: auto;
+                        /* border: 1px solid black; */
+                        height: 20em;
+                        width: 10em;
+                        line-height: 1em;
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                    }
+                    
+                    .frame::-webkit-scrollbar {
+                        -webkit-appearance: none;
+                    }
+                    
+                    .frame::-webkit-scrollbar:vertical {
+                        width: 11px;
+                    }
+                    
+                    .frame::-webkit-scrollbar:horizontal {
+                        height: 11px;
+                    }
+                    
+                    .frame::-webkit-scrollbar-thumb {
+                        border-radius: 8px;
+                        border: 2px solid white; /* should match background, can't be transparent */
+                        background-color: rgba(0, 0, 0, .5);
+                    }
+                    
+
                     .resources-list-container {
                         display: flex;
                         width: 100%;
                         flex-wrap: wrap;
                         gap: 10px;
+                        overflow-y: auto;
 
                         .resource-btn {
                             border: none;
