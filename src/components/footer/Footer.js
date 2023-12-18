@@ -34,7 +34,7 @@ const Footer = () => {
                 <div className="left-footer">
                     <div className="footer-logo-container">
                         {/* <img className="footer-logo" src={images['new-logo.svg']} alt="Unconstrained Logo" /> */}
-                        Powered by <a href="https://aistra.com/" target="_blank" rel="noreferrer"><img
+                        Powered by <a href="https://www.aistra.com/" target="_blank" rel="noreferrer"><img
                             className="footer-logo-powered"
                             src={'https://storage.googleapis.com/aistra-website-assets/assets/logo/aistra-labs.svg'}
                             alt="Unconstrained Logo" /></a>
@@ -98,12 +98,12 @@ const Footer = () => {
                     <div className="mid-footer">
                         <h3 className="footer-title">Useful Links</h3>
                         <div className="sub-links">
-                            <a href="https://aistra.com/termsandcondition/" rel="noopener noreferrer" className="link-no-deco">
+                            <a href="https://www.aistra.com/termsandcondition/" rel="noopener noreferrer" className="link-no-deco">
                                 <span>
                                     Terms of Services
                                 </span>
                             </a>
-                            <a href="https://aistra.com/privacypolicy/" target="_blank" rel="noopener noreferrer" className="link-no-deco">
+                            <a href="https://www.aistra.com/privacypolicy/" target="_blank" rel="noopener noreferrer" className="link-no-deco">
                                 <span>
                                     Privacy Policy
                                 </span>
