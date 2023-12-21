@@ -9,9 +9,13 @@ function wait(delay) {
 }
 
 function fetchRetry(requestObj, dispatch, delay = 3000, tries = 3) {
+    if (tries <= 0) {
+        logout(dispatch);
+        throw new Error('Not Authorized');
+    }
     function onError(err) {
         const triesLeft = tries - 1;
-        if (triesLeft <= 0) {
+        if (triesLeft < 0) {
             logout(dispatch);
             throw new Error('Not Authorized');
         }
