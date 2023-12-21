@@ -73,7 +73,7 @@ jobs:
                   username: ${{ secrets.UC_PROD_EC2_HOST_USER_NAME }}
                   port: 22
                   key: ${{ secrets.UC_PROD_EC2_SSH_KEY }}
-                  source: './build'
+                  source: './build/'
                   target: '/home/ubuntu/actiondir/'
 
             # - name: Upload to S3
