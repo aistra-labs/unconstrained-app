@@ -75,8 +75,11 @@ jobs:
                   key: ${{ secrets.UC_PROD_EC2_SSH_KEY }}
                   port: 22
                   script: |
+                      sudo su
+                      rm -R /var/www/html/*
                       cd /home/ubuntu/actiondir/build
-                      mv * /home/ubuntu/test
+                      cp * -R /var/www/html/
+                      rm -R *
 
             # - name: Upload to S3
             #   run: aws s3 sync ./build s3://unconstrained-frontend-prod
