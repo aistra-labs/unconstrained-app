@@ -4,14 +4,14 @@ export function logout(dispatch) {
     dispatch(setUserdata({}));
 }
 
-function wait(delay){
+function wait(delay) {
     return new Promise((resolve) => setTimeout(resolve, delay));
 }
 
-function fetchRetry(requestObj, dispatch, delay=3000, tries=3) {
-    function onError(err){
+function fetchRetry(requestObj, dispatch, delay = 3000, tries = 3) {
+    function onError(err) {
         const triesLeft = tries - 1;
-        if(!triesLeft){
+        if (triesLeft <= 0) {
             logout(dispatch);
             throw new Error('Not Authorized');
         }

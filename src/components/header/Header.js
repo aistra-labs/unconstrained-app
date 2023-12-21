@@ -7,6 +7,7 @@ import { Dropdown } from "react-bootstrap"
 // import { setUserdata } from "../../redux/userSlice"
 import { logout } from "../../utils"
 import { URLS } from "../../urls"
+import { setUserdata } from '../../redux/userSlice'
 
 const headerLessRoutes = ['/signin']
 
@@ -73,7 +74,7 @@ const Header = () => {
                             <Dropdown.Item onClick={() => logout(dispatch)}>Logout</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown> :
-                    <Link to={URLS.GOOGLE_SIGNIN}>
+                    <Link to={URLS.GOOGLE_SIGNIN} onClick={()=>setUserdata()}>
                         <img className="login-btn" src={images['Login.svg']} alt="login button" />
                     </Link>
                 }
