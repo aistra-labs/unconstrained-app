@@ -57,8 +57,27 @@ jobs:
                   aws-secret-access-key: ${{ secrets.AWS_DEV_SECRET_ACCESS_KEY }}
                   aws-region: ${{ env.AWS_REGION }}
 
-            - name: Upload to S3
-              run: aws s3 sync ./build s3://unconstrained-frontend-prod
+            # - name: Deploye backend
+            #   uses: appleboy/ssh-action@master
+            #   with:
+            #         host: ${{ secrets.UC_PROD_EC2_HOST_DNS }}
+            #         username: ${{ secrets.UC_PROD_EC2_HOST_USER_NAME  }}
+            #         key: ${{ secrets.UC_PROD_EC2_SSH_KEY }}
+            #         port: 22
+            #         script: |
+            #           cd /opt/hatch/backend/build/dev
+            - name: copy file via ssh key
+              uses: appleboy/scp-action@master
+              with:
+                  host: ${{ secrets.UC_PROD_EC2_HOST_DNS }}
+                  username: ${{ secrets.UC_PROD_EC2_HOST_USER_NAME }}
+                  port: 22
+                  key: ${{ secrets.UC_PROD_EC2_SSH_KEY }}
+                  source: './build'
+                  target: '/home/ubuntu/actiondir/'
 
-            - name: invalidate cache
-              run: aws cloudfront create-invalidation --distribution-id ${{ secrets.PRD_CF_DISTRIBUTION_ID }} --paths "/*"
+            # - name: Upload to S3
+            #   run: aws s3 sync ./build s3://unconstrained-frontend-prod
+
+            # - name: invalidate cache
+            #   run: aws cloudfront create-invalidation --distribution-id ${{ secrets.PRD_CF_DISTRIBUTION_ID }} --paths "/*"
