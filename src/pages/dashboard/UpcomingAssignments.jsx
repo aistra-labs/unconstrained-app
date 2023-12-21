@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import './UpcomingAssigments.css';
 import { images } from "../../components/images";
 import { useDispatch, useSelector } from "react-redux";
@@ -260,8 +260,9 @@ const upcomingAssignment = data => data?.map(assignment => (
 
 function getAssignments(token, id, successCb, dispatch) {
     if (!id) { return false; }
-    fetch(URLS.GET_ASSIGNMENTS(id), { headers: { token } })
-        .then(response => processResponse(response, dispatch))
+  const requestObj = [URLS.GET_ASSIGNMENTS(id), { headers: { token } }];
+  fetch(...requestObj)
+        .then(response => processResponse(response, dispatch, requestObj))
         .then(result => successCb(result))
         .catch(error => {
             console.log('error', error);
@@ -270,13 +271,13 @@ function getAssignments(token, id, successCb, dispatch) {
 }
 
 const UpcomingAssignments = (props) => {
-    const userData = useSelector((state) => state.user.userData);
+    const token = useSelector((state) => state.user.userData?.token);
     const dispatch = useDispatch();
     const [data, setData] = useState();
 
     useEffect(() => {
-        getAssignments(userData?.token, props.currentCardId, setData, dispatch)
-    }, [userData?.token, props.currentCardId, dispatch]);
+        getAssignments(token, props.currentCardId, setData, dispatch)
+    }, [token, props.currentCardId, dispatch]);
     return (
         <div className="upcoming-assignments-card-container">
             <div className="card-title">
@@ -289,4 +290,4 @@ const UpcomingAssignments = (props) => {
     );
 };
 
-export default memo(UpcomingAssignments);
+export default UpcomingAssignments;

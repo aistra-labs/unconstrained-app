@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useRef } from "react"
+import React, { useEffect, useRef } from "react"
 import "./header.css"
 import { Link, useLocation, useNavigate } from "react-router-dom"
 import { images } from "../images"
@@ -11,7 +11,8 @@ import { URLS } from "../../urls"
 const headerLessRoutes = ['/signin']
 
 const Header = () => {
-    const userData = useSelector((state) => state.user.userData)
+    const userData = useSelector((state) => state.user.userData);
+    const token = useSelector((state) => state.user.userData?.token);
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const location = useLocation();
@@ -19,11 +20,11 @@ const Header = () => {
     const headerRef = useRef();
 
     useEffect(() => {
-        if (!userData?.token) {
+        if (!token) {
             navigate('/');
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [userData?.token]);
+    }, [token]);
 
     useEffect(() => {
         if (isHeaderLessRoutes) {
@@ -58,10 +59,10 @@ const Header = () => {
                 <Link to="/coaching">Coaching</Link>
                 {/* <Link to="/community">Community</Link> */}
                 <Link target="_blank" to="https://discord.com/invite/qnXPjsuv5q">Community</Link>
-                {userData?.token && <Link to="/resources">Curated Tools</Link>}
+                {token && <Link to="/resources">Curated Tools</Link>}
             </div>
             <div className="login-btn-container">
-                {userData?.token ?
+                {token ?
                     <Dropdown>
                         <Dropdown.Toggle id="dropdown-basic" className="user">
                             <img className="user" src={userData?.image} alt="user" />
@@ -81,4 +82,4 @@ const Header = () => {
     )
 }
 
-export default memo(Header)
+export default Header;

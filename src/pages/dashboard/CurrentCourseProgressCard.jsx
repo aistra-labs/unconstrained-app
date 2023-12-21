@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from 'react-bootstrap/Carousel';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Button from 'react-bootstrap/Button';
@@ -102,8 +102,9 @@ function CarouselItem({ data }) {
 }
 
 function getCourses(token, successCb, dispatch) {
-  fetch(URLS.GET_COURSES, { headers: { token } })
-    .then(response => processResponse(response, dispatch))
+  const requestObj = [URLS.GET_COURSES, { headers: { token } }];
+  fetch(...requestObj)
+    .then(response => processResponse(response, dispatch, requestObj))
     .then(result => successCb(result?.['courses']))
     .catch(error => {
       console.log('error', error);
@@ -112,7 +113,7 @@ function getCourses(token, successCb, dispatch) {
 }
 
 const CurrentCourseProgressCard = (props) => {
-  const userData = useSelector((state) => state.user.userData);
+  const token = useSelector((state) => state.user.userData?.token);
   const dispatch = useDispatch();
   const [data, setData] = useState();
   const [index, setIndex] = useState(0);
@@ -127,10 +128,10 @@ const CurrentCourseProgressCard = (props) => {
   }, [data])
 
   useEffect(() => {
-    if (userData?.token) {
-      getCourses(userData?.token, setData, dispatch);
+    if (token) {
+      getCourses(token, setData, dispatch);
     }
-  }, [dispatch, userData?.token]);
+  }, [dispatch, token]);
 
   return (
     <Carousel activeIndex={index} onSelect={handleSelect} className="carousel-container" controls={false} slide={false} interval={null}>
@@ -145,4 +146,4 @@ const CurrentCourseProgressCard = (props) => {
   );
 };
 
-export default memo(CurrentCourseProgressCard);
+export default CurrentCourseProgressCard;
