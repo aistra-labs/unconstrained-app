@@ -74,7 +74,7 @@ const Header = () => {
                             <Dropdown.Item onClick={() => logout(dispatch)}>Logout</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown> :
-                    <Link to={URLS.GOOGLE_SIGNIN} onClick={()=>setUserdata()}>
+                    <Link to={URLS.GOOGLE_SIGNIN} onClick={()=>setUserdata({})}>
                         <img className="login-btn" src={images['Login.svg']} alt="login button" />
                     </Link>
                 }
