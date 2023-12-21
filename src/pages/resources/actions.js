@@ -3,7 +3,7 @@ import { URLS } from "../../urls";
 import { processResponse } from "../../utils";
 
 export function getCuratedTools(token, successCb, body = {}, dispatch) {
-    fetch(URLS.GET_CURATEDTOOLS, {
+    const requestObj = [URLS.GET_CURATEDTOOLS, {
         headers: {
             token,
             'Accept': 'application/json',
@@ -11,8 +11,9 @@ export function getCuratedTools(token, successCb, body = {}, dispatch) {
         },
         body: JSON.stringify(body),
         method: 'POST'
-    })
-        .then(response => processResponse(response, dispatch))
+    }];
+    fetch(...requestObj)
+        .then(response => processResponse(response, dispatch, requestObj))
         .then(result => successCb(result?.['curatedTools']))
         .catch(error => {
             console.log('error', error);
@@ -45,14 +46,15 @@ function transformFilterData(data) {
 }
 
 export function getCuratedToolFilters(token, successCb, dispatch) {
-    fetch(URLS.GET_CURATEDTOOLS_FILTERS, {
+    const requestObj = [URLS.GET_CURATEDTOOLS_FILTERS, {
         headers: {
             token,
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-    })
-        .then(response => processResponse(response, dispatch))
+    }];
+    fetch(...requestObj)
+        .then(response => processResponse(response, dispatch, requestObj))
         .then(result => successCb(transformFilterData(result)))
         .catch(error => {
             console.log('error', error);

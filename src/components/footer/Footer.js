@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { memo, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./footer.css";
 import { images } from '../images';
 // import Form from 'react-bootstrap/Form';
@@ -133,4 +133,4 @@ const Footer = () => {
     );
 };
 
-export default memo(Footer);
+export default Footer;

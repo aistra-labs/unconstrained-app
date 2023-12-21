@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { memo, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./resources.css";
 import { images } from "../../components/images";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,25 +8,25 @@ import ProdCard from "../../components/curatedToolResCard";
 
 
 const Resources = () => {
-  const userData = useSelector((state) => state.user.userData);
+  const token = useSelector((state) => state.user.userData?.token);
   const dispatch = useDispatch();
   const [curatedData, setCuratedData] = useState();
   const [filterData, setFilterData] = useState([]);
   const [selectedFilters, setSelectedFilters] = useState([]);
 
   useEffect(() => {
-    if (userData?.token) {
-      getCuratedToolFilters(userData?.token, setFilterData, dispatch);
+    if (token) {
+      getCuratedToolFilters(token, setFilterData, dispatch);
 
     }
-  }, [userData?.token]);
+  }, [token]);
 
   useEffect(() => {
     let body = {};
     selectedFilters.forEach(el => {
       body = { ...body, [el[0]]: [...(body?.[el[0]] || []), el[1]] }
     })
-    getCuratedTools(userData?.token, setCuratedData, body, dispatch);
+    getCuratedTools(token, setCuratedData, body, dispatch);
   }, [selectedFilters])
 
   function clearAll(key) {
@@ -113,4 +113,4 @@ const Resources = () => {
   );
 };
 
-export default memo(Resources);
+export default Resources;
