@@ -1,11 +1,30 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { memo } from "react";
+import React, { memo, useEffect, useState } from "react";
 import Slider from "react-slick";
 import "./courses.css";
 import { images } from "../../components/images";
-import CourseCard from "../../components/courseCard/CourseCard";
+import CourseCard, { BuyCourseCard } from "../../components/courseCard/CourseCard";
+import { useDispatch, useSelector } from "react-redux";
+import { URLS } from "../../urls";
+import { processResponse } from "../../utils";
+
+
+function getPaidCourses(token, successCb, dispatch) {
+  console.log('paidCourses...fn called,,,,,../.......');
+  const requestObj = [URLS.GET_PURCHASED_COURSES, { headers: { token } }];
+  fetch(...requestObj)
+    .then(response => processResponse(response, dispatch, requestObj))
+    .then(result => successCb(result?.['productList']))
+    .catch(error => {
+      console.log('error', error);
+      successCb(null);
+    });
+}
 
 const Courses = () => {
+  const token = useSelector((state) => state.user.userData?.token);
+  const dispatch = useDispatch();
+  const [paidCourses, setPaidCourses] = useState();
 
   const cardData = [
     // {
@@ -66,33 +85,47 @@ const Courses = () => {
     },
   ];
 
-  const NextArrow = (props) => (
-    <div
-      {...props}
-      className="arrow-container"
-    >
-      <img className="right-arrow" src={images['right-arrow.svg']} loading="lazy" alt="Next" />
-    </div>
-  );
+  useEffect(() => {
+    if (token) {
+      getPaidCourses(token, setPaidCourses, dispatch);
+    }
+  }, [dispatch, token]);
 
-  const PrevArrow = (props) => (
-    <div
-      {...props}
-      className="arrow-container"
-    >
-      <img className="left-arrow" src={images['left-arrow.svg']} loading="lazy" alt="Previous" />
-    </div>
-  );
+  const NextArrow = (props) => {
+    const {currentSlide, slideCount, ...restProps} = props;
+    return (
+      <div
+        {...restProps}
+        className="arrow-container"
+      >
+        <img className="right-arrow" src={images['right-arrow.svg']} loading="lazy" alt="Next" />
+      </div>
+    );
+  }
 
-  let settings = {
+  const PrevArrow = (props) => {
+    const {currentSlide, slideCount, ...restProps} = props;
+    return (
+      <div
+        {...restProps}
+        className="arrow-container"
+      >
+        <img className="left-arrow" src={images['left-arrow.svg']} loading="lazy" alt="Previous" />
+      </div>
+    );
+  }
+
+  let settings = (maxLen = 0) => ({
     infinite: true,
     speed: 500,
-    slidesToShow: window.innerWidth < 768 ? 1 : 3,
+    slidesToShow: Math.min(window.innerWidth < 768 ? 1 : window.innerWidth > 1470 ? 3 : 2, maxLen),
     slidesToScroll: 1,
     className: "slider-style",
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-  };
+  });
+
+  console.log('paidCourses...', paidCourses);
 
   return (
     <div className="courses-container">
@@ -126,20 +159,45 @@ const Courses = () => {
           </div> */}
         </div>
         <div className="courses-cards">
-          <Slider {...settings}>
-            {cardData.map((card, index) => {
-              return (
-                <CourseCard
-                  imageUrl={card.imageUrl}
-                  key={index}
-                  header={card.header}
-                  description={card.description}
-                  rating={card.rating}
-                  review={card.review}
-                />
-              )
-            })}
-          </Slider>
+          {cardData?.length > 0 &&
+            <Slider {...settings(cardData?.length)}>
+              {cardData.map((card) => {
+                return (
+                  <CourseCard
+                    imageUrl={card.imageUrl}
+                    key={card.header}
+                    header={card.header}
+                    description={card.description}
+                    rating={card.rating}
+                    review={card.review}
+                  />
+                )
+              })}
+            </Slider>
+          }
+        </div>
+      </div>
+      <div className="educators-container">
+        <div className="educators-header">
+          <div className="title">Available Courses</div>
+        </div>
+        <div className="courses-cards">
+          {paidCourses?.length > 0 &&
+            <Slider {...settings(paidCourses?.length)}>
+              {paidCourses?.map((card) => {
+                return (
+                  <BuyCourseCard
+                    imageUrl={card.imageUrl}
+                    key={card.productId}
+                    productId={card.productId}
+                    header={card.productName}
+                    isPurchased={card.isPurchased}
+                  // description={card.productId}
+                  />
+                )
+              })}
+            </Slider>
+          }
         </div>
       </div>
     </div>
