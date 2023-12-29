@@ -9,6 +9,7 @@ import UpcomingAssignments from './UpcomingAssignments';
 import { setUserdata } from '../../redux/userSlice'
 import { useSelector, useDispatch } from 'react-redux'
 import SuccessModal from "./successPaymentModal";
+import FailedModal from "./failedPaymentModal";
 
 const Dashboard = () => {
   const [currentCardId, setCurrentCardId] = useState();
@@ -46,7 +47,7 @@ const Dashboard = () => {
   return (
     <div className="dashoboard-container">
       <SuccessModal show={showSuccess} handleClose={() => setShowSuccess(false)} />
-      <SuccessModal show={showFailed} handleClose={() => setShowFailed(false)} />
+      <FailedModal show={showFailed} handleClose={() => setShowFailed(false)} />
       <div className="dashboard-controller">
         <img className="tree-logo" src={images['tree.svg']} loading="lazy" alt="avatarLogo" />
         {/* <img className="dashboard-avatar" src={images['dashboardAvatar.png']} loading="lazy" alt="avatar logo" /> */}
