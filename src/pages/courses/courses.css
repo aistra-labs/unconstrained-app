@@ -137,6 +137,7 @@
             row-gap: 20px;
             padding: 20px 10px;
             height: auto;
+            width: 100%;
 
             .banner-content {
                 width: auto;
@@ -166,10 +167,10 @@
 
         .educators-container {
             padding: 40px 25px;
-
             .courses-cards {
                 .slick-slider {
                     .arrow-container {
+                        display: none !important;
                         .left-arrow {
                             top: 18%;
                             left: -18px;
@@ -183,5 +184,10 @@
                 }
             }
         }
+    }
+}
+@media (min-width: 768px) {
+    .slick-dots {
+        display: none !important;
     }
 }
