@@ -1,20 +1,22 @@
 .course-card-container {
     display: flex;
     flex-direction: column;
-    width: 375px;
-    height: 440px;
+    width: 355px;
+    height: 430px;
     border-radius: 12px;
     border: 1px solid #EEEEEF;
     background: #FFF;
+    margin-left: 10px;
 
     .image-container {
-        width: 374px;
+        width: 354px;
         height: 210px;
 
         .card-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 12px;
         }
     }
 
@@ -22,6 +24,8 @@
         display: flex;
         flex-direction: column;
         padding: 16px;
+        justify-content: space-between;
+            height: 100%;
 
         .card-header {
             color: var(--foundation-black-black-900, #222526);
@@ -72,22 +76,47 @@
         }
 
         .card-desc {
-            margin-top: 19px;
+            margin-top: 5px;
             color: var(--foundation-black-black-500, #50585B);
             font-family: Inter;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
+            height: 90px;
             line-height: 160%;
+        }
+        .animate-charcter {
+            font-family: Inter;
+            border: 1px solid #FBB8B2;
+                padding: 6px 12px 6px 12px;
+                border-radius: 4px;
+                color: #F66558;
+                background-color: #FEE8E6;
+                font-weight: 600;
+                font-size: 12px;
+                    width: max-content;
+                    margin-top: 10px;
         }
 
         .buy-now-btn {
             cursor: pointer;
-            background: #04AA6D;
+            background: #F28705;
             color: white;
             border: none;
             height: 40px;
             border-radius: 5px;
+            width: 100%;
+                font-weight: 600;
+                font-size: 14px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            
+                .cart-icon {
+                    margin-right: 4px;
+                    width: 20px;
+                    height: 20px;
+                }
         }
 
         .buy-now-btn:disabled {
@@ -97,15 +126,18 @@
         }
 
         .purchased-txt {
-            background: #0047AB;
+            background: #210140;
             color: white;
             border: none;
             height: 40px;
             border-radius: 5px;
+            font-weight: 600;
+                font-size: 14px;
             display: flex;
             text-align: center;
             justify-content: center;
             align-items: center;
+            width: 100%;
         }
     }
 }
@@ -130,5 +162,29 @@
 @keyframes rotateSpinner {
     to {
         transform: rotate(360deg);
+    }
+}
+@media only screen and (max-width: 767px) {
+    .course-card-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 425px;
+        border-radius: 12px;
+        border: 1px solid #EEEEEF;
+        background: #FFF;
+        margin-left: 0px;
+
+        .image-container {
+            width: 100%;
+            height: 210px;
+
+            .card-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 12px;
+            }
+        }
     }
 }

@@ -10,6 +10,7 @@ import { setUserdata } from '../../redux/userSlice'
 import { useSelector, useDispatch } from 'react-redux'
 import SuccessModal from "./successPaymentModal";
 import FailedModal from "./failedPaymentModal";
+import { useNavigate } from "react-router-dom"
 
 const Dashboard = () => {
   const [currentCardId, setCurrentCardId] = useState();
@@ -20,6 +21,7 @@ const Dashboard = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const [showFailed, setShowFailed] = useState(false);
   const dispatch = useDispatch();
+   const navigate = useNavigate();
   useEffect(() => {
     const profileData = {
       name: searchParams.get("name"),
@@ -29,8 +31,11 @@ const Dashboard = () => {
     }
     if (profileData?.token) {
       dispatch(setUserdata(profileData));
-
       setSearchParams('');
+    }
+    const redirectPage = localStorage.getItem('login-through-course') === 'true';
+    if (redirectPage) {
+      navigate('/courses');
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
