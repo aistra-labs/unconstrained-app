@@ -91,6 +91,7 @@ const Courses = () => {
         localStorage.setItem('login-through-course', 'false');
         // }
     }, [dispatch, token]);
+
     const NextArrow = (props) => {
         const { currentSlide, slideCount, ...restProps } = props;
         return (
@@ -120,11 +121,10 @@ const Courses = () => {
         prevArrow: <PrevArrow />,
     });
 
-
-return (
-    <div className="courses-container">
-        {/* <div className="courses-banner-container"> */}
-        {/* <div className="banner-content">
+    return (
+        <div className="courses-container">
+            {/* <div className="courses-banner-container"> */}
+            {/* <div className="banner-content">
                     <div className="banner-title">
                         <span className="orange-title">AI</span> for Learning Design
                     </div>
@@ -145,9 +145,9 @@ return (
                             </li>
                         </ul>
                     </div> */}
-        {/* <img className="signup-btn" src={images['courses-signup-btn.svg']} loading="lazy" alt="signup button" /> */}
-        {/* </div> */}
-        {/* <div className="courses-banner">
+            {/* <img className="signup-btn" src={images['courses-signup-btn.svg']} loading="lazy" alt="signup button" /> */}
+            {/* </div> */}
+            {/* <div className="courses-banner">
                     <div className="banner-image-container">
                         <img
                             className="courses-banner"
@@ -158,7 +158,7 @@ return (
                     </div>
                 </div>
             </div> */}
-        {/* <div className="educators-container">
+            {/* <div className="educators-container">
               <div className="educators-header">
                   <div className="title">Courses for Educators</div>
                   <div className="btn-container">
@@ -184,31 +184,14 @@ return (
                   )}
               </div>
           </div> */}
-        <div className="educators-container">
-            <div className="educators-header">
-                <div className="title">Courses Offered</div>
-            </div>
-            <div className="courses-cards">
-                {(paidCourses?.length > 3 || (paidCourses?.length >= 2 && window.innerWidth < 767)) && (
-                    <Slider {...settings(paidCourses?.length)}>
-                        {paidCourses?.map((card) => (
-                            <BuyCourseCard
-                                imageUrl={card.imageUrl}
-                                key={card.productId}
-                                productId={card.productId}
-                                header={card.productName}
-                                isPurchased={card.isPurchased}
-                                description={card.description}
-                                startDate={card.startDate}
-                            />
-                        ))}
-                    </Slider>
-                )}
-
-                {paidCourses && paidCourses.length <= 3 && window.innerWidth > 767 && (
-                    <div className="course-without-slider">
-                        {paidCourses.map((card) => {
-                            return (
+            <div className="educators-container">
+                <div className="educators-header">
+                    <div className="title">Courses Offered</div>
+                </div>
+                <div className="courses-cards">
+                    {(paidCourses?.length > 3 || (paidCourses?.length >= 2 && window.innerWidth < 767)) && (
+                        <Slider {...settings(paidCourses?.length)}>
+                            {paidCourses?.map((card) => (
                                 <BuyCourseCard
                                     imageUrl={card.imageUrl}
                                     key={card.productId}
@@ -218,14 +201,32 @@ return (
                                     description={card.description}
                                     startDate={card.startDate}
                                 />
-                            );
-                        })}
-                    </div>
-                )}
+                            ))}
+                        </Slider>
+                    )}
+
+                    {paidCourses && paidCourses.length <= 3 && window.innerWidth > 767 && (
+                        <div className="course-without-slider">
+                            {paidCourses &&
+                                paidCourses.map((card) => {
+                                    return (
+                                        <BuyCourseCard
+                                            imageUrl={card.imageUrl}
+                                            key={card.productId}
+                                            productId={card.productId}
+                                            header={card.productName}
+                                            isPurchased={card.isPurchased}
+                                            description={card.description}
+                                            startDate={card.startDate}
+                                        />
+                                    );
+                                })}
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
-    </div>
-);
+    );
 };
 
 export default memo(Courses);
