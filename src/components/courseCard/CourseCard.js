@@ -88,9 +88,9 @@ export const BuyCourseCard = ({ imageUrl, header, description, productId, isPurc
            </div>
            <div className="card-content">
                <div>
-                   <h2 className="card-header">{header}</h2>
+                   <h2 className="card-header">{truncateText(header, 35)}</h2>
                    <h4 className="animate-charcter"> {calculateDaysLeft(startDate)}</h4>
-                   <p className="card-desc">{truncateText(description, 160)}</p>
+                   <p className="card-desc">{truncateText(description, 180)}</p>
                </div>
                <div>
                    {loading ? (

@@ -114,7 +114,7 @@ const Courses = () => {
         infinite: true,
         dots: true,
         speed: 500,
-        slidesToShow: Math.min(window.innerWidth < 768 ? 1 : window.innerWidth > 1470 ? 3 : 3, maxLen),
+        slidesToShow: Math.min(window.innerWidth < 768 ? 1 : window.innerWidth > 1470 ? 3 : 2, maxLen),
         slidesToScroll: 1,
         className: 'slider-style',
         nextArrow: <NextArrow />,
