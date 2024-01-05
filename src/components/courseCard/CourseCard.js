@@ -50,6 +50,9 @@ export const BuyCourseCard = ({ imageUrl, header, description, productId, isPurc
     const [loading, setLoading] = useState(false);
 
     const calculateDaysLeft = (targetDate) => {
+        if (!targetDate) {
+            return 'Coming Soon';
+        }
         const [day, month, year] = targetDate.split('-');
         const targetDateObject = new Date(`${year}-${month}-${day}`);
         const currentDate = new Date();
