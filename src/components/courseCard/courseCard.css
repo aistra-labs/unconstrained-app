@@ -2,10 +2,11 @@
     display: flex;
     flex-direction: column;
     width: 355px;
-    height: 425px;
+    height: 430px;
     border-radius: 12px;
     border: 1px solid #EEEEEF;
     background: #FFF;
+    margin-left: 10px;
 
     .image-container {
         width: 354px;
@@ -82,6 +83,8 @@
             font-style: normal;
             font-weight: 400;
             line-height: 160%;
+            height: 90px;
+                overflow: scroll;
         }
         .animate-charcter {
             font-family: Inter;
@@ -171,6 +174,7 @@
         border-radius: 12px;
         border: 1px solid #EEEEEF;
         background: #FFF;
+        margin-left: 0px;
 
         .image-container {
             width: 100%;

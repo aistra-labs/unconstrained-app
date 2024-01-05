@@ -63,14 +63,14 @@ export const BuyCourseCard = ({ imageUrl, header, description, productId, isPurc
             return `${daysLeft} day${daysLeft !== 1 ? 's' : ''} left`;
         }
     };
-    const truncateText = (text, maxWords) => {
-        const words = text.split(' ');
-        if (words.length <= maxWords) {
-            return text;
-        }
-        const truncatedText = words.slice(0, maxWords).join(' ') + '...';
-        return truncatedText;
-    };
+    // const truncateText = (text, maxWords) => {
+    //     const words = text.split(' ');
+    //     if (words.length <= maxWords) {
+    //         return text;
+    //     }
+    //     const truncatedText = words.slice(0, maxWords).join(' ') + '...';
+    //     return truncatedText;
+    // };
     const handleGoogleSigninClick = () => {
         // Set the item in local storage
         localStorage.setItem('login-through-course', 'true');
@@ -88,7 +88,7 @@ export const BuyCourseCard = ({ imageUrl, header, description, productId, isPurc
                 <div>
                     <h2 className="card-header">{header}</h2>
                     <h4 className="animate-charcter"> {calculateDaysLeft(startDate)}</h4>
-                    <p className="card-desc">{truncateText(description, 25)}</p>
+                    <p className="card-desc">{description}</p>
                 </div>
                 <div>
                     {loading ? (

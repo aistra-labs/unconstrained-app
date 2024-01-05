@@ -91,42 +91,42 @@ const Courses = () => {
         localStorage.setItem('login-through-course', 'false');
         // }
     }, [dispatch, token]);
-
-    const NextArrow = (props) => {
-        const { currentSlide, slideCount, ...restProps } = props;
-        return (
-            <div {...restProps} className="arrow-container">
-                <img className="right-arrow" src={images['right-arrow.svg']} loading="lazy" alt="Next" />
-            </div>
-        );
-    };
-
-    const PrevArrow = (props) => {
-        const { currentSlide, slideCount, ...restProps } = props;
-        return (
-            <div {...restProps} className="arrow-container">
-                <img className="left-arrow" src={images['left-arrow.svg']} loading="lazy" alt="Previous" />
-            </div>
-        );
-    };
-
-    let settings = (maxLen = 0) => ({
-        infinite: true,
-        dots: true,
-        speed: 500,
-        slidesToShow: Math.min(window.innerWidth < 768 ? 1 : window.innerWidth > 1470 ? 3 : 3, maxLen),
-        slidesToScroll: 1,
-        className: 'slider-style',
-        nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />,
-    });
-
-    console.log('paidCourses...', paidCourses);
-
+console.log(window.innerWidth, 'window.innerWidth');
+const NextArrow = (props) => {
+    const { currentSlide, slideCount, ...restProps } = props;
     return (
-        <div className="courses-container">
-            {/* <div className="courses-banner-container"> */}
-            {/* <div className="banner-content">
+        <div {...restProps} className="arrow-container">
+            <img className="right-arrow" src={images['right-arrow.svg']} loading="lazy" alt="Next" />
+        </div>
+    );
+};
+
+const PrevArrow = (props) => {
+    const { currentSlide, slideCount, ...restProps } = props;
+    return (
+        <div {...restProps} className="arrow-container">
+            <img className="left-arrow" src={images['left-arrow.svg']} loading="lazy" alt="Previous" />
+        </div>
+    );
+};
+
+let settings = (maxLen = 0) => ({
+    infinite: true,
+    dots: true,
+    speed: 500,
+    slidesToShow: Math.min(window.innerWidth < 768 ? 1 : window.innerWidth > 1470 ? 3 : 3, maxLen),
+    slidesToScroll: 1,
+    className: 'slider-style',
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+});
+
+console.log('paidCourses...', paidCourses);
+
+return (
+    <div className="courses-container">
+        {/* <div className="courses-banner-container"> */}
+        {/* <div className="banner-content">
                     <div className="banner-title">
                         <span className="orange-title">AI</span> for Learning Design
                     </div>
@@ -147,9 +147,9 @@ const Courses = () => {
                             </li>
                         </ul>
                     </div> */}
-            {/* <img className="signup-btn" src={images['courses-signup-btn.svg']} loading="lazy" alt="signup button" /> */}
-            {/* </div> */}
-            {/* <div className="courses-banner">
+        {/* <img className="signup-btn" src={images['courses-signup-btn.svg']} loading="lazy" alt="signup button" /> */}
+        {/* </div> */}
+        {/* <div className="courses-banner">
                     <div className="banner-image-container">
                         <img
                             className="courses-banner"
@@ -160,7 +160,7 @@ const Courses = () => {
                     </div>
                 </div>
             </div> */}
-            {/* <div className="educators-container">
+        {/* <div className="educators-container">
               <div className="educators-header">
                   <div className="title">Courses for Educators</div>
                   <div className="btn-container">
@@ -186,32 +186,48 @@ const Courses = () => {
                   )}
               </div>
           </div> */}
-            <div className="educators-container">
-                <div className="educators-header">
-                    <div className="title">Courses Offered</div>
-                </div>
-                <div className="courses-cards">
-                    {paidCourses?.length > 0 && (
-                        <Slider {...settings(paidCourses?.length)}>
-                            {paidCourses?.map((card) => {
-                                return (
-                                    <BuyCourseCard
-                                        imageUrl={card.imageUrl}
-                                        key={card.productId}
-                                        productId={card.productId}
-                                        header={card.productName}
-                                        isPurchased={card.isPurchased}
-                                        description={card.description}
-                                        startDate={card.startDate}
-                                    />
-                                );
-                            })}
-                        </Slider>
-                    )}
-                </div>
+        <div className="educators-container">
+            <div className="educators-header">
+                <div className="title">Courses Offered</div>
+            </div>
+            <div className="courses-cards">
+                {(paidCourses?.length > 3 || (paidCourses?.length >= 2 && window.innerWidth < 767)) && (
+                    <Slider {...settings(paidCourses?.length)}>
+                        {paidCourses?.map((card) => (
+                            <BuyCourseCard
+                                imageUrl={card.imageUrl}
+                                key={card.productId}
+                                productId={card.productId}
+                                header={card.productName}
+                                isPurchased={card.isPurchased}
+                                description={card.description}
+                                startDate={card.startDate}
+                            />
+                        ))}
+                    </Slider>
+                )}
+
+                {paidCourses && paidCourses.length <= 3 && window.innerWidth > 767 && (
+                    <div className="course-without-slider">
+                        {paidCourses.map((card) => {
+                            return (
+                                <BuyCourseCard
+                                    imageUrl={card.imageUrl}
+                                    key={card.productId}
+                                    productId={card.productId}
+                                    header={card.productName}
+                                    isPurchased={card.isPurchased}
+                                    description={card.description}
+                                    startDate={card.startDate}
+                                />
+                            );
+                        })}
+                    </div>
+                )}
             </div>
         </div>
-    );
+    </div>
+);
 };
 
 export default memo(Courses);
