@@ -1,0 +1,9 @@
+.failed-msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 500px;
+    .text {
+        margin-right: 20px;
+    }
+}

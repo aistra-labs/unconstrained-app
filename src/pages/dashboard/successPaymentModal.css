@@ -1,0 +1,8 @@
+.success-msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .text {
+        margin-right: 20px;
+    }
+}
