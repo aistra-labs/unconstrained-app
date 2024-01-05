@@ -1,5 +1,6 @@
 .testimonial-card-css {
     width: 100%;
+    padding: 0 120px;
 
     .carousel-slide-container {
         display: flex;
@@ -66,15 +67,15 @@
     }
 
     .card-section {
-        padding-left: 50px;
-        padding-right: 50px;
+        /* padding-left: 50px;
+        padding-right: 50px; */
         padding-top: 100px;
     }
 
     @media (max-width: 767px) {
         .card-section {
-            padding-left: 50px;
-            padding-right: 50px;
+            /* padding-left: 50px;
+            padding-right: 50px; */
             padding-top: 20px;
         }
     }

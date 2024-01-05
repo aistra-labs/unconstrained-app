@@ -3,7 +3,7 @@ function getSpentTime(str) {
 }
 
 function getTasksForEpic() {
-    let t = document.querySelectorAll('[data-issue-key*="GEN"]');
+    let t = document.querySelectorAll('[data-issue-key*="DT"]');
     let dates = document.getElementsByClassName('created');
     let resText = "";
     const res = [];
