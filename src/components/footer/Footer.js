@@ -14,7 +14,7 @@ import SubscribeComponent from "../subscribeComponent";
 const footerLessRoutes = ['/signin'];
 
 const Footer = () => {
-    const userData = useSelector((state) => state.user.userData);
+    const token = useSelector((state) => state.user.token);
     const location = useLocation();
     const isFooterLessRoutes = footerLessRoutes.filter(el => location.pathname.startsWith(el)).length > 0;
 
@@ -88,7 +88,7 @@ const Footer = () => {
                                     Community
                                 </span>
                             </a>
-                            {userData?.token && <a href="/resources" rel="noopener noreferrer" className="link-no-deco">
+                            {token && <a href="/resources" rel="noopener noreferrer" className="link-no-deco">
                                 <span>
                                     Curated Tools
                                 </span>

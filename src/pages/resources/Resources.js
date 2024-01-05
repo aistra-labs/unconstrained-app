@@ -8,7 +8,7 @@ import ProdCard from "../../components/curatedToolResCard";
 
 
 const Resources = () => {
-  const token = useSelector((state) => state.user.userData?.token);
+  const token = useSelector((state) => state.user.token);
   const dispatch = useDispatch();
   const [curatedData, setCuratedData] = useState();
   const [filterData, setFilterData] = useState([]);

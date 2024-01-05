@@ -1,7 +1,8 @@
-import { setUserdata } from "./redux/userSlice";
+import { setUserdata, setToken } from "./redux/userSlice";
 
 export function logout(dispatch) {
     dispatch(setUserdata({}));
+    dispatch(setToken(null));
 }
 
 function wait(delay) {

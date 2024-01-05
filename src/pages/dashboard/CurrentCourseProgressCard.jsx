@@ -113,7 +113,7 @@ function getCourses(token, successCb, dispatch) {
 }
 
 const CurrentCourseProgressCard = (props) => {
-  const token = useSelector((state) => state.user.userData?.token);
+  const token = useSelector((state) => state.user.token);
   const dispatch = useDispatch();
   const [data, setData] = useState();
   const [index, setIndex] = useState(0);

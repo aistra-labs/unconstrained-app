@@ -6,7 +6,7 @@ import Tabs from 'react-bootstrap/Tabs';
 import { images } from "../../components/images";
 import CurrentCourseProgressCard from './CurrentCourseProgressCard';
 import UpcomingAssignments from './UpcomingAssignments';
-import { setUserdata } from '../../redux/userSlice'
+import { setUserdata, setToken } from '../../redux/userSlice'
 import { useSelector, useDispatch } from 'react-redux'
 import SuccessModal from "./successPaymentModal";
 import FailedModal from "./failedPaymentModal";
@@ -21,16 +21,17 @@ const Dashboard = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const [showFailed, setShowFailed] = useState(false);
   const dispatch = useDispatch();
-   const navigate = useNavigate();
+  const navigate = useNavigate();
   useEffect(() => {
     const profileData = {
       name: searchParams.get("name"),
       email: searchParams.get("email"),
       image: searchParams.get("image"),
-      token: searchParams.get("token")
     }
-    if (profileData?.token) {
+    const token = searchParams.get("token");
+    if (token) {
       dispatch(setUserdata(profileData));
+      dispatch(setToken(token));
       setSearchParams('');
     }
     const redirectPage = localStorage.getItem('login-through-course') === 'true';

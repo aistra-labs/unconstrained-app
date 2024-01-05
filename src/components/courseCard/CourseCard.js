@@ -46,7 +46,7 @@ function checkout(productId, token, setLoading) {
 }
 
 export const BuyCourseCard = ({ imageUrl, header, description, productId, isPurchased, startDate }) => {
-    const token = useSelector((state) => state.user.userData?.token);
+    const token = useSelector((state) => state.user.token);
     const [loading, setLoading] = useState(false);
 
     const calculateDaysLeft = (targetDate) => {

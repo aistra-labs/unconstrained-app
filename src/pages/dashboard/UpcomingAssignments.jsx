@@ -271,7 +271,7 @@ function getAssignments(token, id, successCb, dispatch) {
 }
 
 const UpcomingAssignments = (props) => {
-    const token = useSelector((state) => state.user.userData?.token);
+    const token = useSelector((state) => state.user.token);
     const dispatch = useDispatch();
     const [data, setData] = useState();
 

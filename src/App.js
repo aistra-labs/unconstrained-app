@@ -25,8 +25,8 @@ const Resources = lazy(() => import('./pages/resources/Resources'));
 const Dashboard = lazy(() => import('./pages/dashboard'));
 
 const PrivateRoute = () => {
-  const userData = useSelector((state) => state.user.userData);
-  return userData?.token ? <Outlet /> : <Navigate to="/" />;
+  const token = useSelector((state) => state.user.token);
+  return token ? <Outlet /> : <Navigate to="/" />;
 }
 
 function App() {

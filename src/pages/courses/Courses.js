@@ -22,7 +22,7 @@ function getPaidCourses(token, successCb, dispatch) {
 }
 
 const Courses = () => {
-    const token = useSelector((state) => state.user.userData?.token);
+    const token = useSelector((state) => state.user.token);
     const dispatch = useDispatch();
     const [paidCourses, setPaidCourses] = useState();
 
