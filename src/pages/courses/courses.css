@@ -90,10 +90,10 @@
         .courses-cards {
             .course-without-slider {
                     display: flex;
+                    /* justify-content: space-between; */
                 }
             .slick-slider {
-                display: flex;
-
+                /* display: flex; */
                 .slick-list {
                     overflow: hidden;
                     margin: 0;
@@ -109,21 +109,21 @@
                 } */
                 .arrow-container {
                     width: 48px;
-                    height: 48px;
+                    /* height: 48px; */
                     cursor: pointer;
 
                     .left-arrow {
                         position: absolute;
                         z-index: 1;
-                        top: 30%;
-                        left: -10px;
+                        top: 20%;
+                            left: 0px;
                     }
 
                     .right-arrow {
                         position: absolute;
                         z-index: 1;
-                        top: 30%;
-                        right: 0px;
+                        top: 20%;
+                            right: -10px;
                     }
                 }
             }
@@ -176,7 +176,7 @@
                         display: none !important;
                         .left-arrow {
                             top: 18%;
-                            left: -18px;
+                            left: -22px;
                         }
 
                         .right-arrow {
