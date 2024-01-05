@@ -82,9 +82,8 @@
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
-            line-height: 160%;
             height: 90px;
-                overflow: scroll;
+            line-height: 160%;
         }
         .animate-charcter {
             font-family: Inter;
