@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 80px;
+    padding-top: 80px;
+    border-top: 1px solid var(--Foundation-Blue-blue-50, #E9E6EC);
 
     .top-footer {
         display: flex;
