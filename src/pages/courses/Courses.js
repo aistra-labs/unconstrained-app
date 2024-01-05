@@ -125,8 +125,8 @@ const Courses = () => {
 
     return (
         <div className="courses-container">
-            <div className="courses-banner-container">
-                <div className="banner-content">
+            {/* <div className="courses-banner-container"> */}
+            {/* <div className="banner-content">
                     <div className="banner-title">
                         <span className="orange-title">AI</span> for Learning Design
                     </div>
@@ -146,10 +146,10 @@ const Courses = () => {
                                 planning.
                             </li>
                         </ul>
-                    </div>
-                    {/* <img className="signup-btn" src={images['courses-signup-btn.svg']} loading="lazy" alt="signup button" /> */}
-                </div>
-                <div className="courses-banner">
+                    </div> */}
+            {/* <img className="signup-btn" src={images['courses-signup-btn.svg']} loading="lazy" alt="signup button" /> */}
+            {/* </div> */}
+            {/* <div className="courses-banner">
                     <div className="banner-image-container">
                         <img
                             className="courses-banner"
@@ -159,7 +159,7 @@ const Courses = () => {
                         />
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* <div className="educators-container">
               <div className="educators-header">
                   <div className="title">Courses for Educators</div>
@@ -188,7 +188,7 @@ const Courses = () => {
           </div> */}
             <div className="educators-container">
                 <div className="educators-header">
-                    <div className="title">Courses for Educators</div>
+                    <div className="title">Courses Offered</div>
                 </div>
                 <div className="courses-cards">
                     {paidCourses?.length > 0 && (
