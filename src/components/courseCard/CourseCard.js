@@ -2,6 +2,7 @@ import React, { memo, useState } from "react";
 import "./courseCard.css";
 import { URLS } from "../../urls";
 import { useSelector } from "react-redux";
+import { images } from '../../components/images';
 // import { images } from "../images";
 
 const CourseCard = ({ imageUrl, header, description, rating, review }) => {
@@ -54,8 +55,13 @@ export const BuyCourseCard = ({ imageUrl, header, description, productId, isPurc
         const currentDate = new Date();
         const timeDifference = targetDateObject.getTime() - currentDate.getTime();
         const daysLeft = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
-
-        return daysLeft;
+        if (isNaN(daysLeft) || !isFinite(daysLeft)) {
+            return 'Coming Soon';
+        } else if (daysLeft <= 0) {
+            return 'Course Started';
+        } else {
+            return `${daysLeft} day${daysLeft !== 1 ? 's' : ''} left`;
+        }
     };
     const truncateText = (text, maxWords) => {
         const words = text.split(' ');
@@ -79,22 +85,31 @@ export const BuyCourseCard = ({ imageUrl, header, description, productId, isPurc
                 <img src={imageUrl} alt={header} className="card-image" />
             </div>
             <div className="card-content">
-                <h2 className="card-header">{header}</h2>
-                <h4 className="animate-charcter"> {calculateDaysLeft(startDate)} Days left</h4>
-                <p className="card-desc">{truncateText(description, 25)}</p>
-                {loading ? (
-                    <div class="spinner"></div>
-                ) : isPurchased && token ? (
-                    <div className="purchased-txt">Purchased</div>
-                ) : !isPurchased && token ? (
-                    <button className="buy-now-btn" onClick={() => checkout(productId, token, setLoading)}>
-                        Buy Now
-                    </button>
-                ) : (
-                    <button className="buy-now-btn" onClick={() => handleGoogleSigninClick()}>
-                        Buy Now
-                    </button>
-                )}
+                <div>
+                    <h2 className="card-header">{header}</h2>
+                    <h4 className="animate-charcter"> {calculateDaysLeft(startDate)}</h4>
+                    <p className="card-desc">{truncateText(description, 25)}</p>
+                </div>
+                <div>
+                    {loading ? (
+                        <div class="spinner"></div>
+                    ) : isPurchased && token ? (
+                        <div className="purchased-txt">Purchased</div>
+                    ) : !isPurchased && token ? (
+                        <button className="buy-now-btn" onClick={() => checkout(productId, token, setLoading)}>
+                            <span>
+                                <img className="cart-icon" src={images['shopping-cart.svg']} />
+                            </span>{' '}
+                        </button>
+                    ) : (
+                        <button className="buy-now-btn" onClick={() => handleGoogleSigninClick()}>
+                            <span>
+                                <img className="cart-icon" src={images['shopping-cart.svg']} />
+                            </span>{' '}
+                            Buy Now
+                        </button>
+                    )}
+                </div>
             </div>
         </div>
     );
