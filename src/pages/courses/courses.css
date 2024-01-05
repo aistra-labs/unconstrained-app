@@ -88,6 +88,9 @@
         }
 
         .courses-cards {
+            .course-without-slider {
+                    display: flex;
+                }
             .slick-slider {
                 display: flex;
 
