@@ -1,151 +1,154 @@
+.card-blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* padding: 20px; */
+}
 
-    .card-blog-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        /* padding: 20px; */
-    }
+.card-blog {
+    /* width: calc(33.33% - 20px); */
+    margin: 10px;
+    /* padding: 20px; */
+    /* background-color: #f0f0f0; */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    text-align: center;
+    width: 585px;
+    height: 650px;
+    border: none;
+    align-items: center;
+}
 
-    .card-blog {
-        /* width: calc(33.33% - 20px); */
-        margin: 10px;
-        /* padding: 20px; */
-        /* background-color: #f0f0f0; */
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        border-radius: 4px;
-        text-align: center;
-        width: 585px;
-        height: 650px;
-        border: none;
-        align-items: center;
-    }
+.card-blog-image {
+    width: 585px;
+    height: 358px;
+    flex-shrink: 0;
+}
 
-    .card-blog-image {
-        width: 585px;
-        height: 358px;
-        flex-shrink: 0;
-    }
+.card-blog-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 
-    .card-blog-content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-    }
+.card-blog-section {
+    padding-left: 120px;
+    padding-right: 120px;
+    width: 100%;
+    padding-top: 100px;
+    /* width: 80%; */
+}
 
+.card-blog-section-header {
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.card-blog-header {
+    margin: 0;
+    background-color: transparent;
+    border-bottom: none;
+    padding: 0;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: max-content;
+}
+
+.card-blog-description {
+    margin: 10px 0;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+@media (max-width: 767px) {
+
+    /* Media query for mobile devices */
     .card-blog-section {
-        padding-left: 50px;
-        padding-right: 50px;
-        padding-top: 100px;
-        /* width: 80%; */
+        padding: 0 10px;
     }
 
     .card-blog-section-header {
-        font-family: Inter;
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 44px;
-        letter-spacing: 0em;
-        text-align: left;
+        text-align: center;
         padding-left: 15px;
     }
 
-    .card-blog-header {
-        margin: 0;
-        background-color: transparent;
-        border-bottom: none;
-        padding: 0;
-        font-family: Inter;
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 22px;
-        letter-spacing: 0em;
-        text-align: left;
-        width: max-content;
+    .card-blog {
+        height: auto;
+        padding: 20px 0;
+        border: none;
+        width: 370px;
+        border-radius: 20px;
     }
 
-    .card-blog-description {
-        margin: 10px 0;
-        font-family: Inter;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 22px;
-        letter-spacing: 0em;
-        text-align: left;
+    .card-blog-image {
+        width: 340px;
+        height: 340px;
+        border-radius: 40px;
     }
+}
 
-    @media (max-width: 767px) {
+.date {
+    color: var(--foundation-black-black-400, #73797C);
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    /* 20.8px */
+}
 
-        /* Media query for mobile devices */
-        .card-blog-section {
-            padding: 0 10px;
-        }
-        .card-blog-section-header{
-            text-align: center;
-            padding-left: 15px;
-        }
-        .card-blog {
-            height: auto;
-            padding: 20px 0;
-            border: none;
-            width: 370px;
-            border-radius: 20px;
-        }
-        .card-blog-image {
-            width: 340px;
-            height: 340px;
-            border-radius: 40px;
-        }
-    }
+.meta-by {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 32px;
+    padding-left: 32px;
+}
 
-    .date {
-        color: var(--foundation-black-black-400, #73797C);
-        font-family: Inter;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 160%;
-        /* 20.8px */
-    }
+.writer {
+    color: var(--foundation-black-black-400, #73797C);
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    padding-left: 24px;
+}
 
-    .meta-by {
-        display: flex;
-        justify-content: flex-start;
-        margin-top: 32px;
-        padding-left: 32px;
-    }
+.read-more {
+    display: inline-flex;
+    padding: 10px 20px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px solid #F54737;
+    background: #FFF;
+    cursor: pointer;
+    text-decoration: none;
+}
 
-    .writer {
-        color: var(--foundation-black-black-400, #73797C);
-        font-family: Inter;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 160%;
-        padding-left: 24px;
-    }
-
-    .read-more {
-        display: inline-flex;
-        padding: 10px 20px;
-        align-items: flex-start;
-        gap: 10px;
-        border-radius: 8px;
-        border: 1px solid #F54737;
-        background: #FFF;
-        cursor: pointer;
-        text-decoration: none;
-    }
-
-    .read-more-text {
-        color: var(--foundation-red-light-red-light-400, #F54737);
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 160%;
-        /* 22.4px */
-        letter-spacing: 0.7px;
-    }
+.read-more-text {
+    color: var(--foundation-red-light-red-light-400, #F54737);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    /* 22.4px */
+    letter-spacing: 0.7px;
+}
