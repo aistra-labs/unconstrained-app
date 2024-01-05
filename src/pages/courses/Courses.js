@@ -91,37 +91,35 @@ const Courses = () => {
         localStorage.setItem('login-through-course', 'false');
         // }
     }, [dispatch, token]);
-console.log(window.innerWidth, 'window.innerWidth');
-const NextArrow = (props) => {
-    const { currentSlide, slideCount, ...restProps } = props;
-    return (
-        <div {...restProps} className="arrow-container">
-            <img className="right-arrow" src={images['right-arrow.svg']} loading="lazy" alt="Next" />
-        </div>
-    );
-};
+    const NextArrow = (props) => {
+        const { currentSlide, slideCount, ...restProps } = props;
+        return (
+            <div {...restProps} className="arrow-container">
+                <img className="right-arrow" src={images['right-arrow.svg']} loading="lazy" alt="Next" />
+            </div>
+        );
+    };
 
-const PrevArrow = (props) => {
-    const { currentSlide, slideCount, ...restProps } = props;
-    return (
-        <div {...restProps} className="arrow-container">
-            <img className="left-arrow" src={images['left-arrow.svg']} loading="lazy" alt="Previous" />
-        </div>
-    );
-};
+    const PrevArrow = (props) => {
+        const { currentSlide, slideCount, ...restProps } = props;
+        return (
+            <div {...restProps} className="arrow-container">
+                <img className="left-arrow" src={images['left-arrow.svg']} loading="lazy" alt="Previous" />
+            </div>
+        );
+    };
 
-let settings = (maxLen = 0) => ({
-    infinite: true,
-    dots: true,
-    speed: 500,
-    slidesToShow: Math.min(window.innerWidth < 768 ? 1 : window.innerWidth > 1470 ? 3 : 3, maxLen),
-    slidesToScroll: 1,
-    className: 'slider-style',
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-});
+    let settings = (maxLen = 0) => ({
+        infinite: true,
+        dots: true,
+        speed: 500,
+        slidesToShow: Math.min(window.innerWidth < 768 ? 1 : window.innerWidth > 1470 ? 3 : 3, maxLen),
+        slidesToScroll: 1,
+        className: 'slider-style',
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
+    });
 
-console.log('paidCourses...', paidCourses);
 
 return (
     <div className="courses-container">
