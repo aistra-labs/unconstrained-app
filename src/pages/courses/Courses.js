@@ -10,7 +10,6 @@ import { processResponse } from "../../utils";
 
 
 function getPaidCourses(token, successCb, dispatch) {
-  console.log('paidCourses...fn called,,,,,../.......');
   const requestObj = [URLS.GET_PURCHASED_COURSES, { headers: { token } }];
   fetch(...requestObj)
     .then(response => processResponse(response, dispatch, requestObj))
