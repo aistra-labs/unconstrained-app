@@ -52,8 +52,16 @@ const Dashboard = () => {
 
   return (
     <div className="dashoboard-container">
-      <SuccessModal show={showSuccess} handleClose={() => setShowSuccess(false)} />
-      <FailedModal show={showFailed} handleClose={() => setShowFailed(false)} />
+      <SuccessModal show={showSuccess} handleClose={() => {
+        setShowSuccess(false);
+        searchParams.delete('success');
+        setSearchParams(searchParams);
+      }} />
+      <FailedModal show={showFailed} handleClose={() => {
+        setShowFailed(false);
+        searchParams.delete('cancel');
+        setSearchParams(searchParams);
+      }} />
       <div className="dashboard-controller">
         <img className="tree-logo" src={images['tree.svg']} loading="lazy" alt="avatarLogo" />
         {/* <img className="dashboard-avatar" src={images['dashboardAvatar.png']} loading="lazy" alt="avatar logo" /> */}
