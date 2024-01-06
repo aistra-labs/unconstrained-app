@@ -38,7 +38,7 @@ const Home = () => {
       <div className="bottom-banner">
         <img className="banner-image" src={images['home-bottom-banner.svg']} loading="lazy" alt="banner" />
         <div className="banner-content">
-          <a href="http://eepurl.com/iAgD2w" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
+          <a href="http://eepurl.com/iAgD2w" target="_blank" rel="noreferrer" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <div className="banner-title">
               Join UnconstrainED
             </div>

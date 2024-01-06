@@ -7,3 +7,17 @@
         margin-right: 20px;
     }
 }
+
+
+@media only screen and (max-width: 767px) {
+    .failed-msg {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        min-width: 500px;
+        .text {
+            margin-right: 20px;
+        }
+    }
+}

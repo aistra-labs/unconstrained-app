@@ -6,3 +6,15 @@
         margin-right: 20px;
     }
 }
+
+@media only screen and (max-width: 767px) {
+    .success-msg {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        .text {
+            margin-right: 20px;
+        }
+    }
+}

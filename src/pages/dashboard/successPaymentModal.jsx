@@ -10,6 +10,7 @@ function SuccessModal({ show=false, handleClose }) {
         <Modal
         show={show}
         onHide={handleClose}
+        style={{maxWidth: '80vw'}}
         backdrop="static"
         keyboard={false}>
             <Modal.Dialog style={{margin:0}}>

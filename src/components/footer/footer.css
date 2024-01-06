@@ -139,6 +139,7 @@
             row-gap: 25px;
             padding-left: 15px;
             margin-bottom: 10px;
+            align-items: center;
 
             .left-footer {
                 .footer-logo {

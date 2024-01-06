@@ -1,12 +1,14 @@
-.home-container{
+.home-container {
     display: flex;
     flex-direction: column;
-    .body-rest{
+
+    .body-rest {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .home-banner-container{
+
+    .home-banner-container {
         display: flex;
         width: 100%;
         height: auto;
@@ -14,17 +16,18 @@
         padding: 20px 0;
         align-items: center;
         background: linear-gradient(111deg, #FFEFDB 11.39%, #FFF 62.5%);
-        .banner-content{
+
+        .banner-content {
             display: flex;
             width: 490px;
             flex-direction: column;
             row-gap: 26px;
-            
-            .banner-desc{
+
+            .banner-desc {
                 margin-right: 20px;
             }
 
-            .banner-title{
+            .banner-title {
                 display: flex;
                 flex-direction: column;
                 color: var(--foundation-blue-blue-800, #120123);
@@ -33,23 +36,27 @@
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
-                .orange-title{
+
+                .orange-title {
                     color: #D9042B;
                     font-weight: 800;
                 }
             }
-            .demo-btn{
+
+            .demo-btn {
                 width: 156px;
                 height: 34px;
                 cursor: pointer;
             }
         }
-        .banner-image-container{
+
+        .banner-image-container {
             width: 620px;
             height: 620px;
         }
     }
-    .bottom-banner{
+
+    .bottom-banner {
         display: flex;
         position: relative;
         justify-content: center;
@@ -57,17 +64,20 @@
         margin-top: 100px;
         mix-blend-mode: multiply;
         height: 660px;
-        .banner-image{
+
+        .banner-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        .banner-content{
+
+        .banner-content {
             position: absolute;
             display: flex;
             flex-direction: column;
             align-items: center;
-            .banner-title{
+
+            .banner-title {
                 justify-content: center;
                 width: 820px;
                 display: flex;
@@ -81,7 +91,8 @@
                 font-weight: 700;
                 line-height: normal;
             }
-            .banner-desc{
+
+            .banner-desc {
                 width: 705px;
                 display: flex;
                 flex-wrap: wrap;
@@ -95,12 +106,14 @@
                 line-height: 160%;
                 margin-right: 20px;
             }
-            .banner-btn{
+
+            .banner-btn {
                 width: 218px;
                 height: 56px;
                 margin-top: 70px;
                 cursor: pointer;
-                .login-btn{
+
+                .login-btn {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
@@ -111,42 +124,53 @@
 }
 
 @media only screen and (max-width: 767px) {
-    .home-container{
-        .home-banner-container{
+    .home-container {
+        /* width: 75%; */
+
+        .home-banner-container {
             flex-direction: column;
             justify-content: initial;
             align-items: inherit;
             row-gap: 20px;
-            padding: 20px 10px;
+            padding: 20px 70px;
             height: auto;
-            .banner-content{
+
+            .banner-content {
                 width: auto;
-                .banner-title{
+
+                .banner-title {
                     font-size: 36px;
                 }
             }
+
             .banner-image-container {
                 display: flex;
                 width: 100%;
                 height: auto;
                 justify-content: center;
-                .banner-image{
+
+                .banner-image {
                     width: 340px;
                     height: 340px;
                 }
             }
         }
-        .bottom-banner{
+
+        .bottom-banner {
             margin-top: 50px;
             height: 500px;
-            .banner-content{
-                .banner-title{
+
+            .banner-content {
+                .banner-title {
                     width: 370px;
                     font-size: 26px;
                 }
-                .banner-desc{
-                    width: auto;
-                    font-size: 16px;
+
+                .banner-desc {
+                    font-size: 1rem;
+                    width: 100%;
+                    padding-left: 15%;
+                    padding-right: 10%;
                 }
             }
         }

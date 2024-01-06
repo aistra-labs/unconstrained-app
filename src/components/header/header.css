@@ -1,5 +1,5 @@
 .hcontainer{
-    width: 100%;
+    width: 100vw;
     height: 80px;
     background-color: whitesmoke;
     display: flex;
@@ -54,8 +54,9 @@
         width: 100%;
         row-gap: 10px;
         align-items: baseline;
-        padding: 10px 20px;
         height: auto;
+        padding-left: 50px;
+        padding-right: 50px;
         .hmenu {
             display: flex;
             width: 100%;
