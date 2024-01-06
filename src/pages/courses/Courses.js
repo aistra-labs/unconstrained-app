@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { memo, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "./courses.css";
 import { images } from "../../components/images";
@@ -229,4 +229,4 @@ const Courses = () => {
     );
 };
 
-export default memo(Courses);
+export default Courses;
