@@ -4,9 +4,10 @@ import Slider from "react-slick";
 import "./courses.css";
 import { images } from "../../components/images";
 import { BuyCourseCard } from '../../components/courseCard/CourseCard';
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { URLS } from "../../urls";
 import { processResponse } from "../../utils";
+import useLogin from "../loginHandle/useLogin";
 
 
 function getPaidCourses(token, successCb, dispatch) {
@@ -21,7 +22,7 @@ function getPaidCourses(token, successCb, dispatch) {
 }
 
 const Courses = () => {
-    const token = useSelector((state) => state.user.token);
+    const token = useLogin();
     const dispatch = useDispatch();
     const [paidCourses, setPaidCourses] = useState();
 

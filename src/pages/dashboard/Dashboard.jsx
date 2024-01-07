@@ -6,34 +6,23 @@ import Tabs from 'react-bootstrap/Tabs';
 import { images } from "../../components/images";
 import CurrentCourseProgressCard from './CurrentCourseProgressCard';
 import UpcomingAssignments from './UpcomingAssignments';
-import { setUserdata, setToken } from '../../redux/userSlice'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import SuccessModal from "./successPaymentModal";
 import FailedModal from "./failedPaymentModal";
 import { useNavigate } from "react-router-dom"
+// import useLogin from "../loginHandle/useLogin";
 
 const Dashboard = () => {
   const [currentCardId, setCurrentCardId] = useState();
   const [searchParams, setSearchParams] = useSearchParams();
   const userData = useSelector((state) => state.user.userData);
+  // const token = useLogin();
   const isSuccess = searchParams.get("success");
   const isFailure = searchParams.get("cancel");
   const [showSuccess, setShowSuccess] = useState(false);
   const [showFailed, setShowFailed] = useState(false);
-  const dispatch = useDispatch();
   const navigate = useNavigate();
   useEffect(() => {
-    const profileData = {
-      name: searchParams.get("name"),
-      email: searchParams.get("email"),
-      image: searchParams.get("image"),
-    }
-    const token = searchParams.get("token");
-    if (token) {
-      dispatch(setUserdata(profileData));
-      dispatch(setToken(token));
-      setSearchParams('');
-    }
     const redirectPage = localStorage.getItem('login-through-course') === 'true';
     if (redirectPage) {
       navigate('/courses');

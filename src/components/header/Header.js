@@ -70,7 +70,7 @@ const Header = () => {
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                            <Dropdown.Item onClick={() => navigate('/dashboard')}>Dashboard</Dropdown.Item>
+                            {/* <Dropdown.Item onClick={() => navigate('/dashboard')}>Dashboard</Dropdown.Item> */}
                             <Dropdown.Item onClick={() => logout(dispatch)}>Logout</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown> :

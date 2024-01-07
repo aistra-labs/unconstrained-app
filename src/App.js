@@ -22,7 +22,7 @@ const Courses = lazy(() => import('./pages/courses/Courses'));
 const Coaching = lazy(() => import('./pages/coaching/Coaching'));
 const Community = lazy(() => import('./pages/community/Community'));
 const Resources = lazy(() => import('./pages/resources/Resources'));
-const Dashboard = lazy(() => import('./pages/dashboard'));
+// const Dashboard = lazy(() => import('./pages/dashboard'));
 
 const PrivateRoute = () => {
   const token = useSelector((state) => state.user.token);
@@ -45,7 +45,7 @@ function App() {
           </Route>
           <Route path="/cards" element={<Cards />} />
           {/* <Route path="/signin" element={<Login />} /> */}
-          <Route path="/dashboard" element={<Dashboard />} />
+          {/* <Route path="/dashboard" element={<Dashboard />} /> */}
         </Routes>
         <Footer />
       </Suspense>
