@@ -11,18 +11,18 @@ import useLogin from "../loginHandle/useLogin";
 
 
 function getPaidCourses(token, successCb, dispatch) {
-  const requestObj = [URLS.GET_PURCHASED_COURSES, { headers: { token } }];
-  fetch(...requestObj)
-    .then(response => processResponse(response, dispatch, requestObj))
-    .then(result => successCb(result?.['productList']))
-    .catch(error => {
-      console.log('error', error);
-      successCb(null);
-    });
+    const requestObj = [URLS.GET_PURCHASED_COURSES, { headers: { token } }];
+    fetch(...requestObj)
+        .then(response => processResponse(response, dispatch, requestObj))
+        .then(result => successCb(result?.['productList']))
+        .catch(error => {
+            console.log('error', error);
+            successCb(null);
+        });
 }
 
 const Courses = () => {
-    const token = useLogin();
+    const { token, showPaymentStatusModal } = useLogin();
     const dispatch = useDispatch();
     const [paidCourses, setPaidCourses] = useState();
 
@@ -123,6 +123,7 @@ const Courses = () => {
 
     return (
         <div className="courses-container">
+            {showPaymentStatusModal()}
             {/* <div className="courses-banner-container"> */}
             {/* <div className="banner-content">
                     <div className="banner-title">
