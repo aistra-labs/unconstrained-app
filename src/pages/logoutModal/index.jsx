@@ -1,4 +1,4 @@
-import "./successPaymentModal.css";
+import "./style.css";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,13 +15,13 @@ function LogoutModal({ show=false, handleClose }) {
         keyboard={false}>
             <Modal.Dialog style={{margin:0}}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Payment Successfull</Modal.Title>
+                    <Modal.Title>Token Expired</Modal.Title>
                 </Modal.Header>
 
                 <Modal.Body>
-                    <div className="success-msg">
+                    <div className="logout-msg">
                         <p className="text">Token expired please login again.</p>
-                        <FontAwesomeIcon icon={faClockRotateLeft} beat style={{ color: "#4ac47f", }} size="6x" />
+                        <FontAwesomeIcon icon={faClockRotateLeft} spin spinReverse style={{ color: "#eb0a0a", }} size="6x" />
                     </div>
                 </Modal.Body>
 
