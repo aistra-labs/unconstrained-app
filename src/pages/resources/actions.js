@@ -20,6 +20,24 @@ export function getCuratedTools(token, successCb, body = {}, dispatch) {
         });
 }
 
+export function checkout(productId, token, successCb, dispatch, body = {}) {
+    const requestObj = [URLS.CHECKOUT(productId), {
+        headers: {
+            token,
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(body),
+        method: 'POST'
+    }];
+    fetch(...requestObj)
+        .then(response => processResponse(response, dispatch, requestObj))
+        .then(result => successCb(result?.['checkOutUrl']))
+        .catch(error => {
+            console.log('error', error);
+        });
+}
+
 const dataMap = [
     {
         "imageLink": images["purpose_heading.png"],

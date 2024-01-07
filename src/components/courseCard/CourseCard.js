@@ -1,8 +1,9 @@
 import React, { memo, useState } from "react";
 import "./courseCard.css";
 import { URLS } from "../../urls";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { images } from '../../components/images';
+import { checkout } from "../../pages/resources/actions";
 // import { images } from "../images";
 
 const CourseCard = ({ imageUrl, header, description, rating, review }) => {
@@ -26,27 +27,18 @@ const CourseCard = ({ imageUrl, header, description, rating, review }) => {
     );
 };
 
-function checkout(productId, token, setLoading) {
-    const url = URLS.CHECKOUT(productId);
+function checkoutHandle(productId, token, setLoading, dispatch) {
     setLoading(true);
-    fetch(url, {
-        headers: {
-            token,
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-        },
-        mode: 'cors',
-        method: 'POST',
-    })
-        .then((res) => res.json())
-        .then((res) => {
-            window.location.assign(res.checkOutUrl);
-        })
-        .finally(setLoading(false));
+    const successCb = (res)=>{
+        setLoading(false);
+        window.location.assign(res);
+    }
+    checkout(productId, token, successCb, dispatch);
 }
 
 export const BuyCourseCard = ({ imageUrl, header, description, productId, isPurchased, startDate }) => {
-    const token = useSelector((state) => state.user.token);
+  const dispatch = useDispatch();
+  const token = useSelector((state) => state.user.token);
     const [loading, setLoading] = useState(false);
 
     const calculateDaysLeft = (targetDate) => {
@@ -98,7 +90,7 @@ export const BuyCourseCard = ({ imageUrl, header, description, productId, isPurc
                    ) : isPurchased && token ? (
                        <div className="purchased-txt">Purchased</div>
                    ) : !isPurchased && token ? (
-                       <button className="buy-now-btn" onClick={() => checkout(productId, token, setLoading)}>
+                       <button className="buy-now-btn" onClick={() => checkoutHandle(productId, token, setLoading, dispatch)}>
                            <span>
                                <img className="cart-icon" src={images['shopping-cart.svg']} alt="shop-icon" />
                            </span>{' '}
